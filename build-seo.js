@@ -708,9 +708,11 @@ ${JSON.stringify(generateStructuredData(tool), null, 2)}
         <div class="chrome-spacer"></div>
         <div class="chrome-links-container">
           <a class="chrome-link mono" href="/index.html">Directory</a>
+          <a class="chrome-link mono" href="/directory.html">Categories</a>
           <a class="chrome-link mono" href="/guides.html">Guides</a>
           <a class="chrome-link mono" href="/prompts.html">Prompts</a>
           <a class="chrome-link mono" href="/news.html">News</a>
+          <a class="chrome-link mono" href="/newsletter.html">Newsletter</a>
         </div>
         <div class="chrome-toggle" aria-label="Theme toggle">
           <span class="mono chrome-toggle-label">Light</span>
@@ -1249,9 +1251,11 @@ function generateCategoryPage(modality) {
         <div class="chrome-spacer"></div>
         <div class="chrome-links-container">
           <a class="chrome-link mono" href="/index.html">Directory</a>
+          <a class="chrome-link mono" href="/directory.html">Categories</a>
           <a class="chrome-link mono" href="/guides.html">Guides</a>
           <a class="chrome-link mono" href="/prompts.html">Prompts</a>
           <a class="chrome-link mono" href="/news.html">News</a>
+          <a class="chrome-link mono" href="/newsletter.html">Newsletter</a>
         </div>
         <div class="chrome-toggle" aria-label="Theme toggle">
           <span class="mono chrome-toggle-label">Light</span>
@@ -1548,9 +1552,11 @@ function generateBestForPage(bestForTag) {
         <div class="chrome-spacer"></div>
         <div class="chrome-links-container">
           <a class="chrome-link mono" href="/index.html">Directory</a>
+          <a class="chrome-link mono" href="/directory.html">Categories</a>
           <a class="chrome-link mono" href="/guides.html">Guides</a>
           <a class="chrome-link mono" href="/prompts.html">Prompts</a>
           <a class="chrome-link mono" href="/news.html">News</a>
+          <a class="chrome-link mono" href="/newsletter.html">Newsletter</a>
         </div>
         <div class="chrome-toggle" aria-label="Theme toggle">
           <span class="mono chrome-toggle-label">Light</span>
@@ -1731,9 +1737,11 @@ function generatePricingPage(pricingTier) {
         <div class="chrome-spacer"></div>
         <div class="chrome-links-container">
           <a class="chrome-link mono" href="/index.html">Directory</a>
+          <a class="chrome-link mono" href="/directory.html">Categories</a>
           <a class="chrome-link mono" href="/guides.html">Guides</a>
           <a class="chrome-link mono" href="/prompts.html">Prompts</a>
           <a class="chrome-link mono" href="/news.html">News</a>
+          <a class="chrome-link mono" href="/newsletter.html">Newsletter</a>
         </div>
         <div class="chrome-toggle" aria-label="Theme toggle">
           <span class="mono chrome-toggle-label">Light</span>
@@ -1940,9 +1948,11 @@ function generateComparisonPage(tool1, tool2) {
         <div class="chrome-spacer"></div>
         <div class="chrome-links-container">
           <a class="chrome-link mono" href="/index.html">Directory</a>
+          <a class="chrome-link mono" href="/directory.html">Categories</a>
           <a class="chrome-link mono" href="/guides.html">Guides</a>
           <a class="chrome-link mono" href="/prompts.html">Prompts</a>
           <a class="chrome-link mono" href="/news.html">News</a>
+          <a class="chrome-link mono" href="/newsletter.html">Newsletter</a>
         </div>
         <div class="chrome-toggle" aria-label="Theme toggle">
           <span class="mono chrome-toggle-label">Light</span>
@@ -2203,9 +2213,11 @@ function generateTagPage(tag) {
         <div class="chrome-spacer"></div>
         <div class="chrome-links-container">
           <a class="chrome-link mono" href="/index.html">Directory</a>
+          <a class="chrome-link mono" href="/directory.html">Categories</a>
           <a class="chrome-link mono" href="/guides.html">Guides</a>
           <a class="chrome-link mono" href="/prompts.html">Prompts</a>
           <a class="chrome-link mono" href="/news.html">News</a>
+          <a class="chrome-link mono" href="/newsletter.html">Newsletter</a>
         </div>
         <div class="chrome-toggle" aria-label="Theme toggle">
           <span class="mono chrome-toggle-label">Light</span>
@@ -2478,9 +2490,11 @@ ${JSON.stringify({
         <div class="chrome-spacer"></div>
         <div class="chrome-links-container">
           <a class="chrome-link mono" href="/index.html">Directory</a>
+          <a class="chrome-link mono" href="/directory.html">Categories</a>
           <a class="chrome-link mono" href="/guides.html">Guides</a>
           <a class="chrome-link mono" href="/prompts.html">Prompts</a>
           <a class="chrome-link mono" href="/news.html">News</a>
+          <a class="chrome-link mono" href="/newsletter.html">Newsletter</a>
         </div>
         <div class="chrome-toggle" aria-label="Theme toggle">
           <span class="mono chrome-toggle-label">Light</span>
@@ -19219,9 +19233,11 @@ ${JSON.stringify(faqSchema, null, 2)}
         <div class="chrome-spacer"></div>
         <div class="chrome-links-container">
           <a class="chrome-link mono" href="/index.html">Directory</a>
+          <a class="chrome-link mono" href="/directory.html">Categories</a>
           <a class="chrome-link mono" href="/guides.html">Guides</a>
           <a class="chrome-link mono" href="/prompts.html">Prompts</a>
           <a class="chrome-link mono" href="/news.html">News</a>
+          <a class="chrome-link mono" href="/newsletter.html">Newsletter</a>
         </div>
         <div class="chrome-toggle" aria-label="Theme toggle">
           <span class="mono chrome-toggle-label">Light</span>
@@ -19495,9 +19511,11 @@ function generateGuidesIndexPage() {
         <div class="chrome-spacer"></div>
         <div class="chrome-links-container">
           <a class="chrome-link mono" href="/index.html">Directory</a>
+          <a class="chrome-link mono" href="/directory.html">Categories</a>
           <a class="chrome-link mono" href="/guides.html">Guides</a>
           <a class="chrome-link mono" href="/prompts.html">Prompts</a>
           <a class="chrome-link mono" href="/news.html">News</a>
+          <a class="chrome-link mono" href="/newsletter.html">Newsletter</a>
         </div>
         <div class="chrome-toggle" aria-label="Theme toggle">
           <span class="mono chrome-toggle-label">Light</span>
