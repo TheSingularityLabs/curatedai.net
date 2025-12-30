@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Tool Directory — Curated GenAI Tools</title>
+    <meta
+      name="description"
+      content="A hand-picked directory of GenAI tools with a Cursor-inspired terminal theme. Search and filter by modality: text-to-audio, text-to-video, text-to-3D, image-to-video, image-to-image, image-to-3D."
+    />
+    <link rel="canonical" href="https://curatedai.net/index.html" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Tool Directory — Curated GenAI Tools" />
+    <meta property="og:description" content="A hand-picked directory of GenAI tools. Search and filter curated tools by modality: text-to-audio, text-to-video, text-to-3D, image-to-video, image-to-image, image-to-3D." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://curatedai.net/index.html" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI Tool Directory — Curated GenAI Tools" />
+    <meta name="twitter:description" content="Hand-picked GenAI tools. Search and filter by modality. Curated, not cluttered." />
+    
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "AI Tool Directory",
+      "description": "A hand-picked directory of GenAI tools. Curated, not cluttered.",
+      "url": "https://curatedai.net",
+      "logo": "https://curatedai.net/favicon.svg",
+      "sameAs": [
+        "https://thesingularitylabs.xyz"
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Singularity Labs",
+        "url": "https://thesingularitylabs.xyz"
+      }
+    }
+    </script>
+  </head>
+  <body data-theme="light">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="app">
+      <header class="chrome" aria-label="Browser chrome">
+        <div class="chrome-bar">
+          <div class="chrome-pill mono">curated://genai-tools</div>
+          <div class="chrome-spacer"></div>
+          <div class="chrome-links-container">
+            <a class="chrome-link mono" href="./index.html">Directory</a>
+            <a class="chrome-link mono" href="./guides.html">Guides</a>
+            <a class="chrome-link mono" href="./prompts.html">Prompts</a>
+            <a class="chrome-link mono" href="./news.html">News</a>
+          </div>
+          <div class="chrome-toggle" aria-label="Theme toggle">
+            <span class="mono chrome-toggle-label">Light</span>
+            <button id="themeToggle" class="switch" type="button" role="switch" aria-checked="false">
+              <span class="switch-knob" aria-hidden="true"></span>
+            </button>
+            <span class="mono chrome-toggle-label">Dark</span>
+          </div>
+        </div>
+      </header>
+
+      <main id="main" class="page" aria-label="Directory">
+        <!-- Animated background gradient -->
+        <div id="animatedBg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; opacity: 0.03; transition: opacity 0.3s;"></div>
+        
+        <section class="hero" aria-label="Search" style="margin-bottom: 64px; position: relative;">
+          <div class="kicker mono" style="margin-bottom: 20px; opacity: 0.9; animation: fadeInUp 0.6s ease-out;">SINGLE PAGE • SEARCH-FIRST • CURATED ONLY</div>
+          <h1 class="title" style="margin-bottom: 40px; line-height: 1.2; letter-spacing: -0.03em; animation: fadeInUp 0.6s ease-out 0.1s both;">Find the right GenAI tool—fast.</h1>
+
+          <div class="command" id="searchCommand" style="margin-bottom: 20px; position: relative; animation: fadeInUp 0.6s ease-out 0.2s both; transform-style: preserve-3d;">
+            <span class="prompt mono">&gt;</span>
+            <input
+              id="q"
+              class="command-input mono"
+              type="search"
+              placeholder="What do you want to create?"
+              autocomplete="off"
+              spellcheck="false"
+              aria-label="Search for AI tools"
+            />
+            <span class="caret" aria-hidden="true"></span>
+            <div id="searchHint" class="mono" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 11px; color: var(--page-muted); opacity: 0.6; pointer-events: none; display: none;">
+              <kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2);">⌘K</kbd>
+            </div>
+          </div>
+
+          <div class="micro mono" style="margin-bottom: 24px; font-size: 13px; color: var(--page-muted); display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap;">
+            <span>Curated — handpicked tools only.</span>
+            <span style="opacity: 0.6;">•</span>
+            <span id="toolCount" style="font-weight: 600; color: var(--page-text);">Loading…</span>
+          </div>
+          <div style="text-align: center; margin-bottom: 32px; animation: fadeInUp 0.6s ease-out 0.25s both;">
+            <a href="./directory.html" class="pill mono pill-interactive" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);" onmouseover="this.style.transform='translateY(-4px) scale(1.02)'; this.style.borderColor='var(--accent)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.borderColor='var(--line)'; this.style.boxShadow='none'">
+              <span>Browse by Category</span>
+              <span style="opacity: 0.7;">→</span>
+            </a>
+          </div>
+
+          <div class="examples" aria-label="Example searches" style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; animation: fadeInUp 0.6s ease-out 0.3s both;">
+            <button class="pill mono pill-interactive" type="button" data-example="🎙️ Create a Podcast" style="transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-4px) scale(1.02)'; this.style.borderColor='var(--accent)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.borderColor='var(--line)'; this.style.boxShadow='none'">
+              <span style="position: relative; z-index: 1;">Create a Podcast</span>
+            </button>
+            <button class="pill mono pill-interactive" type="button" data-example="📱 Build a Social Media Campaign" style="transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-4px) scale(1.02)'; this.style.borderColor='var(--accent)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.borderColor='var(--line)'; this.style.boxShadow='none'">
+              <span style="position: relative; z-index: 1;">Build a Social Media Campaign</span>
+            </button>
+            <button class="pill mono pill-interactive" type="button" data-example="🎬 Make a Product Demo" style="transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-4px) scale(1.02)'; this.style.borderColor='var(--accent)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.borderColor='var(--line)'; this.style.boxShadow='none'">
+              <span style="position: relative; z-index: 1;">Make a Product Demo</span>
+            </button>
+            <button class="pill mono pill-interactive" type="button" data-example="🎮 Build Game Assets" style="transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-4px) scale(1.02)'; this.style.borderColor='var(--accent)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.borderColor='var(--line)'; this.style.boxShadow='none'">
+              <span style="position: relative; z-index: 1;">Build Game Assets</span>
+            </button>
+            <a href="./ideas.html" class="pill pill-more mono pill-interactive" aria-label="Browse all tool ideas" style="transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-4px) scale(1.02)'; this.style.borderColor='var(--accent)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.borderColor='var(--line)'; this.style.boxShadow='none'">
+              <span style="position: relative; z-index: 1;">+ more</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="controls" aria-label="Filters" style="margin-bottom: 40px;">
+          <div class="controls-row">
+            <div class="controls-left">
+              <div class="controls-title mono" style="margin-bottom: 16px; color: var(--page-muted);">TYPE</div>
+              <div id="chips" class="chips" role="list" aria-label="Type chips" style="gap: 10px;"></div>
+            </div>
+
+            <div class="controls-right">
+              <label class="toggle mono" for="newThisWeek" style="transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+                <span>New this week</span>
+                <input id="newThisWeek" type="checkbox" />
+                <span class="toggle-ui" aria-hidden="true"></span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section class="results" aria-label="Results" style="margin-top: 0;">
+          <div class="results-head" style="margin-bottom: 28px; display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <div class="results-title mono" style="color: var(--page-muted); margin-bottom: 8px; font-size: 11px; letter-spacing: 0.1em;">RESULTS</div>
+              <div id="resultMeta" class="results-meta mono" style="font-size: 14px; color: var(--page-text); font-weight: 600;">
+                <span id="loadingIndicator" style="display: none; opacity: 0.6;">Loading…</span>
+                <span id="resultText"></span>
+              </div>
+            </div>
+            <div id="emptyState" style="display: none; text-align: center; padding: 60px 20px; color: var(--page-muted);">
+              <div class="mono" style="font-size: 16px; font-weight: 600; margin-bottom: 12px; color: var(--page-text);">No tools found</div>
+              <div class="mono" style="font-size: 13px; opacity: 0.8; margin-bottom: 24px; line-height: 1.6;">Try a different search term or clear your filters</div>
+              <div style="display: flex; flex-direction: column; gap: 12px; align-items: center; margin-top: 24px;">
+                <button id="clearFilters" class="pill mono" style="padding: 10px 20px; font-size: 12px; cursor: pointer; border: 1px solid var(--line); background: transparent; color: var(--page-text); transition: all 0.2s ease;" onclick="clearAllFilters()">
+                  Clear all filters
+                </button>
+                <div class="mono" style="font-size: 11px; opacity: 0.6; margin-top: 8px;">Or try browsing by <a href="./directory.html" style="color: var(--accent); text-decoration: underline;">category</a></div>
+              </div>
+            </div>
+          </div>
+          <div id="grid" class="grid" role="list" style="gap: 14px;"></div>
+        </section>
+      </main>
+
+      <footer class="footer" aria-label="Footer">
+        <div class="footer-content">
+          <div class="footer-main">
+            <div class="footer-section">
+              <div class="footer-title mono">AI Tool Directory</div>
+              <div class="footer-desc mono">A hand-picked directory of GenAI tools. Curated, not cluttered.</div>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-label mono">Part of</div>
+              <a href="https://thesingularitylabs.xyz" target="_blank" rel="noreferrer noopener" class="footer-link">
+                <span class="footer-link-text">The Singularity Labs</span>
+                <span class="footer-link-arrow">→</span>
+              </a>
+              <div class="footer-tagline mono">What matters in AI, distilled.</div>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-label mono">Explore</div>
+              <nav class="footer-nav">
+                <a href="./index.html" class="footer-nav-link mono">Directory</a>
+                <a href="./guides.html" class="footer-nav-link mono">Guides</a>
+                <a href="./news.html" class="footer-nav-link mono">News</a>
+                <a href="https://thesingularitylabs.xyz" target="_blank" rel="noreferrer noopener" class="footer-nav-link mono">The Singularity Labs</a>
+              </nav>
+            </div>
+          </div>
+          
+          <div class="footer-bottom mono">
+            <div class="footer-copyright">© 2026 The Singularity Labs</div>
+            <div class="footer-stats" id="footerStats">57 tools • curated</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="./app.js?v=2025-12-25"></script>
+  </body>
+</html>
+
+

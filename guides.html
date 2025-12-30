@@ -1,0 +1,1441 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tools Guides & Tutorials | AI Tool Directory</title>
+  <meta name="description" content="Complete guides and tutorials for AI tools. Learn how AI tools work, compare options, and master content creation with AI. Expert-curated educational content.">
+  <meta name="keywords" content="ai tools guides, ai tools tutorials, how to use ai tools, ai tools explained, learn ai tools">
+  <link rel="canonical" href="https://curatedai.net/guides.html">
+  <meta property="og:title" content="AI Tools Guides & Tutorials">
+  <meta property="og:description" content="Complete guides and tutorials for AI tools. Learn how AI tools work, compare options, and master content creation with AI.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://curatedai.net/guides.html">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-theme="light">
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+  <div class="app">
+    <header class="chrome">
+      <div class="chrome-bar">
+        <div class="chrome-pill mono">curated://genai-tools</div>
+        <div class="chrome-spacer"></div>
+        <div class="chrome-links-container">
+          <a class="chrome-link mono" href="/index.html">Directory</a>
+          <a class="chrome-link mono" href="/guides.html">Guides</a>
+          <a class="chrome-link mono" href="/prompts.html">Prompts</a>
+          <a class="chrome-link mono" href="/news.html">News</a>
+        </div>
+        <div class="chrome-toggle" aria-label="Theme toggle">
+          <span class="mono chrome-toggle-label">Light</span>
+          <button id="themeToggle" class="switch" type="button" role="switch" aria-checked="false">
+            <span class="switch-knob" aria-hidden="true"></span>
+          </button>
+          <span class="mono chrome-toggle-label">Dark</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="hero" aria-label="Guides">
+        <nav class="breadcrumb mono" style="margin-bottom: 20px; font-size: 11px; color: var(--page-muted);">
+          <a href="/index.html" style="color: var(--page-muted); text-decoration: none;">Home</a> / 
+          <span style="color: var(--page-text);">Guides</span>
+        </nav>
+        <div class="kicker mono">GUIDES</div>
+        <h1 class="title">AI Tools Guides & Tutorials</h1>
+        <p class="drawer-sub" style="font-size: 14px; line-height: 1.6; margin: 0 auto;">
+          Complete guides and tutorials to help you understand, choose, and master AI tools. Expert-curated educational content answering your questions.
+        </p>
+      </section>
+      
+      <section class="controls" aria-label="Filters" style="margin-top: 40px;">
+        <div class="controls-row">
+          <div class="controls-left">
+            <div class="controls-title mono">CATEGORY</div>
+            <div id="guideChips" class="chips" role="list" aria-label="Category chips">
+              <button class="chip-btn" data-category="all" type="button" aria-pressed="true" data-active="true">All</button>
+              <button class="chip-btn" data-category="general" type="button" aria-pressed="false">General</button>
+              <button class="chip-btn" data-category="text-to-image" type="button" aria-pressed="false">Image</button>
+              <button class="chip-btn" data-category="text-to-video" type="button" aria-pressed="false">Video</button>
+              <button class="chip-btn" data-category="text-to-audio" type="button" aria-pressed="false">Audio</button>
+              <button class="chip-btn" data-category="text-to-3d" type="button" aria-pressed="false">3D</button>
+              <button class="chip-btn" data-category="ide-coding" type="button" aria-pressed="false">IDEs & Coding</button>
+              <button class="chip-btn" data-category="llm" type="button" aria-pressed="false">LLMs</button>
+            </div>
+          </div>
+          <div class="controls-right">
+            <div class="command" style="width: 280px;">
+              <input type="text" id="guideSearch" class="command-input" placeholder="Search guides..." autocomplete="off">
+            </div>
+          </div>
+        </div>
+        <div class="controls-row" style="margin-top: 20px;">
+          <div class="controls-left" style="flex: 1;">
+            <div class="controls-title mono">TOPICS</div>
+            <div id="guideTags" class="chips" role="list" aria-label="Topic tags" style="flex-wrap: wrap;">
+              <button class="chip-btn tag-chip" data-tag="comparison" type="button" aria-pressed="false">Comparison</button>
+              <button class="chip-btn tag-chip" data-tag="tutorial" type="button" aria-pressed="false">Tutorial</button>
+              <button class="chip-btn tag-chip" data-tag="pricing" type="button" aria-pressed="false">Pricing</button>
+              <button class="chip-btn tag-chip" data-tag="beginner" type="button" aria-pressed="false">Beginner</button>
+              <button class="chip-btn tag-chip" data-tag="api" type="button" aria-pressed="false">API</button>
+              <button class="chip-btn tag-chip" data-tag="workflow" type="button" aria-pressed="false">Workflow</button>
+              <button class="chip-btn tag-chip" data-tag="best-practices" type="button" aria-pressed="false">Best Practices</button>
+              <button class="chip-btn tag-chip" data-tag="integration" type="button" aria-pressed="false">Integration</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="results" aria-label="Guides" style="margin-top: 20px;">
+        <div class="results-head">
+          <div class="results-title mono">GUIDES</div>
+          <div id="guideMeta" class="results-meta mono">72 guides • curated</div>
+        </div>
+        <div id="guidesGrid" class="grid" role="list">
+          
+            <button class="card guide-card" type="button" data-category="text-to-image" data-title="how do ai image generators work? a complete guide" data-description="ai image generators create images from text prompts using diffusion models, neural networks, and machine learning. understand the technology behind tools like midjourney, dall-e, and stable diffusion." data-keywords="ai image generator, how ai images work, diffusion models, text to image, ai art generator" onclick="window.location.href='/dist/pages/guides/how-do-ai-image-generators-work.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🎨</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(236, 72, 153, 0.12); color: rgba(236, 72, 153, 1); border: 1px solid rgba(236, 72, 153, 0.3); border-radius: 6px; font-weight: 600;">Image Generation</span>
+                </div>
+                <div class="card-name">How Do AI Image Generators Work? A Complete Guide</div>
+              </div>
+              <div class="card-preview">AI image generators create images from text prompts using diffusion models, neural networks, and machine learning. Understand the technology behind tools like Midjourney, DALL-E, and Stable Diffusion</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="text-to-video" data-title="what is text-to-video ai? complete guide 2026" data-description="text-to-video ai generates video content directly from text descriptions. explore how it works, what makes it different, and the best tools available for creating videos with ai." data-keywords="text to video ai, ai video generator, text to video, video generation ai, ai video creation" onclick="window.location.href='/dist/pages/guides/what-is-text-to-video-ai.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🎬</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(59, 130, 246, 0.12); color: rgba(59, 130, 246, 1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 6px; font-weight: 600;">Video Generation</span>
+                </div>
+                <div class="card-name">What is Text-to-Video AI? Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Text-to-video AI generates video content directly from text descriptions. Explore how it works, what makes it different, and the best tools available for creating videos with AI</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="general" data-title="ai tools vs traditional software: what&#039;s the difference?" data-description="ai tools challenge traditional software like photoshop, premiere pro, and after effects. understand when to use ai tools versus traditional software and how they complement each other." data-keywords="ai tools vs photoshop, ai alternative to adobe, ai vs traditional software, when to use ai tools" onclick="window.location.href='/dist/pages/guides/ai-tools-vs-traditional-software.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📚</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(99, 102, 241, 0.12); color: rgba(99, 102, 241, 1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; font-weight: 600;">General</span>
+                </div>
+                <div class="card-name">AI Tools vs Traditional Software: What&#039;s the Difference?</div>
+              </div>
+              <div class="card-preview">AI tools challenge traditional software like Photoshop, Premiere Pro, and After Effects. Understand when to use AI tools versus traditional software and how they complement each other</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="general" data-title="how to choose the right ai tool: complete guide 2026" data-description="choosing the right ai tool requires understanding your needs, comparing features, and evaluating pricing. find the perfect ai tool for your project with this systematic approach." data-keywords="how to choose ai tool, best ai tool for, ai tool comparison, selecting ai tools" onclick="window.location.href='/dist/pages/guides/how-to-choose-right-ai-tool.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📚</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(99, 102, 241, 0.12); color: rgba(99, 102, 241, 1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; font-weight: 600;">General</span>
+                </div>
+                <div class="card-name">How to Choose the Right AI Tool: Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Choosing the right AI tool requires understanding your needs, comparing features, and evaluating pricing. Find the perfect AI tool for your project with this systematic approach</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="general" data-title="free ai tools that actually work in 2026" data-description="free ai tools for image generation, video creation, music production, and more. a complete guide to high-quality free ai tools that don&#039;t require credit cards or subscriptions." data-keywords="free ai tools, best free ai tools 2025, free ai image generator, free ai video generator, no credit card ai tools" onclick="window.location.href='/dist/pages/guides/best-free-ai-tools-2025.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📚</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(99, 102, 241, 0.12); color: rgba(99, 102, 241, 1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; font-weight: 600;">General</span>
+                </div>
+                <div class="card-name">Free AI Tools That Actually Work in 2026</div>
+              </div>
+              <div class="card-preview">Free AI tools for image generation, video creation, music production, and more. A complete guide to high-quality free AI tools that don&#039;t require credit cards or subscriptions</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="text-to-image" data-title="ai image generators: which one actually delivers in 2026?" data-description="comparing the best ai image generators: nano banana 2.0, seedream 4.5, midjourney, dall-e, stable diffusion, and flux. features, pricing, quality, and use case recommendations." data-keywords="ai image generator comparison, midjourney vs dall-e, best ai image generator, flux vs stable diffusion, ai art generator comparison" onclick="window.location.href='/dist/pages/guides/ai-image-generator-comparison.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🎨</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(236, 72, 153, 0.12); color: rgba(236, 72, 153, 1); border: 1px solid rgba(236, 72, 153, 0.3); border-radius: 6px; font-weight: 600;">Image Generation</span>
+                </div>
+                <div class="card-name">AI Image Generators: Which One Actually Delivers in 2026?</div>
+              </div>
+              <div class="card-preview">Comparing the best AI image generators: Nano Banana 2.0, Seedream 4.5, Midjourney, DALL-E, Stable Diffusion, and Flux. Features, pricing, quality, and use case recommendations</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="general" data-title="how to use ai tools for content creation: complete guide" data-description="using ai tools for content creation: step-by-step workflows for images, videos, music, and written content. practical guidance for integrating ai into your creative process." data-keywords="how to use ai tools, ai content creation, ai tools tutorial, content creation with ai, ai tools for creators" onclick="window.location.href='/dist/pages/guides/how-to-use-ai-tools-for-content-creation.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📚</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(99, 102, 241, 0.12); color: rgba(99, 102, 241, 1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; font-weight: 600;">General</span>
+                </div>
+                <div class="card-name">How to Use AI Tools for Content Creation: Complete Guide</div>
+              </div>
+              <div class="card-preview">Using AI tools for content creation: step-by-step workflows for images, videos, music, and written content. Practical guidance for integrating AI into your creative process</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="general" data-title="ai tools for beginners: complete starter guide 2026" data-description="ai tools for beginners: which tools are easiest to use, what to start with, and how to get the best results. a practical guide for those new to ai content creation." data-keywords="ai tools for beginners, best ai tools for beginners, how to use ai tools, beginner ai tools, ai tools tutorial" onclick="window.location.href='/dist/pages/guides/ai-tools-for-beginners.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📚</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(99, 102, 241, 0.12); color: rgba(99, 102, 241, 1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; font-weight: 600;">General</span>
+                </div>
+                <div class="card-name">AI Tools for Beginners: Complete Starter Guide 2026</div>
+              </div>
+              <div class="card-preview">AI tools for beginners: which tools are easiest to use, what to start with, and how to get the best results. A practical guide for those new to AI content creation</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="general" data-title="ai tools pricing guide 2026: free vs paid" data-description="ai tool pricing explained: comparing free, freemium, and paid options. understanding which pricing model works best for different use cases and budgets." data-keywords="ai tools pricing, free ai tools, ai tools cost, ai tools pricing comparison, how much do ai tools cost" onclick="window.location.href='/dist/pages/guides/ai-tools-pricing-guide.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📚</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(99, 102, 241, 0.12); color: rgba(99, 102, 241, 1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; font-weight: 600;">General</span>
+                </div>
+                <div class="card-name">AI Tools Pricing Guide 2026: Free vs Paid</div>
+              </div>
+              <div class="card-preview">AI tool pricing explained: comparing free, freemium, and paid options. Understanding which pricing model works best for different use cases and budgets</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="general" data-title="ai tools for business: what actually works in 2026" data-description="best ai tools for business: marketing, content creation, productivity, and automation solutions. enterprise ai tools that deliver real business value." data-keywords="ai tools for business, business ai tools, enterprise ai tools, ai tools for marketing, commercial ai tools" onclick="window.location.href='/dist/pages/guides/ai-tools-for-business.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📚</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(99, 102, 241, 0.12); color: rgba(99, 102, 241, 1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; font-weight: 600;">General</span>
+                </div>
+                <div class="card-name">AI Tools for Business: What Actually Works in 2026</div>
+              </div>
+              <div class="card-preview">Best AI tools for business: marketing, content creation, productivity, and automation solutions. Enterprise AI tools that deliver real business value</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="image-to-image" data-title="what is image-to-image ai? complete guide 2026" data-description="image-to-image ai transforms existing images based on text instructions. understanding how ai image editing tools modify, enhance, and transform photos using advanced neural networks." data-keywords="image to image ai, ai image editing, image transformation ai, ai photo editor, image to image generator" onclick="window.location.href='/dist/pages/guides/what-is-image-to-image-ai.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🖼️</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(239, 68, 68, 0.12); color: rgba(239, 68, 68, 1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 6px; font-weight: 600;">Image Editing</span>
+                </div>
+                <div class="card-name">What is Image-to-Image AI? Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Image-to-image AI transforms existing images based on text instructions. Understanding how AI image editing tools modify, enhance, and transform photos using advanced neural networks</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="image-to-video" data-title="what is image-to-video ai? complete guide 2026" data-description="image-to-video ai animates still images into video sequences. exploring how ai video generators create motion, effects, and dynamic scenes from static photos." data-keywords="image to video ai, ai video generator, image to video, photo to video ai, animate image ai" onclick="window.location.href='/dist/pages/guides/what-is-image-to-video-ai.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🎥</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(14, 165, 233, 0.12); color: rgba(14, 165, 233, 1); border: 1px solid rgba(14, 165, 233, 0.3); border-radius: 6px; font-weight: 600;">Video Generation</span>
+                </div>
+                <div class="card-name">What is Image-to-Video AI? Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Image-to-video AI animates still images into video sequences. Exploring how AI video generators create motion, effects, and dynamic scenes from static photos</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="text-to-audio" data-title="what is text-to-audio ai? complete guide 2026" data-description="text-to-audio ai generates voice, music, and sound effects from text descriptions. how ai audio tools create speech, music, and audio content automatically." data-keywords="text to audio ai, ai voice generator, ai music generator, text to speech ai, ai audio generation" onclick="window.location.href='/dist/pages/guides/what-is-text-to-audio-ai.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🎵</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(251, 146, 60, 0.12); color: rgba(251, 146, 60, 1); border: 1px solid rgba(251, 146, 60, 0.3); border-radius: 6px; font-weight: 600;">Audio Generation</span>
+                </div>
+                <div class="card-name">What is Text-to-Audio AI? Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Text-to-audio AI generates voice, music, and sound effects from text descriptions. How AI audio tools create speech, music, and audio content automatically</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="text-to-3d" data-title="what is text-to-3d ai? complete guide 2026" data-description="text-to-3d ai generates 3d models from text descriptions. how ai 3d tools create meshes, environments, and assets for games, design, and visualization." data-keywords="text to 3d ai, ai 3d generator, text to 3d model, ai 3d modeling, 3d generation ai" onclick="window.location.href='/dist/pages/guides/what-is-text-to-3d-ai.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🎲</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(168, 85, 247, 0.12); color: rgba(168, 85, 247, 1); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 6px; font-weight: 600;">3D Generation</span>
+                </div>
+                <div class="card-name">What is Text-to-3D AI? Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Text-to-3D AI generates 3D models from text descriptions. How AI 3D tools create meshes, environments, and assets for games, design, and visualization</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="image-to-3d" data-title="what is image-to-3d ai? complete guide 2026" data-description="image-to-3d ai converts photos into 3d models. how ai 3d reconstruction tools create meshes from images for games, visualization, and design applications." data-keywords="image to 3d ai, photo to 3d, ai 3d reconstruction, image to 3d model, photo to 3d converter" onclick="window.location.href='/dist/pages/guides/what-is-image-to-3d-ai.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📦</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(139, 92, 246, 0.12); color: rgba(139, 92, 246, 1); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 6px; font-weight: 600;">3D Generation</span>
+                </div>
+                <div class="card-name">What is Image-to-3D AI? Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Image-to-3D AI converts photos into 3D models. How AI 3D reconstruction tools create meshes from images for games, visualization, and design applications</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="video-to-video" data-title="what is video-to-video ai? complete guide 2026" data-description="video-to-video ai transforms existing videos based on instructions. how ai video editing tools enhance, modify, and apply effects to video content automatically." data-keywords="video to video ai, ai video editing, video transformation ai, ai video effects, video enhancement ai" onclick="window.location.href='/dist/pages/guides/what-is-video-to-video-ai.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">✂️</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(245, 158, 11, 0.12); color: rgba(245, 158, 11, 1); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 6px; font-weight: 600;">Video Editing</span>
+                </div>
+                <div class="card-name">What is Video-to-Video AI? Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Video-to-video AI transforms existing videos based on instructions. How AI video editing tools enhance, modify, and apply effects to video content automatically</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="text-to-audio" data-title="what is ai voice generation? complete guide 2026" data-description="ai voice generation creates natural-sounding speech from text. how ai voice synthesis tools generate voiceovers, narration, and spoken content for various applications." data-keywords="ai voice generation, text to speech ai, ai voice synthesis, voice cloning ai, ai voiceover" onclick="window.location.href='/dist/pages/guides/what-is-ai-voice-generation.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🎵</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(251, 146, 60, 0.12); color: rgba(251, 146, 60, 1); border: 1px solid rgba(251, 146, 60, 0.3); border-radius: 6px; font-weight: 600;">Audio Generation</span>
+                </div>
+                <div class="card-name">What is AI Voice Generation? Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">AI voice generation creates natural-sounding speech from text. How AI voice synthesis tools generate voiceovers, narration, and spoken content for various applications</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="text-to-audio" data-title="what is ai music generation? complete guide 2026" data-description="ai music generation creates original music from text descriptions. how ai music tools compose melodies, harmonies, and complete songs automatically." data-keywords="ai music generation, ai music generator, text to music, ai song generator, ai music composer" onclick="window.location.href='/dist/pages/guides/what-is-ai-music-generation.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🎵</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(251, 146, 60, 0.12); color: rgba(251, 146, 60, 1); border: 1px solid rgba(251, 146, 60, 0.3); border-radius: 6px; font-weight: 600;">Audio Generation</span>
+                </div>
+                <div class="card-name">What is AI Music Generation? Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">AI music generation creates original music from text descriptions. How AI music tools compose melodies, harmonies, and complete songs automatically</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="text-to-3d" data-title="what is ai 3d generation? complete guide 2026" data-description="ai 3d generation creates 3d models from text or images. how ai 3d tools generate meshes, environments, and assets for games, design, and visualization workflows." data-keywords="ai 3d generation, ai 3d generator, ai 3d modeling, 3d generation ai, ai 3d creation" onclick="window.location.href='/dist/pages/guides/what-is-ai-3d-generation.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🎲</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(168, 85, 247, 0.12); color: rgba(168, 85, 247, 1); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 6px; font-weight: 600;">3D Generation</span>
+                </div>
+                <div class="card-name">What is AI 3D Generation? Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">AI 3D generation creates 3D models from text or images. How AI 3D tools generate meshes, environments, and assets for games, design, and visualization workflows</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="video-to-video" data-title="what is ai video editing? complete guide 2026" data-description="ai video editing automates video editing tasks with minimal manual work. how ai video tools enhance, transform, and edit video content efficiently." data-keywords="ai video editing, automated video editing, ai video editor, ai video enhancement, smart video editing" onclick="window.location.href='/dist/pages/guides/what-is-ai-video-editing.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">✂️</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(245, 158, 11, 0.12); color: rgba(245, 158, 11, 1); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 6px; font-weight: 600;">Video Editing</span>
+                </div>
+                <div class="card-name">What is AI Video Editing? Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">AI video editing automates video editing tasks with minimal manual work. How AI video tools enhance, transform, and edit video content efficiently</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="image-to-image" data-title="what is ai image editing? complete guide 2026" data-description="ai image editing transforms photos automatically using advanced neural networks. how ai image tools modify, enhance, and edit images with precision and speed." data-keywords="ai image editing, ai photo editor, automated image editing, ai image enhancement, smart photo editing" onclick="window.location.href='/dist/pages/guides/what-is-ai-image-editing.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🖼️</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(239, 68, 68, 0.12); color: rgba(239, 68, 68, 1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 6px; font-weight: 600;">Image Editing</span>
+                </div>
+                <div class="card-name">What is AI Image Editing? Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">AI image editing transforms photos automatically using advanced neural networks. How AI image tools modify, enhance, and edit images with precision and speed</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="text-to-image" data-title="how to use text-to-image ai tools: complete guide 2026" data-description="using text-to-image ai tools effectively: prompt engineering, understanding model capabilities, and creating professional images. step-by-step workflows and expert tips." data-keywords="how to use text to image ai, text to image guide, ai image generation tutorial, prompt engineering, ai art creation" onclick="window.location.href='/dist/pages/guides/how-to-use-text-to-image-ai-tools.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🎨</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(236, 72, 153, 0.12); color: rgba(236, 72, 153, 1); border: 1px solid rgba(236, 72, 153, 0.3); border-radius: 6px; font-weight: 600;">Image Generation</span>
+                </div>
+                <div class="card-name">How to Use Text-to-Image AI Tools: Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Using text-to-image AI tools effectively: prompt engineering, understanding model capabilities, and creating professional images. Step-by-step workflows and expert tips</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="text-to-video" data-title="how to use text-to-video ai tools: complete guide 2026" data-description="text-to-video ai workflows: prompt engineering for video, motion control techniques, and creating professional video content efficiently. step-by-step guidance." data-keywords="how to use text to video ai, text to video tutorial, ai video generation guide, video prompt engineering, create ai videos" onclick="window.location.href='/dist/pages/guides/how-to-use-text-to-video-ai-tools.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🎬</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(59, 130, 246, 0.12); color: rgba(59, 130, 246, 1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 6px; font-weight: 600;">Video Generation</span>
+                </div>
+                <div class="card-name">How to Use Text-to-Video AI Tools: Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Text-to-video AI workflows: prompt engineering for video, motion control techniques, and creating professional video content efficiently. Step-by-step guidance</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="text-to-audio" data-title="how to use text-to-audio ai tools: complete guide 2026" data-description="text-to-audio ai tools for music, voice, and sound generation. prompt engineering, model capabilities, and expert workflows for creating professional audio content." data-keywords="how to use text to audio ai, text to audio tutorial, ai music generation guide, ai voice generation, audio prompt engineering" onclick="window.location.href='/dist/pages/guides/how-to-use-text-to-audio-ai-tools.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🎵</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(251, 146, 60, 0.12); color: rgba(251, 146, 60, 1); border: 1px solid rgba(251, 146, 60, 0.3); border-radius: 6px; font-weight: 600;">Audio Generation</span>
+                </div>
+                <div class="card-name">How to Use Text-to-Audio AI Tools: Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Text-to-audio AI tools for music, voice, and sound generation. Prompt engineering, model capabilities, and expert workflows for creating professional audio content</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="image-to-image" data-title="how to use image-to-image ai tools: complete guide 2026" data-description="image-to-image ai tools for editing, transformation, and enhancement. using reference images, controlling transformations, and creating professional edits with step-by-step workflows." data-keywords="how to use image to image ai, image to image tutorial, ai image editing guide, style transfer, image transformation" onclick="window.location.href='/dist/pages/guides/how-to-use-image-to-image-ai-tools.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🖼️</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(239, 68, 68, 0.12); color: rgba(239, 68, 68, 1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 6px; font-weight: 600;">Image Editing</span>
+                </div>
+                <div class="card-name">How to Use Image-to-Image AI Tools: Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Image-to-image AI tools for editing, transformation, and enhancement. Using reference images, controlling transformations, and creating professional edits with step-by-step workflows</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="image-to-video" data-title="how to use image-to-video ai tools: complete guide 2026" data-description="image-to-video ai tools for animating static images. motion control, camera techniques, and expert workflows for creating professional video content from photos." data-keywords="how to use image to video ai, image to video tutorial, animate images, ai video animation, image animation guide" onclick="window.location.href='/dist/pages/guides/how-to-use-image-to-video-ai-tools.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🎥</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(14, 165, 233, 0.12); color: rgba(14, 165, 233, 1); border: 1px solid rgba(14, 165, 233, 0.3); border-radius: 6px; font-weight: 600;">Video Generation</span>
+                </div>
+                <div class="card-name">How to Use Image-to-Video AI Tools: Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Image-to-video AI tools for animating static images. Motion control, camera techniques, and expert workflows for creating professional video content from photos</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="text-to-3d" data-title="how to use text-to-3d ai tools: complete guide 2026" data-description="text-to-3d ai tools for 3d model generation. prompt engineering, model formats, and step-by-step workflows for creating professional 3d assets." data-keywords="how to use text to 3d ai, text to 3d tutorial, 3d model generation guide, ai 3d creation, 3d asset generation" onclick="window.location.href='/dist/pages/guides/how-to-use-text-to-3d-ai-tools.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🎲</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(168, 85, 247, 0.12); color: rgba(168, 85, 247, 1); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 6px; font-weight: 600;">3D Generation</span>
+                </div>
+                <div class="card-name">How to Use Text-to-3D AI Tools: Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Text-to-3D AI tools for 3D model generation. Prompt engineering, model formats, and step-by-step workflows for creating professional 3D assets</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="general" data-title="how professionals reduce ai tool overload" data-description="proven strategies professionals use to manage ai tool overload. building focused tool stacks, establishing evaluation criteria, and maintaining productive workflows without tool fatigue." data-keywords="ai tool overload, reduce ai tool fatigue, professional ai tool stack, manage ai tools, ai tool selection strategy" onclick="window.location.href='/dist/pages/guides/how-professionals-reduce-ai-tool-overload.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📚</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(99, 102, 241, 0.12); color: rgba(99, 102, 241, 1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; font-weight: 600;">General</span>
+                </div>
+                <div class="card-name">How Professionals Reduce AI Tool Overload</div>
+              </div>
+              <div class="card-preview">Proven strategies professionals use to manage AI tool overload. Building focused tool stacks, establishing evaluation criteria, and maintaining productive workflows without tool fatigue</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="general" data-title="what makes an ai tool production-ready? complete guide 2026" data-description="technical criteria that define production-ready ai tools. evaluating reliability, api quality, documentation, and infrastructure before deploying ai tools in professional workflows." data-keywords="production-ready ai tools, ai tool reliability, ai tool api quality, production ai tools, enterprise ai tools" onclick="window.location.href='/dist/pages/guides/what-makes-ai-tool-production-ready.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📚</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(99, 102, 241, 0.12); color: rgba(99, 102, 241, 1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; font-weight: 600;">General</span>
+                </div>
+                <div class="card-name">What Makes an AI Tool Production-Ready? Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Technical criteria that define production-ready AI tools. Evaluating reliability, API quality, documentation, and infrastructure before deploying AI tools in professional workflows</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="general" data-title="ai tools that survived real workflows: production-tested tools 2026" data-description="ai tools that have proven themselves in real professional workflows. which tools survived 6+ months of daily use, why they succeeded, and what makes them reliable for production work." data-keywords="production ai tools, reliable ai tools, proven ai tools, workflow-tested ai tools, enterprise ai tools" onclick="window.location.href='/dist/pages/guides/ai-tools-that-survived-real-workflows.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📚</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(99, 102, 241, 0.12); color: rgba(99, 102, 241, 1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; font-weight: 600;">General</span>
+                </div>
+                <div class="card-name">AI Tools That Survived Real Workflows: Production-Tested Tools 2026</div>
+              </div>
+              <div class="card-preview">AI tools that have proven themselves in real professional workflows. Which tools survived 6+ months of daily use, why they succeeded, and what makes them reliable for production work</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="general" data-title="what are ai prompts? complete guide 2026" data-description="ai prompts explained: what they are, how they work, and how to use them effectively. different types of prompts for image generation, video creation, audio production, and 3d modeling." data-keywords="ai prompts, what are ai prompts, prompt engineering, ai prompt guide, how ai prompts work, prompt library" onclick="window.location.href='/dist/pages/guides/what-are-ai-prompts.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📚</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(99, 102, 241, 0.12); color: rgba(99, 102, 241, 1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; font-weight: 600;">General</span>
+                </div>
+                <div class="card-name">What are AI Prompts? Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">AI prompts explained: what they are, how they work, and how to use them effectively. Different types of prompts for image generation, video creation, audio production, and 3D modeling</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="general" data-title="how to write effective ai prompts: complete guide 2026" data-description="writing effective ai prompts: step-by-step guidance, proven techniques, and real-world examples. prompt engineering best practices for image generation, video creation, audio production, and 3d modeling." data-keywords="how to write ai prompts, effective ai prompts, prompt engineering guide, ai prompt writing, prompt best practices, prompt techniques" onclick="window.location.href='/dist/pages/guides/how-to-write-effective-ai-prompts.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📚</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(99, 102, 241, 0.12); color: rgba(99, 102, 241, 1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; font-weight: 600;">General</span>
+                </div>
+                <div class="card-name">How to Write Effective AI Prompts: Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Writing effective AI prompts: step-by-step guidance, proven techniques, and real-world examples. Prompt engineering best practices for image generation, video creation, audio production, and 3D modeling</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="ide-coding" data-title="what is ai coding? complete guide 2026" data-description="ai coding explained: how ai-powered ides and coding assistants work and transform software development. the technology behind tools like cursor, google antigravity, and github copilot." data-keywords="ai coding, ai coding tools, ai ide, ai code editor, ai coding assistant, ai programming" onclick="window.location.href='/dist/pages/guides/what-is-ai-coding.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">💻</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(34, 197, 94, 0.12); color: rgba(34, 197, 94, 1); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 6px; font-weight: 600;">IDEs & Coding</span>
+                </div>
+                <div class="card-name">What is AI Coding? Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">AI coding explained: how AI-powered IDEs and coding assistants work and transform software development. The technology behind tools like Cursor, Google Antigravity, and GitHub Copilot</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="ide-coding" data-title="how to use ai coding tools: complete guide 2026" data-description="using ai coding tools effectively: step-by-step guides for cursor, google antigravity, github copilot, and other ai-powered development tools. best practices and workflows." data-keywords="how to use ai coding tools, ai coding tutorial, cursor tutorial, github copilot guide, ai coding best practices" onclick="window.location.href='/dist/pages/guides/how-to-use-ai-coding-tools.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">💻</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(34, 197, 94, 0.12); color: rgba(34, 197, 94, 1); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 6px; font-weight: 600;">IDEs & Coding</span>
+                </div>
+                <div class="card-name">How to Use AI Coding Tools: Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Using AI coding tools effectively: step-by-step guides for Cursor, Google Antigravity, GitHub Copilot, and other AI-powered development tools. Best practices and workflows</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="ide-coding" data-title="ai coding tools: which ones actually help developers?" data-description="best ai coding tools compared: cursor, google antigravity, github copilot, replit, and more. features, pricing, use cases, and recommendations for developers." data-keywords="best ai coding tools, best ai ide, best code editor ai, cursor vs copilot, ai coding tools comparison" onclick="window.location.href='/dist/pages/guides/best-ai-coding-tools.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">💻</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(34, 197, 94, 0.12); color: rgba(34, 197, 94, 1); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 6px; font-weight: 600;">IDEs & Coding</span>
+                </div>
+                <div class="card-name">AI Coding Tools: Which Ones Actually Help Developers?</div>
+              </div>
+              <div class="card-preview">Best AI coding tools compared: Cursor, Google Antigravity, GitHub Copilot, Replit, and more. Features, pricing, use cases, and recommendations for developers</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="text-to-video" data-title="text-to-video ai tools: which ones deliver in 2026?" data-description="comparing the best text-to-video ai tools: veo 3.1, sora 2, kling 2.6 pro, runway, pika, and luma dream machine. features, quality, pricing, and use case recommendations for 2026." data-keywords="best text to video ai, best video generator, text to video ai tools, video generation ai, best ai video tools 2025" onclick="window.location.href='/dist/pages/guides/best-text-to-video-ai-tools-2025.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🎬</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(59, 130, 246, 0.12); color: rgba(59, 130, 246, 1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 6px; font-weight: 600;">Video Generation</span>
+                </div>
+                <div class="card-name">Text-to-Video AI Tools: Which Ones Deliver in 2026?</div>
+              </div>
+              <div class="card-preview">Comparing the best text-to-video AI tools: Veo 3.1, Sora 2, Kling 2.6 Pro, Runway, Pika, and Luma Dream Machine. Features, quality, pricing, and use case recommendations for 2026</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="text-to-audio" data-title="ai music production tools: what producers actually use" data-description="discover the best ai tools for music production: suno, stable audio 2.5, and other ai music generators. features, quality, pricing, and workflow recommendations for creating music with ai." data-keywords="best ai music tools, ai music production, ai song generator, best ai tools for music, ai music creation" onclick="window.location.href='/dist/pages/guides/best-ai-tools-for-music-production.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🎵</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(251, 146, 60, 0.12); color: rgba(251, 146, 60, 1); border: 1px solid rgba(251, 146, 60, 0.3); border-radius: 6px; font-weight: 600;">Audio Generation</span>
+                </div>
+                <div class="card-name">AI Music Production Tools: What Producers Actually Use</div>
+              </div>
+              <div class="card-preview">Discover the best AI tools for music production: Suno, Stable Audio 2.5, and other AI music generators. Features, quality, pricing, and workflow recommendations for creating music with AI</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="general" data-title="how to integrate ai tools via api: complete guide 2026" data-description="complete guide to integrating ai tools via api: authentication, endpoints, rate limits, error handling, and production workflows. code examples and best practices for 2026." data-keywords="ai tools api integration, how to integrate ai tools, ai api guide, ai tools api tutorial, programmatic ai tools" onclick="window.location.href='/dist/pages/guides/how-to-integrate-ai-tools-via-api.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📚</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(99, 102, 241, 0.12); color: rgba(99, 102, 241, 1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; font-weight: 600;">General</span>
+                </div>
+                <div class="card-name">How to Integrate AI Tools via API: Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Complete guide to integrating AI tools via API: authentication, endpoints, rate limits, error handling, and production workflows. Code examples and best practices for 2026</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="general" data-title="ai tool cost optimization: complete guide 2026" data-description="complete guide to optimizing ai tool costs: pricing analysis, usage optimization, cost reduction strategies, and roi calculation. practical techniques for reducing ai tool expenses while maintaining quality." data-keywords="ai tool cost optimization, reduce ai tool costs, ai tool pricing, ai tool cost reduction, optimize ai tool spending" onclick="window.location.href='/dist/pages/guides/ai-tool-cost-optimization.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📚</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(99, 102, 241, 0.12); color: rgba(99, 102, 241, 1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; font-weight: 600;">General</span>
+                </div>
+                <div class="card-name">AI Tool Cost Optimization: Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Complete guide to optimizing AI tool costs: pricing analysis, usage optimization, cost reduction strategies, and ROI calculation. Practical techniques for reducing AI tool expenses while maintaining quality</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="general" data-title="ai marketing tools: what campaigns actually use in 2026" data-description="best ai tools for marketing: video ads with runway and veo 3.1, social graphics with nano banana pro and midjourney, voiceovers with elevenlabs, and complete campaign workflows. practical marketing use cases with specific tool recommendations." data-keywords="best ai tools for marketing, ai marketing tools, ai tools for social media, ai video ads, ai marketing graphics, marketing automation ai" onclick="window.location.href='/dist/pages/guides/best-ai-tools-for-marketing.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📚</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(99, 102, 241, 0.12); color: rgba(99, 102, 241, 1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; font-weight: 600;">General</span>
+                </div>
+                <div class="card-name">AI Marketing Tools: What Campaigns Actually Use in 2026</div>
+              </div>
+              <div class="card-preview">Best AI tools for marketing: video ads with Runway and Veo 3.1, social graphics with Nano Banana Pro and Midjourney, voiceovers with ElevenLabs, and complete campaign workflows. Practical marketing use cases with specific tool recommendations</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="text-to-image" data-title="text-to-image ai tools: which one actually delivers in 2026?" data-description="real-world comparison of text-to-image ai tools: gpt-image 1.5 for prompt adherence, flux models for quality, midjourney for artistic style, stable diffusion for control, and more. find which tool actually delivers for your workflow." data-keywords="text to image ai tools, best text to image ai, text to image comparison, ai image generation tools, text to image ai 2025" onclick="window.location.href='/dist/pages/guides/text-to-image-ai-tools-which-one-actually-delivers.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🎨</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(236, 72, 153, 0.12); color: rgba(236, 72, 153, 1); border: 1px solid rgba(236, 72, 153, 0.3); border-radius: 6px; font-weight: 600;">Image Generation</span>
+                </div>
+                <div class="card-name">Text-to-Image AI Tools: Which One Actually Delivers in 2026?</div>
+              </div>
+              <div class="card-preview">Real-world comparison of text-to-image AI tools: GPT-Image 1.5 for prompt adherence, Flux models for quality, Midjourney for artistic style, Stable Diffusion for control, and more. Find which tool actually delivers for your workflow</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="image-to-video" data-title="image-to-video ai tools: which ones actually deliver in 2026?" data-description="real-world comparison of image-to-video ai tools: kling 2.6 pro for cinematic quality with audio, veo 3.1 for reference control, sora 2 for physics realism, runway for professional workflows, and more. find which tool actually delivers for your animation needs." data-keywords="image to video ai, best image to video ai tools, image to video generator, photo to video ai, animate image ai, image animation ai" onclick="window.location.href='/dist/pages/guides/best-image-to-video-ai-tools-2025.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🎥</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(14, 165, 233, 0.12); color: rgba(14, 165, 233, 1); border: 1px solid rgba(14, 165, 233, 0.3); border-radius: 6px; font-weight: 600;">Video Generation</span>
+                </div>
+                <div class="card-name">Image-to-Video AI Tools: Which Ones Actually Deliver in 2026?</div>
+              </div>
+              <div class="card-preview">Real-world comparison of image-to-video AI tools: Kling 2.6 Pro for cinematic quality with audio, Veo 3.1 for reference control, Sora 2 for physics realism, Runway for professional workflows, and more. Find which tool actually delivers for your animation needs</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="text-to-audio" data-title="what are the best text-to-audio ai tools?" data-description="real-world comparison of text-to-audio ai tools: suno for music generation, elevenlabs for voice synthesis, udio for music creation, and more. find which tool actually delivers for your audio needs." data-keywords="best text to audio ai tools, text to audio ai, text to music ai, text to speech ai, ai voice generator, ai music generator" onclick="window.location.href='/dist/pages/guides/what-are-the-best-text-to-audio-ai-tools.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🎵</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(251, 146, 60, 0.12); color: rgba(251, 146, 60, 1); border: 1px solid rgba(251, 146, 60, 0.3); border-radius: 6px; font-weight: 600;">Audio Generation</span>
+                </div>
+                <div class="card-name">What are the best text-to-audio AI tools?</div>
+              </div>
+              <div class="card-preview">Real-world comparison of text-to-audio AI tools: Suno for music generation, ElevenLabs for voice synthesis, Udio for music creation, and more. Find which tool actually delivers for your audio needs</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="text-to-3d" data-title="what are the best text-to-3d ai tools?" data-description="real-world comparison of text-to-3d ai tools: meshy ai for fast iteration, tripo ai for reliable quality, 3dfy.ai for product assets, spline for interactive design, and more. find which tool actually delivers for your 3d needs." data-keywords="best text to 3d ai tools, text to 3d ai, text to 3d generator, ai 3d model generator, text to mesh ai, 3d asset generation" onclick="window.location.href='/dist/pages/guides/what-are-the-best-text-to-3d-ai-tools.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🎲</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(168, 85, 247, 0.12); color: rgba(168, 85, 247, 1); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 6px; font-weight: 600;">3D Generation</span>
+                </div>
+                <div class="card-name">What are the best text-to-3D AI tools?</div>
+              </div>
+              <div class="card-preview">Real-world comparison of text-to-3D AI tools: Meshy AI for fast iteration, Tripo AI for reliable quality, 3DFY.ai for product assets, Spline for interactive design, and more. Find which tool actually delivers for your 3D needs</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="image-to-3d" data-title="what are the best image-to-3d ai tools?" data-description="real-world comparison of image-to-3d ai tools: meshy ai for fast conversion, tripo ai for reliable quality, sam3d for segmentation-aware reconstruction, kaedim for professional workflows, and more. find which tool actually delivers for your 3d conversion needs." data-keywords="best image to 3d ai tools, image to 3d ai, photo to 3d ai, image to 3d converter, ai 3d reconstruction, photo to mesh ai" onclick="window.location.href='/dist/pages/guides/what-are-the-best-image-to-3d-ai-tools.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📦</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(139, 92, 246, 0.12); color: rgba(139, 92, 246, 1); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 6px; font-weight: 600;">3D Generation</span>
+                </div>
+                <div class="card-name">What are the best image-to-3D AI tools?</div>
+              </div>
+              <div class="card-preview">Real-world comparison of image-to-3D AI tools: Meshy AI for fast conversion, Tripo AI for reliable quality, SAM3D for segmentation-aware reconstruction, Kaedim for professional workflows, and more. Find which tool actually delivers for your 3D conversion needs</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="video-to-video" data-title="what are the best video-to-video ai tools?" data-description="real-world comparison of video-to-video ai tools: runway gen-3 for professional editing, bria video eraser for object removal, lightx recamera for style transfer, and more. find which tool actually delivers for your video transformation needs." data-keywords="best video to video ai tools, video to video ai, video style transfer, video editing ai, ai video transformation, video enhancement ai" onclick="window.location.href='/dist/pages/guides/what-are-the-best-video-to-video-ai-tools.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">✂️</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(245, 158, 11, 0.12); color: rgba(245, 158, 11, 1); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 6px; font-weight: 600;">Video Editing</span>
+                </div>
+                <div class="card-name">What are the best video-to-video AI tools?</div>
+              </div>
+              <div class="card-preview">Real-world comparison of video-to-video AI tools: Runway Gen-3 for professional editing, BRIA Video Eraser for object removal, LightX Recamera for style transfer, and more. Find which tool actually delivers for your video transformation needs</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="general" data-title="what are the best ai tools for design?" data-description="real-world comparison of ai design tools: canva for social graphics, adobe firefly for brand assets, recraft for design workflows, ideogram for text-in-image designs, and more. find which tool actually delivers for your design needs." data-keywords="best ai tools for design, ai design tools, ai graphic design, ai logo generator, ai brand assets, design ai tools" onclick="window.location.href='/dist/pages/guides/what-are-the-best-ai-tools-for-design.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📚</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(99, 102, 241, 0.12); color: rgba(99, 102, 241, 1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; font-weight: 600;">General</span>
+                </div>
+                <div class="card-name">What are the best AI tools for design?</div>
+              </div>
+              <div class="card-preview">Real-world comparison of AI design tools: Canva for social graphics, Adobe Firefly for brand assets, Recraft for design workflows, Ideogram for text-in-image designs, and more. Find which tool actually delivers for your design needs</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="llm" data-title="which llms actually deliver in 2026?" data-description="comprehensive comparison of the best large language models in 2026 including chatgpt, claude, gemini, grok, deepseek, llama, and more. compare features, pricing, and use cases to find the right llm for your needs." data-keywords="best llm 2025, best large language model, chatgpt vs claude vs gemini, which llm to use, llm comparison 2025" onclick="window.location.href='/dist/pages/guides/what-are-the-best-llms-in-2025.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">💬</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(113, 113, 122, 0.12); color: rgba(113, 113, 122, 1); border: 1px solid rgba(113, 113, 122, 0.3); border-radius: 6px; font-weight: 600;">LLMs</span>
+                </div>
+                <div class="card-name">Which LLMs Actually Deliver in 2026?</div>
+              </div>
+              <div class="card-preview">Comprehensive comparison of the best large language models in 2026 including ChatGPT, Claude, Gemini, Grok, DeepSeek, Llama, and more. Compare features, pricing, and use cases to find the right LLM for your needs</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="llm" data-title="large language models explained: how they actually work" data-description="complete guide to large language models (llms). learn how llms work, their architecture, training process, capabilities, limitations, and real-world applications. understand the technology behind chatgpt, claude, gemini, and other ai models." data-keywords="what is llm, large language model, llm explained, how llms work, llm guide, language model ai" onclick="window.location.href='/dist/pages/guides/what-is-an-llm-complete-guide.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">💬</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(113, 113, 122, 0.12); color: rgba(113, 113, 122, 1); border: 1px solid rgba(113, 113, 122, 0.3); border-radius: 6px; font-weight: 600;">LLMs</span>
+                </div>
+                <div class="card-name">Large Language Models Explained: How They Actually Work</div>
+              </div>
+              <div class="card-preview">Complete guide to Large Language Models (LLMs). Learn how LLMs work, their architecture, training process, capabilities, limitations, and real-world applications. Understand the technology behind ChatGPT, Claude, Gemini, and other AI models</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="llm" data-title="choosing the right llm: decision framework that actually works" data-description="complete guide to choosing the right large language model for your needs. compare chatgpt, claude, gemini, and other llms based on use case, pricing, features, and requirements. make informed decisions with our comprehensive comparison." data-keywords="how to choose llm, which llm to use, llm comparison, best llm for, choosing large language model" onclick="window.location.href='/dist/pages/guides/how-to-choose-the-right-llm.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">💬</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(113, 113, 122, 0.12); color: rgba(113, 113, 122, 1); border: 1px solid rgba(113, 113, 122, 0.3); border-radius: 6px; font-weight: 600;">LLMs</span>
+                </div>
+                <div class="card-name">Choosing the Right LLM: Decision Framework That Actually Works</div>
+              </div>
+              <div class="card-preview">Complete guide to choosing the right large language model for your needs. Compare ChatGPT, Claude, Gemini, and other LLMs based on use case, pricing, features, and requirements. Make informed decisions with our comprehensive comparison</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="llm" data-title="llm mastery: practical techniques that get results" data-description="complete guide to using large language models effectively. learn prompt engineering, api integration, best practices, and practical workflows for chatgpt, claude, gemini, and other llms." data-keywords="how to use llm, llm guide, prompt engineering, llm api integration, using large language models" onclick="window.location.href='/dist/pages/guides/how-to-use-llms-complete-guide.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">💬</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(113, 113, 122, 0.12); color: rgba(113, 113, 122, 1); border: 1px solid rgba(113, 113, 122, 0.3); border-radius: 6px; font-weight: 600;">LLMs</span>
+                </div>
+                <div class="card-name">LLM Mastery: Practical Techniques That Get Results</div>
+              </div>
+              <div class="card-preview">Complete guide to using large language models effectively. Learn prompt engineering, API integration, best practices, and practical workflows for ChatGPT, Claude, Gemini, and other LLMs</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="llm" data-title="best llm for coding: what developers actually use" data-description="complete guide to the best large language models for coding in 2026. compare chatgpt, claude, deepseek, and other llms for code generation, debugging, and software development tasks." data-keywords="best llm for coding, coding llm, code generation ai, best ai for programming, llm code generation" onclick="window.location.href='/dist/pages/guides/best-llm-for-coding-2025.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">💬</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(113, 113, 122, 0.12); color: rgba(113, 113, 122, 1); border: 1px solid rgba(113, 113, 122, 0.3); border-radius: 6px; font-weight: 600;">LLMs</span>
+                </div>
+                <div class="card-name">Best LLM for Coding: What Developers Actually Use</div>
+              </div>
+              <div class="card-preview">Complete guide to the best large language models for coding in 2026. Compare ChatGPT, Claude, DeepSeek, and other LLMs for code generation, debugging, and software development tasks</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="llm" data-title="open source vs proprietary llms: what actually matters" data-description="complete comparison of open source and proprietary large language models. compare llama, deepseek, mistral vs chatgpt, claude, gemini. understand trade-offs, costs, and when to choose each approach." data-keywords="open source llm vs proprietary, open source vs closed source llm, llm comparison, should i use open source llm" onclick="window.location.href='/dist/pages/guides/open-source-vs-proprietary-llms.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">💬</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(113, 113, 122, 0.12); color: rgba(113, 113, 122, 1); border: 1px solid rgba(113, 113, 122, 0.3); border-radius: 6px; font-weight: 600;">LLMs</span>
+                </div>
+                <div class="card-name">Open Source vs Proprietary LLMs: What Actually Matters</div>
+              </div>
+              <div class="card-preview">Complete comparison of open source and proprietary large language models. Compare Llama, DeepSeek, Mistral vs ChatGPT, Claude, Gemini. Understand trade-offs, costs, and when to choose each approach</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="llm" data-title="llm api integration: complete developer guide" data-description="complete guide to integrating large language model apis. learn authentication, request formatting, error handling, and best practices for chatgpt, claude, gemini, and other llm apis." data-keywords="llm api integration, chatgpt api, claude api, gemini api, llm api guide, how to use llm api" onclick="window.location.href='/dist/pages/guides/llm-api-integration-guide.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">💬</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(113, 113, 122, 0.12); color: rgba(113, 113, 122, 1); border: 1px solid rgba(113, 113, 122, 0.3); border-radius: 6px; font-weight: 600;">LLMs</span>
+                </div>
+                <div class="card-name">LLM API Integration: Complete Developer Guide</div>
+              </div>
+              <div class="card-preview">Complete guide to integrating large language model APIs. Learn authentication, request formatting, error handling, and best practices for ChatGPT, Claude, Gemini, and other LLM APIs</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="llm" data-title="best free llms: what actually works without paying" data-description="complete guide to the best free large language models in 2026. compare free tiers, open-source options, and freemium models from chatgpt, claude, gemini, deepseek, and llama." data-keywords="best free llm, free large language model, free chatgpt alternative, free llm 2025, open source llm" onclick="window.location.href='/dist/pages/guides/best-free-llms-2025.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">💬</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(113, 113, 122, 0.12); color: rgba(113, 113, 122, 1); border: 1px solid rgba(113, 113, 122, 0.3); border-radius: 6px; font-weight: 600;">LLMs</span>
+                </div>
+                <div class="card-name">Best Free LLMs: What Actually Works Without Paying</div>
+              </div>
+              <div class="card-preview">Complete guide to the best free large language models in 2026. Compare free tiers, open-source options, and freemium models from ChatGPT, Claude, Gemini, DeepSeek, and Llama</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="llm" data-title="best llm for writing: what writers actually use" data-description="complete guide to the best large language models for writing in 2026. compare chatgpt, claude, gemini, and other llms for content creation, editing, and professional writing tasks." data-keywords="best llm for writing, llm writing assistant, ai writing tool, best ai for content creation, llm for authors" onclick="window.location.href='/dist/pages/guides/best-llm-for-writing-2025.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">💬</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(113, 113, 122, 0.12); color: rgba(113, 113, 122, 1); border: 1px solid rgba(113, 113, 122, 0.3); border-radius: 6px; font-weight: 600;">LLMs</span>
+                </div>
+                <div class="card-name">Best LLM for Writing: What Writers Actually Use</div>
+              </div>
+              <div class="card-preview">Complete guide to the best large language models for writing in 2026. Compare ChatGPT, Claude, Gemini, and other LLMs for content creation, editing, and professional writing tasks</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="llm" data-title="llm limitations: what they can&#039;t do (yet)" data-description="complete guide to large language model limitations. understand what llms cannot do, their weaknesses, common failures, and realistic expectations for ai capabilities in 2026." data-keywords="llm limitations, what can llms not do, ai limitations, llm weaknesses, llm failures, ai model limitations" onclick="window.location.href='/dist/pages/guides/llm-limitations-what-they-cant-do.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">💬</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(113, 113, 122, 0.12); color: rgba(113, 113, 122, 1); border: 1px solid rgba(113, 113, 122, 0.3); border-radius: 6px; font-weight: 600;">LLMs</span>
+                </div>
+                <div class="card-name">LLM Limitations: What They Can&#039;t Do (Yet)</div>
+              </div>
+              <div class="card-preview">Complete guide to large language model limitations. Understand what LLMs cannot do, their weaknesses, common failures, and realistic expectations for AI capabilities in 2026</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="llm" data-title="llm pricing: complete cost comparison 2026" data-description="complete guide to llm pricing in 2026. compare costs for chatgpt, claude, gemini, deepseek, and other large language models. understand api pricing, subscription costs, and total cost of ownership." data-keywords="llm pricing, llm cost, chatgpt pricing, claude pricing, gemini pricing, llm api cost, llm subscription cost" onclick="window.location.href='/dist/pages/guides/llm-pricing-complete-cost-comparison.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">💬</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(113, 113, 122, 0.12); color: rgba(113, 113, 122, 1); border: 1px solid rgba(113, 113, 122, 0.3); border-radius: 6px; font-weight: 600;">LLMs</span>
+                </div>
+                <div class="card-name">LLM Pricing: Complete Cost Comparison 2026</div>
+              </div>
+              <div class="card-preview">Complete guide to LLM pricing in 2026. Compare costs for ChatGPT, Claude, Gemini, DeepSeek, and other large language models. Understand API pricing, subscription costs, and total cost of ownership</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="llm" data-title="llm security &amp; privacy: what businesses need to know" data-description="complete guide to llm security and privacy for businesses. understand data handling, compliance, enterprise security features, and best practices for using llms safely in business environments." data-keywords="llm security, llm privacy, llm data privacy, enterprise llm security, llm compliance, llm gdpr, llm hipaa" onclick="window.location.href='/dist/pages/guides/llm-security-privacy-business-guide.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">💬</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(113, 113, 122, 0.12); color: rgba(113, 113, 122, 1); border: 1px solid rgba(113, 113, 122, 0.3); border-radius: 6px; font-weight: 600;">LLMs</span>
+                </div>
+                <div class="card-name">LLM Security &amp; Privacy: What Businesses Need to Know</div>
+              </div>
+              <div class="card-preview">Complete guide to LLM security and privacy for businesses. Understand data handling, compliance, enterprise security features, and best practices for using LLMs safely in business environments</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="llm" data-title="llm for business: complete enterprise guide 2026" data-description="complete guide to using large language models in business. learn about enterprise use cases, roi, implementation strategies, and best practices for deploying llms in business environments." data-keywords="llm for business, enterprise llm, business llm use cases, llm roi, llm implementation, enterprise ai" onclick="window.location.href='/dist/pages/guides/llm-for-business-enterprise-guide.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">💬</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(113, 113, 122, 0.12); color: rgba(113, 113, 122, 1); border: 1px solid rgba(113, 113, 122, 0.3); border-radius: 6px; font-weight: 600;">LLMs</span>
+                </div>
+                <div class="card-name">LLM for Business: Complete Enterprise Guide 2026</div>
+              </div>
+              <div class="card-preview">Complete guide to using large language models in business. Learn about enterprise use cases, ROI, implementation strategies, and best practices for deploying LLMs in business environments</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="development" data-title="development-ai prompts: complete guide for coding workflows" data-description="complete guide to using ai prompts for software development. learn how to use prompts for git workflows, ci/cd setup, testing, debugging, api development, and deployment automation." data-keywords="development ai prompts, coding prompts, devops prompts, git prompts, ci cd prompts, testing prompts, debugging prompts" onclick="window.location.href='/dist/pages/guides/development-ai-prompts-guide.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🤖</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(113, 113, 122, 0.12); color: rgba(113, 113, 122, 1); border: 1px solid rgba(113, 113, 122, 0.3); border-radius: 6px; font-weight: 600;">AI Tools</span>
+                </div>
+                <div class="card-name">Development-AI Prompts: Complete Guide for Coding Workflows</div>
+              </div>
+              <div class="card-preview">Complete guide to using AI prompts for software development. Learn how to use prompts for Git workflows, CI/CD setup, testing, debugging, API development, and deployment automation</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="llm" data-title="advanced llm workflow prompts: rag, chain-of-thought, and more" data-description="complete guide to advanced llm workflow prompts including rag (retrieval augmented generation), chain-of-thought reasoning, prompt engineering best practices, and multi-agent workflows." data-keywords="rag prompts, chain of thought prompts, advanced llm prompts, prompt engineering, retrieval augmented generation, llm workflows" onclick="window.location.href='/dist/pages/guides/advanced-llm-workflow-prompts.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">💬</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(113, 113, 122, 0.12); color: rgba(113, 113, 122, 1); border: 1px solid rgba(113, 113, 122, 0.3); border-radius: 6px; font-weight: 600;">LLMs</span>
+                </div>
+                <div class="card-name">Advanced LLM Workflow Prompts: RAG, Chain-of-Thought, and More</div>
+              </div>
+              <div class="card-preview">Complete guide to advanced LLM workflow prompts including RAG (Retrieval Augmented Generation), chain-of-thought reasoning, prompt engineering best practices, and multi-agent workflows</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="creative" data-title="multi-modal prompt workflows: brand campaigns and style transfer" data-description="complete guide to multi-modal prompt workflows combining image, video, and audio generation. learn how to create cohesive brand campaigns, style transfer across modalities, and iterative refinement workflows." data-keywords="multi-modal prompts, brand campaign prompts, style transfer prompts, prompt chaining, iterative refinement, ab testing prompts" onclick="window.location.href='/dist/pages/guides/multi-modal-prompt-workflows.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🤖</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(113, 113, 122, 0.12); color: rgba(113, 113, 122, 1); border: 1px solid rgba(113, 113, 122, 0.3); border-radius: 6px; font-weight: 600;">AI Tools</span>
+                </div>
+                <div class="card-name">Multi-Modal Prompt Workflows: Brand Campaigns and Style Transfer</div>
+              </div>
+              <div class="card-preview">Complete guide to multi-modal prompt workflows combining image, video, and audio generation. Learn how to create cohesive brand campaigns, style transfer across modalities, and iterative refinement workflows</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="general" data-title="how to optimize ai generation quality: complete guide" data-description="complete guide to optimizing ai generation quality across all modalities. learn prompt refinement techniques, parameter tuning, iteration strategies, and quality vs speed tradeoffs for better results." data-keywords="optimize ai generation, improve ai quality, ai prompt optimization, generation quality, parameter tuning, iteration strategies" onclick="window.location.href='/dist/pages/guides/how-to-optimize-ai-generation-quality.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📚</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(99, 102, 241, 0.12); color: rgba(99, 102, 241, 1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; font-weight: 600;">General</span>
+                </div>
+                <div class="card-name">How to Optimize AI Generation Quality: Complete Guide</div>
+              </div>
+              <div class="card-preview">Complete guide to optimizing AI generation quality across all modalities. Learn prompt refinement techniques, parameter tuning, iteration strategies, and quality vs speed tradeoffs for better results</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="general" data-title="common ai tool problems and solutions: complete troubleshooting guide" data-description="complete troubleshooting guide for common ai tool problems. learn how to fix generation errors, quality issues, api problems, and workflow issues across image, video, audio, and 3d generation tools." data-keywords="ai tool problems, ai generation errors, troubleshooting ai tools, fix ai issues, ai tool solutions, common ai problems" onclick="window.location.href='/dist/pages/guides/common-ai-tool-problems-and-solutions.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📚</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(99, 102, 241, 0.12); color: rgba(99, 102, 241, 1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; font-weight: 600;">General</span>
+                </div>
+                <div class="card-name">Common AI Tool Problems and Solutions: Complete Troubleshooting Guide</div>
+              </div>
+              <div class="card-preview">Complete troubleshooting guide for common AI tool problems. Learn how to fix generation errors, quality issues, API problems, and workflow issues across image, video, audio, and 3D generation tools</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="multi-service-ai-platforms" data-title="what are multi-service ai platforms? complete guide 2026" data-description="multi-service ai platforms aggregate multiple ai models and services through unified apis. learn how they differ from single-purpose tools, their benefits, and when to use them." data-keywords="multi-service ai platforms, ai platform aggregators, unified ai api, ai model aggregators, multi-service ai, ai api platforms" onclick="window.location.href='/dist/pages/guides/what-are-multi-service-ai-platforms.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🤖</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(113, 113, 122, 0.12); color: rgba(113, 113, 122, 1); border: 1px solid rgba(113, 113, 122, 0.3); border-radius: 6px; font-weight: 600;">AI Tools</span>
+                </div>
+                <div class="card-name">What are Multi-Service AI Platforms? Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Multi-service AI platforms aggregate multiple AI models and services through unified APIs. Learn how they differ from single-purpose tools, their benefits, and when to use them</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="multi-service-ai-platforms" data-title="best multi-service ai platforms 2026: complete comparison" data-description="compare the best multi-service ai platforms including fal.ai, replicate, openrouter, groq, and more. detailed comparison of model variety, api quality, pricing, and infrastructure." data-keywords="best multi-service ai platforms, best ai api platforms, ai platform aggregators comparison, best unified ai api, multi-service ai platforms 2026" onclick="window.location.href='/dist/pages/guides/best-multi-service-ai-platforms.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🤖</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(113, 113, 122, 0.12); color: rgba(113, 113, 122, 1); border: 1px solid rgba(113, 113, 122, 0.3); border-radius: 6px; font-weight: 600;">AI Tools</span>
+                </div>
+                <div class="card-name">Best Multi-Service AI Platforms 2026: Complete Comparison</div>
+              </div>
+              <div class="card-preview">Compare the best multi-service AI platforms including fal.ai, Replicate, OpenRouter, Groq, and more. Detailed comparison of model variety, API quality, pricing, and infrastructure</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="multi-service-ai-platforms" data-title="how to choose multi-service ai platforms: complete guide 2026" data-description="complete guide to choosing the right multi-service ai platform. learn what factors to consider: model variety, api quality, pricing, infrastructure, and developer experience." data-keywords="how to choose multi-service ai platforms, ai platform selection, choosing ai api platform, multi-service ai platform comparison, ai platform evaluation" onclick="window.location.href='/dist/pages/guides/how-to-choose-multi-service-ai-platforms.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">🤖</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(113, 113, 122, 0.12); color: rgba(113, 113, 122, 1); border: 1px solid rgba(113, 113, 122, 0.3); border-radius: 6px; font-weight: 600;">AI Tools</span>
+                </div>
+                <div class="card-name">How to Choose Multi-Service AI Platforms: Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Complete guide to choosing the right multi-service AI platform. Learn what factors to consider: model variety, API quality, pricing, infrastructure, and developer experience</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="image-to-3d" data-title="how to use image-to-3d ai tools: complete guide 2026" data-description="image-to-3d ai tools for converting photos into 3d models. step-by-step workflows, best practices, and optimization techniques for creating professional 3d assets from images." data-keywords="how to use image to 3d ai, image to 3d tutorial, photo to 3d model guide, ai 3d conversion, 3d model from photo" onclick="window.location.href='/dist/pages/guides/how-to-use-image-to-3d-ai-tools.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📦</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(139, 92, 246, 0.12); color: rgba(139, 92, 246, 1); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 6px; font-weight: 600;">3D Generation</span>
+                </div>
+                <div class="card-name">How to Use Image-to-3D AI Tools: Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Image-to-3D AI tools for converting photos into 3D models. Step-by-step workflows, best practices, and optimization techniques for creating professional 3D assets from images</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="video-to-video" data-title="how to use video-to-video ai tools: complete guide 2026" data-description="video-to-video ai tools for transforming existing videos. step-by-step workflows, style transfer, object removal, and professional video editing techniques." data-keywords="how to use video to video ai, video transformation tutorial, style transfer video guide, video editing ai, object removal video" onclick="window.location.href='/dist/pages/guides/how-to-use-video-to-video-ai-tools.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">✂️</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(245, 158, 11, 0.12); color: rgba(245, 158, 11, 1); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 6px; font-weight: 600;">Video Editing</span>
+                </div>
+                <div class="card-name">How to Use Video-to-Video AI Tools: Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Video-to-video AI tools for transforming existing videos. Step-by-step workflows, style transfer, object removal, and professional video editing techniques</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="ide-coding" data-title="best ai tools for developers: complete guide 2026" data-description="discover the best ai tools for developers: cursor, github copilot, google antigravity, replit, and more. features, pricing, and workflow recommendations for coding, debugging, and development." data-keywords="best ai tools for developers, ai coding tools, developer ai tools, ai code editor, ai programming tools, best ai ide" onclick="window.location.href='/dist/pages/guides/best-ai-tools-for-developers.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">💻</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(34, 197, 94, 0.12); color: rgba(34, 197, 94, 1); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 6px; font-weight: 600;">IDEs & Coding</span>
+                </div>
+                <div class="card-name">Best AI Tools for Developers: Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Discover the best AI tools for developers: Cursor, GitHub Copilot, Google Antigravity, Replit, and more. Features, pricing, and workflow recommendations for coding, debugging, and development</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+            <button class="card guide-card" type="button" data-category="general" data-title="best ai tools for content creators: complete guide 2026" data-description="discover the best ai tools for content creators: runway, suno, midjourney, and more. features, pricing, and workflow recommendations for video, audio, image, and social media content creation." data-keywords="best ai tools for content creators, ai content creation tools, social media ai tools, video creation ai, content creator tools" onclick="window.location.href='/dist/pages/guides/best-ai-tools-for-content-creators.html'" style="cursor: pointer;">
+              <div class="card-header">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="font-size: 18px;">📚</span>
+                  <span class="bestfor-tag" style="font-size: 10px; padding: 3px 10px; background: rgba(99, 102, 241, 0.12); color: rgba(99, 102, 241, 1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; font-weight: 600;">General</span>
+                </div>
+                <div class="card-name">Best AI Tools for Content Creators: Complete Guide 2026</div>
+              </div>
+              <div class="card-preview">Discover the best AI tools for content creators: Runway, Suno, Midjourney, and more. Features, pricing, and workflow recommendations for video, audio, image, and social media content creation</div>
+              <div class="card-foot" style="margin-top: auto; padding-top: 8px;">
+                <span class="drawer-link" style="display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--card-bg);">
+                  Read Guide <span style="font-size: 10px;">→</span>
+                </span>
+              </div>
+            </button>
+            
+        </div>
+      </section>
+      
+      <div class="tool-page-container" style="margin-top: 40px; max-width: 800px;">
+        <div class="block">
+          <div class="block-title">EXPLORE TOOLS</div>
+          <p class="drawer-text">Ready to try AI tools? Explore our curated directory:</p>
+          <div style="margin-top: 16px;">
+            <a href="/index.html" class="drawer-link primary">Browse All Tools</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const stored = localStorage.getItem('theme');
+    const theme = stored === 'dark' ? 'dark' : 'light';
+    document.body.setAttribute('data-theme', theme);
+    themeToggle.setAttribute('aria-checked', theme === 'dark');
+    themeToggle.addEventListener('click', () => {
+      const current = document.body.getAttribute('data-theme');
+      const newTheme = current === 'dark' ? 'light' : 'dark';
+      document.body.setAttribute('data-theme', newTheme);
+      themeToggle.setAttribute('aria-checked', newTheme === 'dark');
+      localStorage.setItem('theme', newTheme);
+    });
+    
+    if (window.matchMedia('(pointer: fine)').matches) {
+      document.body.classList.add('has-cursor');
+      const cursorDot = document.querySelector('.cursor-dot');
+      const cursorOutline = document.querySelector('.cursor-outline');
+      
+      if (cursorDot && cursorOutline) {
+        let mouseX = 0, mouseY = 0;
+        let dotX = 0, dotY = 0;
+        let outlineX = 0, outlineY = 0;
+        let rafId = null;
+        
+        const handleMouseMove = (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+          if (!rafId) {
+            rafId = requestAnimationFrame(animateCursor);
+          }
+        };
+        
+        function animateCursor() {
+          const spring = 0.15;
+          const dotDx = (mouseX - dotX) * spring;
+          const dotDy = (mouseY - dotY) * spring;
+          const outlineDx = (mouseX - outlineX) * (spring * 0.6);
+          const outlineDy = (mouseY - outlineY) * (spring * 0.6);
+          
+          dotX += dotDx;
+          dotY += dotDy;
+          outlineX += outlineDx;
+          outlineY += outlineDy;
+          
+          cursorDot.style.transform = `translate(${dotX}px, ${dotY}px)`;
+          cursorOutline.style.transform = `translate(${outlineX}px, ${outlineY}px)`;
+          
+          rafId = requestAnimationFrame(animateCursor);
+        }
+        
+        document.addEventListener('mousemove', handleMouseMove, { passive: true });
+        rafId = requestAnimationFrame(animateCursor);
+      }
+    }
+    
+    // Guide filtering and search
+    const guideCards = document.querySelectorAll('.guide-card');
+    const guideChips = document.querySelectorAll('#guideChips .chip-btn');
+    const guideTags = document.querySelectorAll('#guideTags .tag-chip');
+    const guideSearch = document.getElementById('guideSearch');
+    const guideMeta = document.getElementById('guideMeta');
+    
+    if (guideCards.length && guideChips.length) {
+      let activeCategory = 'all';
+      let activeTags = new Set();
+      let searchQuery = '';
+      
+      function filterGuides() {
+        let visibleCount = 0;
+        guideCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          const title = card.getAttribute('data-title');
+          const description = card.getAttribute('data-description');
+          const keywords = card.getAttribute('data-keywords') || '';
+          
+          const matchesCategory = activeCategory === 'all' || category === activeCategory;
+          const matchesSearch = !searchQuery || title.includes(searchQuery.toLowerCase()) || description.includes(searchQuery.toLowerCase()) || keywords.includes(searchQuery.toLowerCase());
+          const matchesTags = activeTags.size === 0 || Array.from(activeTags).some(tag => keywords.includes(tag.toLowerCase()));
+          
+          if (matchesCategory && matchesSearch && matchesTags) {
+            card.style.display = '';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        
+        if (guideMeta) {
+          guideMeta.textContent = `${visibleCount} guides • curated`;
+        }
+      }
+      
+      guideChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          guideChips.forEach(c => {
+            c.classList.remove('active');
+            c.setAttribute('aria-pressed', 'false');
+            c.removeAttribute('data-active');
+          });
+          chip.classList.add('active');
+          chip.setAttribute('aria-pressed', 'true');
+          chip.setAttribute('data-active', 'true');
+          activeCategory = chip.getAttribute('data-category');
+          filterGuides();
+        });
+      });
+      
+      if (guideTags.length) {
+        guideTags.forEach(tag => {
+          tag.addEventListener('click', () => {
+            const tagValue = tag.getAttribute('data-tag');
+            const isPressed = tag.getAttribute('aria-pressed') === 'true';
+            
+            if (isPressed) {
+              tag.classList.remove('active');
+              tag.setAttribute('aria-pressed', 'false');
+              tag.removeAttribute('data-active');
+              activeTags.delete(tagValue);
+            } else {
+              tag.classList.add('active');
+              tag.setAttribute('aria-pressed', 'true');
+              tag.setAttribute('data-active', 'true');
+              activeTags.add(tagValue);
+            }
+            filterGuides();
+          });
+        });
+      }
+      
+      if (guideSearch) {
+        guideSearch.addEventListener('input', (e) => {
+          searchQuery = e.target.value;
+          filterGuides();
+        });
+      }
+    }
+  </script>
+
+      <footer class="footer" aria-label="Footer">
+        <div class="footer-content">
+          <div class="footer-main">
+            <div class="footer-section">
+              <div class="footer-title mono">AI Tool Directory</div>
+              <div class="footer-desc mono">A hand-picked directory of GenAI tools. Curated, not cluttered.</div>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-label mono">Part of</div>
+              <a href="https://thesingularitylabs.xyz" target="_blank" rel="noreferrer noopener" class="footer-link">
+                <span class="footer-link-text">The Singularity Labs</span>
+                <span class="footer-link-arrow">→</span>
+              </a>
+              <div class="footer-tagline mono">What matters in AI, distilled.</div>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-label mono">Explore</div>
+              <nav class="footer-nav">
+                <a href="/index.html" class="footer-nav-link mono">Directory</a>
+                <a href="/guides.html" class="footer-nav-link mono">Guides</a>
+                <a href="/news.html" class="footer-nav-link mono">News</a>
+                <a href="https://thesingularitylabs.xyz" target="_blank" rel="noreferrer noopener" class="footer-nav-link mono">The Singularity Labs</a>
+              </nav>
+            </div>
+          </div>
+          
+          <div class="footer-bottom mono">
+            <div class="footer-copyright">© 2026 The Singularity Labs</div>
+            <div class="footer-stats">118 tools • curated</div>
+          </div>
+        </div>
+      </footer>
+  
+  </div>
+</body>
+</html>

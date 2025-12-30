@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI News — The Singularity Labs</title>
+    <meta
+      name="description"
+      content="What matters in AI, distilled. Curated updates from The Singularity Labs, Mon–Fri."
+    />
+    <link rel="canonical" href="https://curatedai.net/news.html" />
+    <meta property="og:url" content="https://curatedai.net/news.html" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-theme="light">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="app">
+      <header class="chrome" aria-label="Browser chrome">
+        <div class="chrome-bar">
+          <div class="chrome-pill mono">curated://news</div>
+          <div class="chrome-spacer"></div>
+          <div class="chrome-links-container">
+            <a class="chrome-link mono" href="./index.html">Directory</a>
+            <a class="chrome-link mono" href="./directory.html">Categories</a>
+            <a class="chrome-link mono" href="./guides.html">Guides</a>
+            <a class="chrome-link mono" href="./prompts.html">Prompts</a>
+            <a class="chrome-link mono" href="./news.html">News</a>
+            <a class="chrome-link mono" href="./newsletter.html">Newsletter</a>
+          </div>
+          <div class="chrome-toggle" aria-label="Theme toggle">
+            <span class="mono chrome-toggle-label">Light</span>
+            <button id="themeToggle" class="switch" type="button" role="switch" aria-checked="false">
+              <span class="switch-knob" aria-hidden="true"></span>
+            </button>
+            <span class="mono chrome-toggle-label">Dark</span>
+          </div>
+        </div>
+      </header>
+
+      <main id="main" class="page" aria-label="News">
+        <section class="hero" aria-label="News header">
+          <div class="kicker mono">THE SINGULARITY LABS • MON–FRI</div>
+          <h1 class="title">AI News, this week.</h1>
+          <div class="micro mono">What matters in AI, distilled.</div>
+        </section>
+
+        <section class="results" aria-label="News list">
+          <div class="results-head">
+            <div class="results-title mono">LATEST</div>
+            <div id="newsMeta" class="results-meta mono">Loading…</div>
+          </div>
+          <div id="newsGrid" class="grid" role="list"></div>
+        </section>
+      </main>
+
+      <footer class="footer" aria-label="Footer">
+        <div class="footer-content">
+          <div class="footer-main">
+            <div class="footer-section">
+              <div class="footer-title mono">AI News</div>
+              <div class="footer-desc mono">What matters in AI, distilled. Curated updates from The Singularity Labs, Mon–Fri.</div>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-label mono">Part of</div>
+              <a href="https://thesingularitylabs.xyz" target="_blank" rel="noreferrer noopener" class="footer-link">
+                <span class="footer-link-text">The Singularity Labs</span>
+                <span class="footer-link-arrow">→</span>
+              </a>
+              <div class="footer-tagline mono">What matters in AI, distilled.</div>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-label mono">Follow</div>
+              <nav class="footer-nav">
+                <a href="https://thesingularitylabs.xyz" target="_blank" rel="noreferrer noopener" class="footer-nav-link mono">Website →</a>
+                <a href="https://youtube.com/@thesingularitylabs" target="_blank" rel="noreferrer noopener" class="footer-nav-link mono">YouTube →</a>
+                <a href="https://x.com/thesingularitylabs" target="_blank" rel="noreferrer noopener" class="footer-nav-link mono">X (Twitter) →</a>
+              </nav>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-label mono">Explore</div>
+              <nav class="footer-nav">
+                <a href="./index.html" class="footer-nav-link mono">Directory</a>
+                <a href="./news.html" class="footer-nav-link mono">News</a>
+                <a href="https://thesingularitylabs.xyz" target="_blank" rel="noreferrer noopener" class="footer-nav-link mono">The Singularity Labs</a>
+              </nav>
+            </div>
+          </div>
+          
+          <div class="footer-bottom mono">
+            <div class="footer-copyright">© 2025 The Singularity Labs</div>
+            <div class="footer-stats" id="newsFooterStats">14 updates • curated</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="./data/news.js?v=2025-12-24"></script>
+    <script type="module" src="./news-page.js?v=2025-12-24"></script>
+  </body>
+</html>
+
+

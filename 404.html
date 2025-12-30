@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found | AI Tool Directory</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Return to the AI Tool Directory.">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-theme="light">
+  <div class="app" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 40px 20px;">
+    <div style="text-align: center; max-width: 600px;">
+      <h1 class="title mono" style="font-size: 72px; margin-bottom: 16px; color: var(--page-text);">404</h1>
+      <h2 class="mono" style="font-size: 24px; font-weight: 600; color: var(--page-text); margin-bottom: 16px; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);">Page Not Found</h2>
+      <p class="mono" style="font-size: 14px; color: var(--page-muted); line-height: 1.6; margin-bottom: 32px; opacity: 0.9;">
+        The page you're looking for doesn't exist or has been moved.
+      </p>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="./index.html" class="pill mono pill-interactive" style="padding: 12px 24px; font-size: 13px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+          ← Back to Directory
+        </a>
+        <a href="./directory.html" class="pill mono pill-interactive" style="padding: 12px 24px; font-size: 13px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+          Browse Categories →
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // Theme toggle support
+    const themeToggle = document.createElement('button');
+    themeToggle.className = 'switch';
+    themeToggle.type = 'button';
+    themeToggle.role = 'switch';
+    themeToggle.setAttribute('aria-label', 'Toggle theme');
+    themeToggle.style.position = 'fixed';
+    themeToggle.style.top = '20px';
+    themeToggle.style.right = '20px';
+    themeToggle.style.zIndex = '1000';
+    
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.body.setAttribute('data-theme', savedTheme);
+    themeToggle.setAttribute('aria-checked', savedTheme === 'dark');
+    
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      document.body.setAttribute('data-theme', newTheme);
+      themeToggle.setAttribute('aria-checked', newTheme === 'dark');
+      localStorage.setItem('theme', newTheme);
+    });
+    
+    document.body.appendChild(themeToggle);
+  </script>
+</body>
+</html>
+

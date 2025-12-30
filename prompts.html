@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Prompts Directory — Curated Prompt Library</title>
+    <meta
+      name="description"
+      content="Curated collection of 236+ high-quality AI prompts for image, video, audio, 3D generation, LLM workflows, and development tasks. Tested, production-ready prompts organized by tool and use case. Copy, customize, and create better AI results faster."
+    />
+    <meta name="keywords" content="AI prompts, prompt engineering, ChatGPT prompts, Claude prompts, Midjourney prompts, Runway prompts, AI tools, prompt library, AI workflows, LLM prompts" />
+    <meta property="og:title" content="AI Prompts Directory — 236+ Curated Prompt Library" />
+    <meta property="og:description" content="High-quality, tested prompts for AI tools. Copy, customize, and create better results faster." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://curatedai.net/prompts.html" />
+    <link rel="canonical" href="https://curatedai.net/prompts.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI Prompts Directory — Curated Prompt Library" />
+    <meta name="twitter:description" content="236+ curated, tested prompts for AI tools. Production-ready prompts for image, video, audio, 3D, LLM workflows, and development tasks." />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-theme="light">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="app">
+      <header class="chrome" aria-label="Browser chrome">
+        <div class="chrome-bar">
+        <div class="chrome-pill mono">curated://ai-prompts</div>
+        <div class="chrome-spacer"></div>
+        <div class="chrome-links-container">
+          <a class="chrome-link mono" href="./index.html">Directory</a>
+          <a class="chrome-link mono" href="./directory.html">Categories</a>
+          <a class="chrome-link mono" href="./guides.html">Guides</a>
+          <a class="chrome-link mono" href="./prompts.html">Prompts</a>
+          <a class="chrome-link mono" href="./news.html">News</a>
+          <a class="chrome-link mono" href="./newsletter.html">Newsletter</a>
+        </div>
+          <div class="chrome-toggle" aria-label="Theme toggle">
+            <span class="mono chrome-toggle-label">Light</span>
+            <button id="themeToggle" class="switch" type="button" role="switch" aria-checked="false">
+              <span class="switch-knob" aria-hidden="true"></span>
+            </button>
+            <span class="mono chrome-toggle-label">Dark</span>
+          </div>
+        </div>
+      </header>
+
+      <main id="main" class="page" aria-label="Prompts Directory">
+        <section class="hero" aria-label="Search">
+          <div class="kicker mono">CURATED • TESTED • PRODUCTION-READY</div>
+          <h1 class="title">AI Prompts Library</h1>
+          <p class="drawer-sub" style="font-size: 14px; line-height: 1.6; margin: 16px auto 0; max-width: 600px; opacity: 0.9;">
+            High-quality, tested prompts for AI tools. Copy, customize, and create better results faster.
+          </p>
+          <div style="margin-top: 24px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+            <a href="#llm-workflows" style="font-size: 11px; font-family: var(--mono); color: var(--accent); text-decoration: none; padding: 6px 12px; border: 1px solid var(--line); border-radius: 4px; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent)'; this.style.opacity='1'" onmouseout="this.style.borderColor='var(--line)'; this.style.opacity='0.8'">💼 LLM Workflows</a>
+            <a href="#development-ai" style="font-size: 11px; font-family: var(--mono); color: var(--accent); text-decoration: none; padding: 6px 12px; border: 1px solid var(--line); border-radius: 4px; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent)'; this.style.opacity='1'" onmouseout="this.style.borderColor='var(--line)'; this.style.opacity='0.8'">💻 Dev & AI</a>
+            <a href="#video-production" style="font-size: 11px; font-family: var(--mono); color: var(--accent); text-decoration: none; padding: 6px 12px; border: 1px solid var(--line); border-radius: 4px; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent)'; this.style.opacity='1'" onmouseout="this.style.borderColor='var(--line)'; this.style.opacity='0.8'">🎬 Video</a>
+            <a href="#photography" style="font-size: 11px; font-family: var(--mono); color: var(--accent); text-decoration: none; padding: 6px 12px; border: 1px solid var(--line); border-radius: 4px; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent)'; this.style.opacity='1'" onmouseout="this.style.borderColor='var(--line)'; this.style.opacity='0.8'">📸 Photography</a>
+          </div>
+
+          <div class="command" style="margin-top: 32px;">
+            <span class="prompt mono">&gt;</span>
+            <input
+              id="q"
+              class="command-input mono"
+              type="search"
+              placeholder="Search prompts by tool, use case, or tag..."
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <span class="caret" aria-hidden="true"></span>
+          </div>
+        </section>
+
+        <section class="controls" aria-label="Filters" style="margin-top: 40px;">
+          <div class="controls-row" style="display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+            <div class="controls-left" style="flex: 1; min-width: 300px;">
+              <div class="controls-title mono" style="margin-bottom: 12px;">CATEGORIES</div>
+              <div id="categoryChips" class="chips" role="list" aria-label="Category chips"></div>
+            </div>
+            <div class="controls-right" style="flex-shrink: 0;">
+              <div class="controls-title mono" style="font-size: 10px; opacity: 0.7; margin-bottom: 8px; text-align: right;">FEATURED</div>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end;">
+                <a href="#llm-workflows" class="featured-link" onclick="event.preventDefault(); document.querySelector('[data-category=\'llm-workflows\']')?.click();">💼 LLM</a>
+                <a href="#development-ai" class="featured-link" onclick="event.preventDefault(); document.querySelector('[data-category=\'development-ai\']')?.click();">💻 Dev</a>
+                <a href="#video-production" class="featured-link" onclick="event.preventDefault(); document.querySelector('[data-category=\'video-production\']')?.click();">🎬 Video</a>
+                <a href="#photography" class="featured-link" onclick="event.preventDefault(); document.querySelector('[data-category=\'photography\']')?.click();">📸 Photo</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="results" aria-label="Results" style="margin-top: 40px;">
+          <div class="results-head">
+            <div class="results-title mono">PROMPTS</div>
+            <div id="resultMeta" class="results-meta mono">Loading…</div>
+          </div>
+          <div id="grid" class="grid" role="list"></div>
+        </section>
+      </main>
+
+      <footer class="footer" aria-label="Footer">
+        <div class="footer-content">
+          <div class="footer-main">
+            <div class="footer-section">
+              <div class="footer-title mono">AI Prompts Directory</div>
+              <div class="footer-desc mono">Curated, tested prompts for better AI results.</div>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-label mono">Part of</div>
+              <a href="https://thesingularitylabs.xyz" target="_blank" rel="noreferrer noopener" class="footer-link">
+                <span class="footer-link-text">The Singularity Labs</span>
+                <span class="footer-link-arrow">→</span>
+              </a>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-label mono">Explore</div>
+              <nav class="footer-nav">
+                <a href="./index.html" class="footer-nav-link mono">Directory</a>
+                <a href="./prompts.html" class="footer-nav-link mono">Prompts</a>
+                <a href="./guides.html" class="footer-nav-link mono">Guides</a>
+                <a href="./news.html" class="footer-nav-link mono">News</a>
+              </nav>
+            </div>
+          </div>
+          
+          <div class="footer-bottom mono">
+            <div class="footer-copyright">© 2025 The Singularity Labs</div>
+            <div class="footer-stats" id="footerStats">0 prompts • curated</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="./data/prompts.js"></script>
+    <script type="module" src="./prompts-page.js"></script>
+  </body>
+</html>
+

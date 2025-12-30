@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsletter — AI Tool Directory</title>
+    <meta
+      name="description"
+      content="Get weekly curated AI tool discoveries, updates, and insights. Handpicked tools, no spam."
+    />
+    <link rel="canonical" href="https://curatedai.net/newsletter.html" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Newsletter — AI Tool Directory" />
+    <meta property="og:description" content="Get weekly curated AI tool discoveries, updates, and insights. Handpicked tools, no spam." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://curatedai.net/newsletter.html" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Newsletter — AI Tool Directory" />
+    <meta name="twitter:description" content="Get weekly curated AI tool discoveries, updates, and insights." />
+    
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      @media (max-width: 768px) {
+        .newsletter-title {
+          font-size: 36px !important;
+        }
+      }
+      @media (max-width: 480px) {
+        .newsletter-title {
+          font-size: 28px !important;
+        }
+      }
+    </style>
+  </head>
+  <body data-theme="light">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="app">
+      <header class="chrome" aria-label="Browser chrome">
+        <div class="chrome-bar">
+          <div class="chrome-pill mono">curated://newsletter</div>
+          <div class="chrome-spacer"></div>
+          <div class="chrome-links-container">
+            <a class="chrome-link mono" href="./index.html">Directory</a>
+            <a class="chrome-link mono" href="./directory.html">Categories</a>
+            <a class="chrome-link mono" href="./guides.html">Guides</a>
+            <a class="chrome-link mono" href="./prompts.html">Prompts</a>
+            <a class="chrome-link mono" href="./news.html">News</a>
+            <a class="chrome-link mono" href="./newsletter.html">Newsletter</a>
+          </div>
+          <div class="chrome-toggle" aria-label="Theme toggle">
+            <span class="mono chrome-toggle-label">Light</span>
+            <button id="themeToggle" class="switch" type="button" role="switch" aria-checked="false">
+              <span class="switch-knob" aria-hidden="true"></span>
+            </button>
+            <span class="mono chrome-toggle-label">Dark</span>
+          </div>
+        </div>
+      </header>
+
+      <main id="main" class="page" aria-label="Newsletter">
+        <!-- Animated background gradient -->
+        <div id="animatedBg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; opacity: 0.03; transition: opacity 0.3s;"></div>
+        
+        <div style="max-width: 560px; margin: 0 auto;">
+          <section class="hero" aria-label="Newsletter signup" style="text-align: center; margin-bottom: 80px; position: relative;">
+            <h1 class="title newsletter-title" style="margin-bottom: 20px; line-height: 1.15; letter-spacing: -0.04em; font-size: 48px; font-weight: 600; animation: fadeInUp 0.8s ease-out;">Get the best AI tools delivered weekly</h1>
+            <p class="drawer-sub mono" style="font-size: 17px; line-height: 1.6; color: var(--page-muted); margin-bottom: 0; max-width: 480px; margin-left: auto; margin-right: auto; animation: fadeInUp 0.8s ease-out 0.15s both; font-weight: 400;">
+              Discover handpicked AI tools, updates, and insights. Curated weekly.
+            </p>
+          </section>
+
+          <div id="newsletterFormBlock" style="position: relative; animation: fadeInUp 0.8s ease-out 0.3s both;">
+            <form id="newsletterForm" style="display: flex; flex-direction: column; gap: 0; position: relative; z-index: 1;">
+              <div style="display: flex; gap: 0; border: 1.5px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--card-bg); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.02); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);" id="formContainer">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="mono"
+                  style="flex: 1; padding: 18px 24px; font-size: 15px; background: transparent; border: none; color: var(--page-text); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-sizing: border-box; outline: none;"
+                  placeholder="Enter your email"
+                  aria-label="Email address"
+                  onfocus="const container = document.getElementById('formContainer'); container.style.borderColor='var(--page-text)'; container.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.08), 0 0 0 1px var(--page-text)';"
+                  onblur="const container = document.getElementById('formContainer'); container.style.borderColor='var(--line)'; container.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.02)';"
+                />
+                <button
+                  type="submit"
+                  class="mono"
+                  id="subscribeBtn"
+                  style="padding: 18px 32px; font-size: 14px; font-weight: 500; background: var(--btn-bg); color: var(--btn-text); border: none; border-left: 1.5px solid var(--line); cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); white-space: nowrap;"
+                  onmouseover="this.style.opacity='0.9'"
+                  onmouseout="this.style.opacity='1'"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+            
+            <div id="successMessage" style="display: none; margin-top: 20px; padding: 16px 20px; background: var(--card-bg); border: 1.5px solid var(--line); border-radius: 12px; text-align: center; animation: fadeInUp 0.4s ease-out;">
+              <p class="mono" style="font-size: 14px; color: var(--page-text); margin: 0; font-weight: 500;">
+                ✓ Check your email to confirm
+              </p>
+            </div>
+
+            <div id="errorMessage" style="display: none; margin-top: 20px; padding: 16px 20px; background: var(--card-bg); border: 1.5px solid rgba(220, 38, 38, 0.3); border-radius: 12px; text-align: center; animation: fadeInUp 0.4s ease-out;">
+              <p class="mono" style="font-size: 14px; color: var(--page-text); margin: 0; font-weight: 500;">
+                Something went wrong. Please try again.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer" aria-label="Footer" style="margin-top: 80px;">
+        <div class="footer-content">
+          <div class="footer-main">
+            <div class="footer-section">
+              <div class="footer-title mono">AI Tool Directory</div>
+              <div class="footer-desc mono">A hand-picked directory of GenAI tools. Curated, not cluttered.</div>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-label mono">Part of</div>
+              <a href="https://thesingularitylabs.xyz" target="_blank" rel="noreferrer noopener" class="footer-link">
+                <span class="footer-link-text">The Singularity Labs</span>
+                <span class="footer-link-arrow">→</span>
+              </a>
+              <div class="footer-tagline mono">What matters in AI, distilled.</div>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-label mono">Explore</div>
+              <nav class="footer-nav">
+                <a href="./index.html" class="footer-nav-link mono">Directory</a>
+                <a href="./directory.html" class="footer-nav-link mono">Categories</a>
+                <a href="./guides.html" class="footer-nav-link mono">Guides</a>
+                <a href="./prompts.html" class="footer-nav-link mono">Prompts</a>
+                <a href="./news.html" class="footer-nav-link mono">News</a>
+                <a href="./newsletter.html" class="footer-nav-link mono">Newsletter</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Theme toggle
+      const themeToggle = document.getElementById('themeToggle');
+      const stored = localStorage.getItem('theme');
+      const theme = stored === 'dark' ? 'dark' : 'light';
+      document.body.setAttribute('data-theme', theme);
+      themeToggle.setAttribute('aria-checked', theme === 'dark');
+      themeToggle.addEventListener('click', () => {
+        const current = document.body.getAttribute('data-theme');
+        const newTheme = current === 'dark' ? 'light' : 'dark';
+        document.body.setAttribute('data-theme', newTheme);
+        themeToggle.setAttribute('aria-checked', newTheme === 'dark');
+        localStorage.setItem('theme', newTheme);
+      });
+
+      // Subtle animated background (very minimal)
+      const bg = document.getElementById('animatedBg');
+      if (bg) {
+        let mouseX = 0, mouseY = 0;
+        let targetX = 0, targetY = 0;
+        
+        document.addEventListener('mousemove', (e) => {
+          targetX = (e.clientX / window.innerWidth) * 100;
+          targetY = (e.clientY / window.innerHeight) * 100;
+        });
+        
+        function animateBg() {
+          mouseX += (targetX - mouseX) * 0.03;
+          mouseY += (targetY - mouseY) * 0.03;
+          bg.style.background = `radial-gradient(circle at ${mouseX}% ${mouseY}%, rgba(87, 83, 78, 0.02), transparent 60%)`;
+          requestAnimationFrame(animateBg);
+        }
+        animateBg();
+      }
+      
+      // Form container hover effect
+      const formContainer = document.getElementById('formContainer');
+      if (formContainer) {
+        formContainer.addEventListener('mouseenter', () => {
+          formContainer.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.03)';
+        });
+        formContainer.addEventListener('mouseleave', () => {
+          if (document.getElementById('email') !== document.activeElement) {
+            formContainer.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.02)';
+          }
+        });
+      }
+
+      // Newsletter form
+      const form = document.getElementById('newsletterForm');
+      const successMessage = document.getElementById('successMessage');
+      const errorMessage = document.getElementById('errorMessage');
+      
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const email = document.getElementById('email').value;
+        successMessage.style.display = 'none';
+        errorMessage.style.display = 'none';
+        
+        // TODO: Replace with your email service API endpoint
+        // Examples: Mailchimp, ConvertKit, Substack, etc.
+        try {
+          // Placeholder - replace with actual API call
+          // const response = await fetch('YOUR_API_ENDPOINT', {
+          //   method: 'POST',
+          //   headers: { 'Content-Type': 'application/json' },
+          //   body: JSON.stringify({ email })
+          // });
+          
+          // For now, just show success (you'll integrate with your email service)
+          successMessage.style.display = 'block';
+          form.reset();
+          
+          // If using an actual API:
+          // if (response.ok) {
+          //   successMessage.style.display = 'block';
+          //   form.reset();
+          // } else {
+          //   errorMessage.style.display = 'block';
+          // }
+        } catch (error) {
+          errorMessage.style.display = 'block';
+        }
+      });
+
+      // Custom cursor (desktop only)
+      if (window.matchMedia('(pointer: fine)').matches) {
+        document.body.classList.add('has-cursor');
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+
+        if (cursorDot && cursorOutline) {
+          let mouseX = 0, mouseY = 0;
+          let dotX = 0, dotY = 0;
+          let outlineX = 0, outlineY = 0;
+          let rafId = null;
+
+          const handleMouseMove = (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            if (!rafId) {
+              rafId = requestAnimationFrame(animateCursor);
+            }
+          };
+
+          function animateCursor() {
+            const spring = 0.15;
+            const friction = 0.85;
+
+            const dotDx = (mouseX - dotX) * spring;
+            const dotDy = (mouseY - dotY) * spring;
+            const outlineDx = (mouseX - outlineX) * (spring * 0.7);
+            const outlineDy = (mouseY - outlineY) * (spring * 0.7);
+
+            dotX += dotDx;
+            dotY += dotDy;
+            outlineX += outlineDx;
+            outlineY += outlineDy;
+
+            cursorDot.style.transform = `translate(${dotX}px, ${dotY}px)`;
+            cursorOutline.style.transform = `translate(${outlineX}px, ${outlineY}px)`;
+
+            rafId = requestAnimationFrame(animateCursor);
+          }
+
+          document.addEventListener('mousemove', handleMouseMove, { passive: true });
+          rafId = requestAnimationFrame(animateCursor);
+        }
+      }
+    </script>
+  </body>
+</html>

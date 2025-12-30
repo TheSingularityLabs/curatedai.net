@@ -1,0 +1,72 @@
+{
+  "buildCommand": "node build-seo.js",
+  "outputDirectory": ".",
+  "installCommand": "",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/tools/:path*",
+      "destination": "/dist/pages/tools/:path*"
+    },
+    {
+      "source": "/category/:path*",
+      "destination": "/dist/pages/category/:path*"
+    },
+    {
+      "source": "/guides/:path*",
+      "destination": "/dist/pages/guides/:path*"
+    },
+    {
+      "source": "/best-for/:path*",
+      "destination": "/dist/pages/best-for/:path*"
+    },
+    {
+      "source": "/pricing/:path*",
+      "destination": "/dist/pages/pricing/:path*"
+    },
+    {
+      "source": "/tags/:path*",
+      "destination": "/dist/pages/tags/:path*"
+    },
+    {
+      "source": "/compare/:path*",
+      "destination": "/dist/pages/compare/:path*"
+    },
+    {
+      "source": "/news/:path*",
+      "destination": "/dist/pages/news/:path*"
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/dist/sitemap.xml"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/dist/robots.txt"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}
+
