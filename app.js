@@ -819,38 +819,57 @@ function initMobileOptimizations() {
   }
 }
 
-// Force fixed header on mobile
+// Force fixed header on mobile - AGGRESSIVE FIX
 function forceFixedHeader() {
   if (window.innerWidth <= 720) {
     const header = document.querySelector('header.chrome');
     if (header) {
-      header.style.position = 'fixed';
-      header.style.top = '0';
-      header.style.left = '0';
-      header.style.right = '0';
-      header.style.zIndex = '9999';
-      header.style.width = '100vw';
-      header.style.margin = '0';
-      header.style.transform = 'none';
-      header.style.willChange = 'auto';
+      // Use setProperty with !important via CSSStyleDeclaration
+      header.style.setProperty('position', 'fixed', 'important');
+      header.style.setProperty('top', '0', 'important');
+      header.style.setProperty('left', '0', 'important');
+      header.style.setProperty('right', '0', 'important');
+      header.style.setProperty('z-index', '9999', 'important');
+      header.style.setProperty('width', '100vw', 'important');
+      header.style.setProperty('margin', '0', 'important');
+      header.style.setProperty('transform', 'none', 'important');
+      header.style.setProperty('will-change', 'auto', 'important');
       
       // Ensure body/html don't create containing block
-      document.documentElement.style.transform = 'none';
-      document.documentElement.style.perspective = 'none';
-      document.documentElement.style.filter = 'none';
-      document.body.style.transform = 'none';
-      document.body.style.perspective = 'none';
-      document.body.style.filter = 'none';
+      document.documentElement.style.setProperty('transform', 'none', 'important');
+      document.documentElement.style.setProperty('perspective', 'none', 'important');
+      document.documentElement.style.setProperty('filter', 'none', 'important');
+      document.body.style.setProperty('transform', 'none', 'important');
+      document.body.style.setProperty('perspective', 'none', 'important');
+      document.body.style.setProperty('filter', 'none', 'important');
     }
   }
 }
 
-// Run on load and resize
-forceFixedHeader();
+// Run immediately and on multiple events
+requestAnimationFrame(() => {
+  forceFixedHeader();
+  setTimeout(forceFixedHeader, 0);
+  setTimeout(forceFixedHeader, 100);
+});
+
 window.addEventListener('resize', forceFixedHeader);
 window.addEventListener('orientationchange', () => {
   setTimeout(forceFixedHeader, 100);
 });
+
+// Watch for style changes and re-apply
+if (window.innerWidth <= 720) {
+  const header = document.querySelector('header.chrome');
+  if (header) {
+    const observer = new MutationObserver(() => {
+      if (header.style.position !== 'fixed') {
+        forceFixedHeader();
+      }
+    });
+    observer.observe(header, { attributes: true, attributeFilter: ['style', 'class'] });
+  }
+}
 
 // Initialize mobile features
 if (document.readyState === 'loading') {
