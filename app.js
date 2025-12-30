@@ -819,6 +819,39 @@ function initMobileOptimizations() {
   }
 }
 
+// Force fixed header on mobile
+function forceFixedHeader() {
+  if (window.innerWidth <= 720) {
+    const header = document.querySelector('header.chrome');
+    if (header) {
+      header.style.position = 'fixed';
+      header.style.top = '0';
+      header.style.left = '0';
+      header.style.right = '0';
+      header.style.zIndex = '9999';
+      header.style.width = '100vw';
+      header.style.margin = '0';
+      header.style.transform = 'none';
+      header.style.willChange = 'auto';
+      
+      // Ensure body/html don't create containing block
+      document.documentElement.style.transform = 'none';
+      document.documentElement.style.perspective = 'none';
+      document.documentElement.style.filter = 'none';
+      document.body.style.transform = 'none';
+      document.body.style.perspective = 'none';
+      document.body.style.filter = 'none';
+    }
+  }
+}
+
+// Run on load and resize
+forceFixedHeader();
+window.addEventListener('resize', forceFixedHeader);
+window.addEventListener('orientationchange', () => {
+  setTimeout(forceFixedHeader, 100);
+});
+
 // Initialize mobile features
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
