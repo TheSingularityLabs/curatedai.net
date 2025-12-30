@@ -17,10 +17,10 @@
 <body data-theme="light">
   <div class="cursor-dot"></div>
   <div class="cursor-outline"></div>
-  <header class="chrome">
-    <div class="chrome-bar">
-      <div class="chrome-pill mono">curated://genai-tools</div>
-      <div class="chrome-spacer"></div>
+    <header class="chrome">
+      <div class="chrome-bar">
+        <div class="chrome-pill mono">curated://genai-tools</div>
+        <div class="chrome-spacer"></div>
       <div class="chrome-links-container">
         <a class="chrome-link mono" href="/index.html">Directory</a>
         <a class="chrome-link mono" href="/directory.html">Categories</a>
@@ -29,15 +29,15 @@
         <a class="chrome-link mono" href="/news.html">News</a>
         <a class="chrome-link mono" href="/newsletter.html">Newsletter</a>
       </div>
-      <div class="chrome-toggle" aria-label="Theme toggle">
-        <span class="mono chrome-toggle-label">Light</span>
-        <button id="themeToggle" class="switch" type="button" role="switch" aria-checked="false">
-          <span class="switch-knob" aria-hidden="true"></span>
-        </button>
-        <span class="mono chrome-toggle-label">Dark</span>
+        <div class="chrome-toggle" aria-label="Theme toggle">
+          <span class="mono chrome-toggle-label">Light</span>
+          <button id="themeToggle" class="switch" type="button" role="switch" aria-checked="false">
+            <span class="switch-knob" aria-hidden="true"></span>
+          </button>
+          <span class="mono chrome-toggle-label">Dark</span>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
   <div class="app">
     <main class="page">
@@ -1401,6 +1401,37 @@
         });
       }
     }
+    
+    // Force fixed header on mobile
+    function forceFixedHeader() {
+      if (window.innerWidth <= 720) {
+        const header = document.querySelector('header.chrome');
+        if (header) {
+          header.style.position = 'fixed';
+          header.style.top = '0';
+          header.style.left = '0';
+          header.style.right = '0';
+          header.style.zIndex = '9999';
+          header.style.width = '100vw';
+          header.style.margin = '0';
+          header.style.transform = 'none';
+          header.style.willChange = 'auto';
+          
+          document.documentElement.style.transform = 'none';
+          document.documentElement.style.perspective = 'none';
+          document.documentElement.style.filter = 'none';
+          document.body.style.transform = 'none';
+          document.body.style.perspective = 'none';
+          document.body.style.filter = 'none';
+        }
+      }
+    }
+    
+    forceFixedHeader();
+    window.addEventListener('resize', forceFixedHeader);
+    window.addEventListener('orientationchange', () => {
+      setTimeout(forceFixedHeader, 100);
+    });
   </script>
 
       <footer class="footer" aria-label="Footer">
