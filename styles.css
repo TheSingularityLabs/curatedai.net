@@ -245,6 +245,7 @@ pre {
 /* Chrome */
 .chrome {
   padding: 12px 0 0;
+  position: relative;
 }
 .chrome-bar {
   display: flex;
@@ -3018,21 +3019,6 @@ body[data-theme="light"] .limitations-list li {
     will-change: auto !important;
   }
   
-  /* Ensure app doesn't create positioning context for fixed header */
-  .app {
-    position: static !important;
-    transform: none !important;
-    will-change: auto !important;
-  }
-  
-  /* Add padding to main content on mobile to account for fixed header */
-  .app {
-    padding-top: 70px !important;
-  }
-  
-  .page {
-    padding-top: 0 !important;
-  }
   
   .chrome-bar {
     flex-wrap: wrap;
