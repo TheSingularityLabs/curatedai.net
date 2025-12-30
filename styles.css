@@ -2997,13 +2997,22 @@ body[data-theme="light"] .limitations-list li {
   /* Mobile navigation improvements */
   .chrome {
     padding: 10px 12px 0;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
     background: var(--bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--line);
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Add padding to main content on mobile to account for fixed header */
+  .page {
+    padding-top: 70px;
   }
   
   .chrome-bar {
