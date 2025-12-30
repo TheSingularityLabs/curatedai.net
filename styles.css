@@ -2889,7 +2889,7 @@ body[data-theme="light"] .limitations-list li {
   }
   
   .app {
-    margin: 8px auto;
+    margin: 0 auto;
     padding: 0 12px;
     border-radius: 16px;
   }
@@ -3008,11 +3008,12 @@ body[data-theme="light"] .limitations-list li {
     border-bottom: 1px solid var(--line);
     width: 100%;
     box-sizing: border-box;
+    margin: 0;
   }
   
   /* Add padding to main content on mobile to account for fixed header */
   .page {
-    padding-top: 70px;
+    padding-top: 70px !important;
   }
   
   .chrome-bar {
@@ -3146,13 +3147,13 @@ body[data-theme="light"] .limitations-list li {
 /* Very small screens (iPhone SE, etc.) */
 @media (max-width: 375px) {
   .app {
-    margin: 4px auto;
+    margin: 0 auto;
     padding: 0 8px;
     border-radius: 12px;
   }
   
   .page {
-    padding: 70px 8px 16px;
+    padding: 70px 8px 16px !important;
   }
   
   .title {
