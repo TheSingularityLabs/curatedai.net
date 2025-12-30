@@ -2,6 +2,8 @@
 
 A hand-picked directory of GenAI tools + weekly AI news from The Singularity Labs.
 
+<!-- Test commit for Vercel auto-deploy -->
+
 ## Pages
 
 | Page | URL | Purpose |
