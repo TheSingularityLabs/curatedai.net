@@ -2891,6 +2891,7 @@ body[data-theme="light"] .limitations-list li {
   .app {
     margin: 0 auto;
     padding: 0 12px;
+    padding-top: 70px !important;
     border-radius: 16px;
     position: static;
     transform: none;
@@ -3025,8 +3026,12 @@ body[data-theme="light"] .limitations-list li {
   }
   
   /* Add padding to main content on mobile to account for fixed header */
-  .page {
+  .app {
     padding-top: 70px !important;
+  }
+  
+  .page {
+    padding-top: 0 !important;
   }
   
   .chrome-bar {
@@ -3161,12 +3166,12 @@ body[data-theme="light"] .limitations-list li {
 @media (max-width: 375px) {
   .app {
     margin: 0 auto;
-    padding: 0 8px;
+    padding: 70px 8px 0 !important;
     border-radius: 12px;
   }
   
   .page {
-    padding: 70px 8px 16px !important;
+    padding: 12px 8px 16px !important;
   }
   
   .title {
