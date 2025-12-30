@@ -248,8 +248,8 @@ pre {
   position: relative;
 }
 
-/* Mobile: Override base position immediately */
-@media (max-width: 720px) {
+/* Mobile/Tablet: Override base position immediately */
+@media (max-width: 1024px) {
   .chrome {
     position: fixed !important;
   }
