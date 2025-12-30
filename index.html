@@ -47,7 +47,7 @@
     <div class="cursor-outline"></div>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="chrome" aria-label="Browser chrome" style="position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; z-index: 99999 !important; width: 100vw !important; margin: 0 !important; transform: none !important; will-change: auto !important;">
+    <header class="chrome" aria-label="Browser chrome">
       <div class="chrome-bar">
         <div class="chrome-pill mono">curated://genai-tools</div>
         <div class="chrome-spacer"></div>
@@ -68,6 +68,18 @@
         </div>
       </div>
     </header>
+    <script>
+      (function() {
+        if (window.innerWidth <= 720) {
+          var header = document.querySelector('header.chrome');
+          if (header) {
+            header.style.cssText = 'position: fixed; top: 0; left: 0; right: 0; z-index: 99999; width: 100vw; margin: 0; transform: none; will-change: auto;';
+            document.documentElement.style.cssText += 'transform: none; perspective: none; filter: none;';
+            document.body.style.cssText += 'transform: none; perspective: none; filter: none;';
+          }
+        }
+      })();
+    </script>
 
     <div class="app">
       <main id="main" class="page" aria-label="Directory">
