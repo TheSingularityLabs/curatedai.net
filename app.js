@@ -819,9 +819,9 @@ function initMobileOptimizations() {
   }
 }
 
-// Force fixed header on mobile - AGGRESSIVE FIX
+// Force fixed header on mobile/tablet - AGGRESSIVE FIX
 function forceFixedHeader() {
-  if (window.innerWidth <= 720) {
+  if (window.innerWidth <= 1024) {
     const header = document.querySelector('header.chrome');
     if (header) {
       // Use setProperty with !important via CSSStyleDeclaration

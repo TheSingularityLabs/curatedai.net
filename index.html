@@ -69,7 +69,7 @@
       </div>
     </header>
     <style id="mobile-header-fix">
-      @media (max-width: 720px) {
+      @media (max-width: 1024px) {
         html body header.chrome {
           position: fixed !important;
           top: 0 !important;
@@ -85,7 +85,7 @@
     <script>
       (function fixHeader() {
         function applyFix() {
-          if (window.innerWidth <= 720) {
+          if (window.innerWidth <= 1024) {
             var header = document.querySelector('header.chrome');
             if (header) {
               header.style.setProperty('position', 'fixed', 'important');
@@ -126,7 +126,7 @@
         
         // Watch for style changes
         var header = document.querySelector('header.chrome');
-        if (header && window.innerWidth <= 720) {
+        if (header && window.innerWidth <= 1024) {
           var observer = new MutationObserver(function() {
             if (header.style.getPropertyValue('position') !== 'fixed') {
               applyFix();

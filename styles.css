@@ -9660,9 +9660,9 @@ body[data-theme="light"] .prompt-modal-content {
 }
 
 /* ============================================
-   MOBILE HEADER FIX - ABSOLUTE LAST RULE
+   MOBILE/TABLET HEADER FIX - ABSOLUTE LAST RULE
    ============================================ */
-@media (max-width: 720px) {
+@media (max-width: 1024px) {
   html body header.chrome,
   html body > header.chrome,
   body > header.chrome,
