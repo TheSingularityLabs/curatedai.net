@@ -3006,7 +3006,7 @@ body[data-theme="light"] .limitations-list li {
     min-height: 44px;
   }
   
-  /* Mobile navigation improvements - MUST be fixed */
+  /* Mobile/Tablet navigation improvements - MUST be fixed */
   html {
     overflow-x: hidden;
     transform: none !important;
