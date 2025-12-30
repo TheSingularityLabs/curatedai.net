@@ -68,15 +68,75 @@
         </div>
       </div>
     </header>
+    <style id="mobile-header-fix">
+      @media (max-width: 720px) {
+        html body header.chrome {
+          position: fixed !important;
+          top: 0 !important;
+          left: 0 !important;
+          right: 0 !important;
+          width: 100vw !important;
+          margin: 0 !important;
+          z-index: 99999 !important;
+          transform: none !important;
+        }
+      }
+    </style>
     <script>
-      (function() {
-        if (window.innerWidth <= 720) {
-          var header = document.querySelector('header.chrome');
-          if (header) {
-            header.style.cssText = 'position: fixed; top: 0; left: 0; right: 0; z-index: 99999; width: 100vw; margin: 0; transform: none; will-change: auto;';
-            document.documentElement.style.cssText += 'transform: none; perspective: none; filter: none;';
-            document.body.style.cssText += 'transform: none; perspective: none; filter: none;';
+      (function fixHeader() {
+        function applyFix() {
+          if (window.innerWidth <= 720) {
+            var header = document.querySelector('header.chrome');
+            if (header) {
+              header.style.setProperty('position', 'fixed', 'important');
+              header.style.setProperty('top', '0', 'important');
+              header.style.setProperty('left', '0', 'important');
+              header.style.setProperty('right', '0', 'important');
+              header.style.setProperty('width', '100vw', 'important');
+              header.style.setProperty('margin', '0', 'important');
+              header.style.setProperty('z-index', '99999', 'important');
+              header.style.setProperty('transform', 'none', 'important');
+              header.style.setProperty('will-change', 'auto', 'important');
+              
+              document.documentElement.style.setProperty('transform', 'none', 'important');
+              document.documentElement.style.setProperty('perspective', 'none', 'important');
+              document.documentElement.style.setProperty('filter', 'none', 'important');
+              document.body.style.setProperty('transform', 'none', 'important');
+              document.body.style.setProperty('perspective', 'none', 'important');
+              document.body.style.setProperty('filter', 'none', 'important');
+            }
           }
+        }
+        
+        // Run immediately
+        applyFix();
+        
+        // Run when DOM is ready
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', applyFix);
+        } else {
+          applyFix();
+        }
+        
+        // Run on resize
+        window.addEventListener('resize', applyFix);
+        window.addEventListener('orientationchange', function() {
+          setTimeout(applyFix, 100);
+        });
+        
+        // Watch for style changes
+        var header = document.querySelector('header.chrome');
+        if (header && window.innerWidth <= 720) {
+          var observer = new MutationObserver(function() {
+            if (header.style.getPropertyValue('position') !== 'fixed') {
+              applyFix();
+            }
+          });
+          observer.observe(header, { 
+            attributes: true, 
+            attributeFilter: ['style', 'class'],
+            attributeOldValue: true
+          });
         }
       })();
     </script>
