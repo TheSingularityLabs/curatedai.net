@@ -3150,6 +3150,15 @@ body[data-theme="light"] .limitations-list li {
 
 /* Very small screens (iPhone SE, etc.) */
 @media (max-width: 375px) {
+  .chrome {
+    padding: 8px 10px 0 !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+  }
+  
   .app {
     margin: 0 auto;
     padding: 70px 8px 0 !important;
@@ -3166,10 +3175,6 @@ body[data-theme="light"] .limitations-list li {
   
   .card {
     padding: 14px;
-  }
-  
-  .chrome {
-    padding: 8px 10px 0;
   }
   
   .chrome-link {
@@ -3228,16 +3233,21 @@ body.is-mobile {
 
 /* Landscape mobile optimizations */
 @media (max-width: 720px) and (orientation: landscape) {
+  .chrome {
+    padding: 8px 12px 0 !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+  }
+  
   .hero {
     padding: 4px 0;
   }
   
   .title {
     font-size: 24px;
-  }
-  
-  .chrome {
-    padding: 8px 12px 0;
   }
   
   .grid {
