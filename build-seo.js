@@ -118,8 +118,6 @@ function generateFooter() {
                 <a href="/prompts.html" class="footer-nav-link mono">Prompts</a>
                 <a href="/news.html" class="footer-nav-link mono">News</a>
                 <a href="/about.html" class="footer-nav-link mono">About</a>
-                <a href="/news.html" class="footer-nav-link mono">News</a>
-                <a href="https://thesingularitylabs.xyz" target="_blank" rel="noreferrer noopener" class="footer-nav-link mono">The Singularity Labs</a>
               </nav>
             </div>
           </div>
