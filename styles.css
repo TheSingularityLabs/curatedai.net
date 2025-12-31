@@ -3065,10 +3065,20 @@ body[data-theme="light"] .limitations-list li {
     text-overflow: clip;
   }
   
+  /* Move toggle to top-right on mobile */
   .chrome-toggle {
+    position: absolute !important;
+    top: 4px !important;
+    right: 8px !important;
     min-height: 28px !important;
-    padding: 2px 0 !important;
+    padding: 4px 6px !important;
     flex-shrink: 0;
+    background: var(--bg) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 8px !important;
+    z-index: 10 !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
   }
   
   .chrome-toggle-label {
@@ -3087,6 +3097,11 @@ body[data-theme="light"] .limitations-list li {
   
   .switch[aria-checked="true"] .switch-knob {
     transform: translateX(20px) !important;
+  }
+  
+  /* Ensure header has relative positioning for absolute toggle */
+  .chrome {
+    position: relative !important;
   }
   
   /* On very small screens, wrap navigation to new line */
