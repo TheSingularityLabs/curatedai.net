@@ -248,8 +248,8 @@ pre {
   position: relative;
 }
 
-/* Mobile/Tablet: Override base position immediately */
-@media (max-width: 1024px) {
+/* Mobile only: Override base position immediately */
+@media (max-width: 720px) {
   .chrome {
     position: fixed !important;
   }
@@ -2855,8 +2855,8 @@ body[data-theme="light"] .limitations-list li {
   margin-bottom: 0;
 }
 
-/* Mobile/Tablet Enhancements - Touch Targets & UX */
-@media (max-width: 1024px) {
+/* Mobile Enhancements - Touch Targets & UX */
+@media (max-width: 720px) {
   /* Ensure minimum 44x44px touch targets (Apple's recommendation) */
   .chrome-link,
   .chip-btn,
