@@ -2793,8 +2793,8 @@ export const TOOLS = [
   },
   // === NEW FROM FAL.AI ===
   // Text → Video
+  // Removed: kandinsky-5-pro (not used)
   {
-    id: "kandinsky-5-pro",
     name: "Kandinsky 5.0 Pro",
     tagline: "Fast, high-quality text-to-video diffusion model",
     whatItDoes: "Generates high-quality videos from text prompts using Kandinsky 5.0 Pro diffusion model technology. Provides fast generation speed with strong visual quality and motion understanding for efficient text-to-video workflows. Optimized diffusion architecture enables rapid video generation while maintaining visual fidelity and coherent motion. Suitable for production pipelines requiring both speed and quality in text-to-video generation.",
