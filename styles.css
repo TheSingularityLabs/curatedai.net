@@ -3014,23 +3014,32 @@ body[data-theme="light"] .limitations-list li {
     overflow-x: hidden;
   }
   
-  /* Compact header for mobile/tablet only */
+  /* Fixed header on mobile - does not scroll */
   body > header.chrome,
   header.chrome,
   .chrome {
-    padding: 4px 8px 0 !important;
-    position: relative !important;
+    padding: 4px 8px 8px !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw !important;
+    z-index: 9999 !important;
     background: var(--bg) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
     border-bottom: 1px solid var(--line) !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 0 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
   }
   
   .chrome-bar {
     flex-wrap: wrap;
     gap: 4px;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 0;
+    position: relative;
   }
   
   .chrome-pill {
@@ -3050,8 +3059,9 @@ body[data-theme="light"] .limitations-list li {
     flex-wrap: wrap;
     gap: 3px;
     flex: 1 1 auto;
-    justify-content: flex-end;
+    justify-content: flex-start;
     min-width: 0;
+    padding-right: 60px; /* Space for toggle */
   }
   
   .chrome-link {
@@ -3065,7 +3075,7 @@ body[data-theme="light"] .limitations-list li {
     text-overflow: clip;
   }
   
-  /* Move toggle to top-right on mobile */
+  /* Move toggle to top-right on mobile - above navigation */
   .chrome-toggle {
     position: absolute !important;
     top: 4px !important;
@@ -3099,9 +3109,9 @@ body[data-theme="light"] .limitations-list li {
     transform: translateX(20px) !important;
   }
   
-  /* Ensure header has relative positioning for absolute toggle */
-  .chrome {
-    position: relative !important;
+  /* Add padding to app to account for fixed header */
+  .app {
+    padding-top: 60px !important;
   }
   
   /* On very small screens, wrap navigation to new line */
