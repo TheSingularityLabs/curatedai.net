@@ -3061,7 +3061,8 @@ body[data-theme="light"] .limitations-list li {
     flex: 1 1 auto;
     justify-content: flex-start;
     min-width: 0;
-    padding-right: 60px; /* Space for toggle */
+    padding-right: 90px !important; /* Space for toggle - increased to prevent overlap */
+    max-width: calc(100% - 90px) !important; /* Ensure links don't extend into toggle area */
   }
   
   .chrome-link {
