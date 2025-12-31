@@ -1701,7 +1701,7 @@ function generateBestForPage(bestForTag) {
             </button>
             `;
           }).join('')}
-        </div>
+        </div>`}
       </section>
     </main>
   </div>
