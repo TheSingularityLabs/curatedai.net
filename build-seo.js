@@ -96,7 +96,7 @@ function generateFooter() {
         <div class="footer-content">
           <div class="footer-main">
             <div class="footer-section">
-              <div class="footer-title mono">AI Tool Directory</div>
+              <div class="footer-title mono">Curated AI</div>
               <div class="footer-desc mono">A hand-picked directory of GenAI tools. Curated, not cluttered.</div>
             </div>
             
@@ -113,7 +113,11 @@ function generateFooter() {
               <div class="footer-label mono">Explore</div>
               <nav class="footer-nav">
                 <a href="/index.html" class="footer-nav-link mono">Directory</a>
+                <a href="/directory.html" class="footer-nav-link mono">Categories</a>
                 <a href="/guides.html" class="footer-nav-link mono">Guides</a>
+                <a href="/prompts.html" class="footer-nav-link mono">Prompts</a>
+                <a href="/news.html" class="footer-nav-link mono">News</a>
+                <a href="/about.html" class="footer-nav-link mono">About</a>
                 <a href="/news.html" class="footer-nav-link mono">News</a>
                 <a href="https://thesingularitylabs.xyz" target="_blank" rel="noreferrer noopener" class="footer-nav-link mono">The Singularity Labs</a>
               </nav>
