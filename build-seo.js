@@ -879,6 +879,17 @@ ${JSON.stringify(generateStructuredData(tool), null, 2)}
         </div>
         ` : ''}
 
+        <!-- Alternatives Link -->
+        <div class="content-section" style="padding: 20px 0; border-bottom: 1px solid var(--line); max-width: 100%; box-sizing: border-box;">
+          <p class="section-label mono" style="margin-bottom: 12px; font-size: 10px; opacity: 0.7;">EXPLORE ALTERNATIVES</p>
+          <div style="margin-top: 12px;">
+            <a href="../alternatives/${tool.id}.html" class="drawer-link" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 8px; text-decoration: none; font-weight: 500; font-family: var(--mono); font-size: 13px; transition: all 0.2s ease;" onmouseover="this.style.borderColor='var(--accent)'; this.style.background='var(--btn-bg)'; this.style.color='var(--btn-text)'; this.style.transform='translateX(4px)'" onmouseout="this.style.borderColor='var(--line)'; this.style.background='var(--card-bg)'; this.style.color='var(--page-text)'; this.style.transform='translateX(0)'">
+              View ${escapeHtml(tool.name)} Alternatives (2026) →
+            </a>
+            <p style="font-size: 11px; color: var(--page-muted); line-height: 1.5; margin: 12px 0 0 0; font-family: var(--mono); opacity: 0.8;">Compare ${escapeHtml(tool.name)} with ${relatedTools.length > 0 ? relatedTools.length + '+' : '10+'} similar ${modalityLabel.toLowerCase()} AI tools.</p>
+          </div>
+        </div>
+
         <div class="content-section" style="padding: 20px 0; border-top: 1px solid var(--line); margin-top: 24px; max-width: 100%; box-sizing: border-box;">
           <p class="section-label mono" style="margin-bottom: 16px; font-size: 10px; opacity: 0.7;">FREQUENTLY ASKED QUESTIONS</p>
           <div style="display: flex; flex-direction: column; gap: 0; margin-top: 0; max-width: 100%; box-sizing: border-box; background: var(--card-bg); border-radius: 12px; border: 1px solid var(--line); overflow: hidden;">
@@ -1536,8 +1547,8 @@ function generateBestForPage(bestForTag) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Best AI Tools for ${tagLabel} (2026) | AI Tool Directory</title>
-  <meta name="description" content="Discover the best AI tools for ${tagLabel.toLowerCase()}. Compare ${tagTools.length} curated tools hand-picked for ${tagLabel.toLowerCase()} use cases.">
+  <title>AI Tools for ${tagLabel === 'Developers' ? 'Developers' : tagLabel} (2026) | Best ${tagLabel === 'Developers' ? 'Developer' : tagLabel} AI Tools</title>
+  <meta name="description" content="${tagLabel === 'Developers' ? `AI tools for developers: ${tagTools.length} curated developer AI tools, personally tested. Find the best coding, IDE, and development AI tools for 2026.` : `Discover the best AI tools for ${tagLabel.toLowerCase()}. Compare ${tagTools.length} curated tools hand-picked for ${tagLabel.toLowerCase()} use cases.`}">
   <link rel="canonical" href="https://curatedai.net/best-for/${tagSlug}.html">
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
@@ -1721,8 +1732,8 @@ function generatePricingPage(pricingTier) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${tierLabel} AI Tools (2026) | AI Tool Directory</title>
-  <meta name="description" content="Discover ${tierLabel.toLowerCase()} AI tools. Compare ${tierTools.length} curated ${tierLabel.toLowerCase()} tools for generative AI. Hand-picked by experts.">
+  <title>${pricingTier === 'free' ? 'Free AI Tools 2026' : tierLabel + ' AI Tools (2026)'} | Curated AI Tool Directory</title>
+  <meta name="description" content="${pricingTier === 'free' ? `Free AI tools 2026: ${tierTools.length} curated free AI tools, personally tested. No credit card required. Find the best free text-to-video, image-to-image, coding, and LLM tools.` : `Discover ${tierLabel.toLowerCase()} AI tools. Compare ${tierTools.length} curated ${tierLabel.toLowerCase()} tools for generative AI. Hand-picked by experts.`}">
   <link rel="canonical" href="https://curatedai.net/pricing/${tierSlug}.html">
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
@@ -19879,6 +19890,207 @@ topComparisons.forEach(([tool1, tool2]) => {
   console.log(`✓ Generated: /compare/${comparisonSlug}/`);
 });
 
+// Generate Alternatives pages
+function generateAlternativesPage(tool) {
+  // Find alternatives: same modality, exclude the tool itself
+  const alternatives = tools
+    .filter(t => 
+      t.id !== tool.id && 
+      t.modalities?.some(m => tool.modalities?.includes(m))
+    )
+    .sort((a, b) => (a.curatedRank || 999) - (b.curatedRank || 999))
+    .slice(0, 10); // Top 10 alternatives
+  
+  const modality = tool.modalities?.[0] || 'AI tool';
+  const modalityLabel = getModalityLabel(modality);
+  const toolSlug = slugify(tool.id);
+  
+  const html = `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${escapeHtml(tool.name)} Alternatives (2026) | Best ${modalityLabel} AI Tools</title>
+  <meta name="description" content="${escapeHtml(tool.name)} alternatives: ${alternatives.length} curated ${modalityLabel.toLowerCase()} AI tools similar to ${escapeHtml(tool.name)}. Compare features, pricing, and use cases to find the best alternative.">
+  <link rel="canonical" href="https://curatedai.net/alternatives/${toolSlug}.html">
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "${escapeHtml(tool.name)} Alternatives (2026)",
+    "description": "Curated list of ${alternatives.length} ${modalityLabel.toLowerCase()} AI tools that are alternatives to ${escapeHtml(tool.name)}.",
+    "url": "https://curatedai.net/alternatives/${toolSlug}.html"
+  }
+  </script>
+</head>
+<body data-theme="light">
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+  <div class="app">
+    <header class="chrome">
+      <div class="chrome-bar">
+        <div class="chrome-pill mono">curated://genai-tools</div>
+        <div class="chrome-spacer"></div>
+        <div class="chrome-links-container">
+          <a class="chrome-link mono" href="/index.html">Directory</a>
+          <a class="chrome-link mono" href="/directory.html">Categories</a>
+          <a class="chrome-link mono" href="/guides.html">Guides</a>
+          <a class="chrome-link mono" href="/prompts.html">Prompts</a>
+          <a class="chrome-link mono" href="/news.html">News</a>
+          <a class="chrome-link mono" href="/newsletter.html">Newsletter</a>
+        </div>
+        <div class="chrome-toggle" aria-label="Theme toggle">
+          <span class="mono chrome-toggle-label">Light</span>
+          <button id="themeToggle" class="switch" type="button" role="switch" aria-checked="false">
+            <span class="switch-knob" aria-hidden="true"></span>
+          </button>
+          <span class="mono chrome-toggle-label">Dark</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="hero" aria-label="Alternatives">
+        <nav class="breadcrumb mono" style="margin-bottom: 20px; font-size: 11px; color: var(--page-muted);">
+          <a href="/index.html" style="color: var(--page-muted); text-decoration: none;">Home</a> / 
+          <a href="/tools/${toolSlug}.html" style="color: var(--page-muted); text-decoration: none;">${escapeHtml(tool.name)}</a> / 
+          <span style="color: var(--page-text);">Alternatives</span>
+        </nav>
+        <div class="kicker mono">ALTERNATIVES • CURATED</div>
+        <h1 class="title">${escapeHtml(tool.name)} Alternatives (2026)</h1>
+        <p class="drawer-sub" style="font-size: 14px; line-height: 1.6; margin: 0 auto;">
+          We've curated ${alternatives.length} top ${modalityLabel.toLowerCase()} AI tools that are alternatives to ${escapeHtml(tool.name)}. Each tool is hand-picked for quality, reliability, and unique capabilities.
+        </p>
+      </section>
+      
+      <section class="results" aria-label="Results" style="margin-top: 40px;">
+        <div class="results-head">
+          <div class="results-title mono">ALTERNATIVES</div>
+          <div class="results-meta mono">${alternatives.length} tools • curated</div>
+        </div>
+        <div class="grid" role="list">
+          ${alternatives.map(alt => {
+            const website = alt.links?.find(l => l.label === 'Website');
+            const price = pricingLabel(alt.pricing);
+            const whatItDoesText = alt.whatItDoes || alt.tagline || "";
+            const firstSentence = whatItDoesText.split(/[.!?]/)[0].trim();
+            const previewText = firstSentence.length > 200 ? firstSentence.slice(0, 200) + "..." : firstSentence;
+            
+            return `
+            <button class="card" type="button" onclick="window.location.href='../tools/${alt.id}.html'" style="text-align: left;">
+              <div class="card-header">
+                <div class="card-name">${escapeHtml(alt.name)}</div>
+                ${alt.tagline ? `<div class="card-tagline">${escapeHtml(alt.tagline)}</div>` : ""}
+              </div>
+              <div class="card-preview">${escapeHtml(previewText)}</div>
+              ${alt.whyPicked ? `<div class="card-why"><span class="muted">Why:</span> ${escapeHtml(alt.whyPicked)}</div>` : ""}
+              <div class="card-foot">
+                <span style="display:inline-flex; gap:10px; align-items:center; flex-wrap: wrap;">
+                  ${alt.pricing && norm(alt.pricing) !== "unknown" ? `<span class="price-pill">${escapeHtml(price)}</span>` : ""}
+                  ${alt.bestForTag ? `<span class="bestfor-tag ${getBestForColorClass(alt.bestForTag)}">${escapeHtml(alt.bestForTag)}</span>` : ""}
+                </span>
+                <span class="card-actions">
+                  ${website ? `<a class="visit-btn" href="${website.url}" target="_blank" rel="noreferrer noopener" onclick="event.stopPropagation();">Visit</a>` : ""}
+                </span>
+              </div>
+            </button>
+            `;
+          }).join('')}
+        </div>
+      </section>
+      
+      <section style="margin-top: 60px; padding: 40px 24px; background: var(--card-bg); border-radius: 12px; border: 1px solid var(--line);">
+        <h2 class="mono" style="font-size: 20px; font-weight: 600; margin-bottom: 16px; color: var(--page-text);">About ${escapeHtml(tool.name)}</h2>
+        <p class="mono" style="font-size: 14px; line-height: 1.7; color: var(--page-text); margin-bottom: 16px;">
+          ${escapeHtml(tool.whatItDoes || tool.tagline || '')}
+        </p>
+        <a href="/tools/${toolSlug}.html" class="mono" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: var(--btn-bg); color: var(--btn-text); border-radius: 8px; text-decoration: none; font-weight: 500; transition: all 0.2s ease;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+          View ${escapeHtml(tool.name)} Details →
+        </a>
+      </section>
+    </main>
+  </div>
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const stored = localStorage.getItem('theme');
+    const theme = stored === 'dark' ? 'dark' : 'light';
+    document.body.setAttribute('data-theme', theme);
+    themeToggle.setAttribute('aria-checked', theme === 'dark');
+    themeToggle.addEventListener('click', () => {
+      const current = document.body.getAttribute('data-theme');
+      const newTheme = current === 'dark' ? 'light' : 'dark';
+      document.body.setAttribute('data-theme', newTheme);
+      themeToggle.setAttribute('aria-checked', newTheme === 'dark');
+      localStorage.setItem('theme', newTheme);
+    });
+    
+    if (window.matchMedia('(pointer: fine)').matches) {
+      document.body.classList.add('has-cursor');
+      const cursorDot = document.querySelector('.cursor-dot');
+      const cursorOutline = document.querySelector('.cursor-outline');
+      
+      if (cursorDot && cursorOutline) {
+        let mouseX = 0, mouseY = 0;
+        let dotX = 0, dotY = 0;
+        let outlineX = 0, outlineY = 0;
+        let rafId = null;
+        
+        const handleMouseMove = (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+          if (!rafId) {
+            rafId = requestAnimationFrame(animateCursor);
+          }
+        };
+        
+        function animateCursor() {
+          const dotDx = (mouseX - dotX) * 0.2;
+          const dotDy = (mouseY - dotY) * 0.2;
+          const outlineDx = (mouseX - outlineX) * 0.12;
+          const outlineDy = (mouseY - outlineY) * 0.12;
+          
+          if (Math.abs(dotDx) > 0.1 || Math.abs(dotDy) > 0.1 || 
+              Math.abs(outlineDx) > 0.1 || Math.abs(outlineDy) > 0.1) {
+            dotX += dotDx;
+            dotY += dotDy;
+            outlineX += outlineDx;
+            outlineY += outlineDy;
+            
+            cursorDot.style.transform = 'translate(' + dotX + 'px, ' + dotY + 'px)';
+            cursorOutline.style.transform = 'translate(' + outlineX + 'px, ' + outlineY + 'px)';
+            
+            rafId = requestAnimationFrame(animateCursor);
+          } else {
+            rafId = null;
+          }
+        }
+        
+        document.addEventListener('mousemove', handleMouseMove, { passive: true });
+      }
+    }
+  </script>
+${generateFooter()}
+  </div>
+</body>
+</html>`;
+
+  return html;
+}
+
+const alternativesDir = path.join(PAGES_DIR, 'alternatives');
+if (!fs.existsSync(alternativesDir)) fs.mkdirSync(alternativesDir, { recursive: true });
+
+// Generate alternatives pages for all tools
+tools.forEach(tool => {
+  const toolSlug = slugify(tool.id);
+  const html = generateAlternativesPage(tool);
+  const filePath = path.join(alternativesDir, `${toolSlug}.html`);
+  fs.writeFileSync(filePath, html);
+  console.log(`✓ Generated: /alternatives/${toolSlug}/`);
+});
+
 // Generate Tag pages
 const tagsDir = path.join(PAGES_DIR, 'tags');
 if (!fs.existsSync(tagsDir)) fs.mkdirSync(tagsDir, { recursive: true });
@@ -19998,6 +20210,16 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     return `
   <url>
     <loc>https://curatedai.net/compare/${comparisonSlug}.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+    `;
+  }).join('')}
+  ${tools.map(tool => {
+    const toolSlug = slugify(tool.id);
+    return `
+  <url>
+    <loc>https://curatedai.net/alternatives/${toolSlug}.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

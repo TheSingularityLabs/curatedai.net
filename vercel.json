@@ -33,6 +33,10 @@
       "destination": "/dist/pages/compare/:path*"
     },
     {
+      "source": "/alternatives/:path*",
+      "destination": "/dist/pages/alternatives/:path*"
+    },
+    {
       "source": "/news/:path*",
       "destination": "/dist/pages/news/:path*"
     },
