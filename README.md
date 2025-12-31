@@ -10,7 +10,7 @@ A hand-picked directory of GenAI tools + weekly AI news from The Singularity Lab
 | **Category Directory** | `/directory.html` | Browse tools by category (11 categories, grid layout) |
 | **AI News** | `/news.html` | 101 curated news shorts from @thesingularitylabs |
 | **Tool Ideas** | `/ideas.html` | Browse creative use cases and tool bundles |
-| **Prompts** | `/prompts.html` | 236+ curated AI prompts organized by category |
+| **Prompts** | `/prompts.html` | 248+ curated AI prompts organized by category |
 
 ## Current Tool Distribution
 
