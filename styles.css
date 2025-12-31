@@ -3014,11 +3014,11 @@ body[data-theme="light"] .limitations-list li {
     overflow-x: hidden;
   }
   
-  /* Fixed header on mobile - does not scroll */
+  /* Fixed header on mobile - does not scroll - THINNER */
   body > header.chrome,
   header.chrome,
   .chrome {
-    padding: 4px 8px 8px !important;
+    padding: 2px 6px 4px !important;
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
@@ -3030,12 +3030,12 @@ body[data-theme="light"] .limitations-list li {
     -webkit-backdrop-filter: blur(10px) !important;
     border-bottom: 1px solid var(--line) !important;
     margin-bottom: 0 !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08) !important;
   }
   
   .chrome-bar {
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 2px;
     justify-content: space-between;
     align-items: flex-start;
     padding: 0;
@@ -3043,32 +3043,32 @@ body[data-theme="light"] .limitations-list li {
   }
   
   .chrome-pill {
-    font-size: 9px !important;
-    padding: 4px 6px !important;
+    font-size: 8px !important;
+    padding: 2px 4px !important;
     flex: 0 0 auto;
     display: none; /* Hide on mobile to save space */
   }
   
   .chrome-spacer {
-    flex: 0 0 4px;
-    min-width: 4px;
+    flex: 0 0 2px;
+    min-width: 2px;
   }
   
   .chrome-links-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 3px;
+    gap: 2px;
     flex: 1 1 auto;
     justify-content: flex-start;
     min-width: 0;
-    padding-right: 90px !important; /* Space for toggle - increased to prevent overlap */
-    max-width: calc(100% - 90px) !important; /* Ensure links don't extend into toggle area */
+    padding-right: 85px !important; /* Space for toggle */
+    max-width: calc(100% - 85px) !important; /* Ensure links don't extend into toggle area */
   }
   
   .chrome-link {
-    font-size: 10px !important;
-    padding: 4px 6px !important;
-    min-height: 28px !important;
+    font-size: 9px !important;
+    padding: 3px 5px !important;
+    min-height: 24px !important;
     -webkit-tap-highlight-color: var(--accent-medium);
     white-space: nowrap;
     flex-shrink: 0;
@@ -3076,43 +3076,43 @@ body[data-theme="light"] .limitations-list li {
     text-overflow: clip;
   }
   
-  /* Move toggle to top-right on mobile - above navigation */
+  /* Move toggle to top-right on mobile - above navigation - COMPACT */
   .chrome-toggle {
     position: absolute !important;
-    top: 4px !important;
-    right: 8px !important;
-    min-height: 28px !important;
-    padding: 4px 6px !important;
+    top: 2px !important;
+    right: 6px !important;
+    min-height: 24px !important;
+    padding: 2px 4px !important;
     flex-shrink: 0;
     background: var(--bg) !important;
     border: 1px solid var(--line) !important;
-    border-radius: 8px !important;
+    border-radius: 6px !important;
     z-index: 10 !important;
     backdrop-filter: blur(10px) !important;
     -webkit-backdrop-filter: blur(10px) !important;
   }
   
   .chrome-toggle-label {
-    font-size: 9px !important;
+    font-size: 8px !important;
   }
   
   .switch {
-    width: 40px !important;
-    height: 20px !important;
+    width: 36px !important;
+    height: 18px !important;
   }
   
   .switch-knob {
-    width: 14px !important;
-    height: 14px !important;
+    width: 12px !important;
+    height: 12px !important;
   }
   
   .switch[aria-checked="true"] .switch-knob {
-    transform: translateX(20px) !important;
+    transform: translateX(18px) !important;
   }
   
-  /* Add padding to app to account for fixed header */
+  /* Add padding to app to account for fixed header - REDUCED */
   .app {
-    padding-top: 60px !important;
+    padding-top: 45px !important;
   }
   
   /* On very small screens, wrap navigation to new line */
