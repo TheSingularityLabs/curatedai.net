@@ -17,18 +17,19 @@
 <body data-theme="light">
   <div class="cursor-dot"></div>
   <div class="cursor-outline"></div>
+  <div class="app">
     <header class="chrome">
       <div class="chrome-bar">
         <div class="chrome-pill mono">curated://genai-tools</div>
         <div class="chrome-spacer"></div>
-      <div class="chrome-links-container">
-        <a class="chrome-link mono" href="/index.html">Directory</a>
-        <a class="chrome-link mono" href="/directory.html">Categories</a>
-        <a class="chrome-link mono" href="/guides.html">Guides</a>
-        <a class="chrome-link mono" href="/prompts.html">Prompts</a>
-        <a class="chrome-link mono" href="/news.html">News</a>
-        <a class="chrome-link mono" href="/newsletter.html">Newsletter</a>
-      </div>
+        <div class="chrome-links-container">
+          <a class="chrome-link mono" href="/index.html">Directory</a>
+          <a class="chrome-link mono" href="/directory.html">Categories</a>
+          <a class="chrome-link mono" href="/guides.html">Guides</a>
+          <a class="chrome-link mono" href="/prompts.html">Prompts</a>
+          <a class="chrome-link mono" href="/news.html">News</a>
+          <a class="chrome-link mono" href="/newsletter.html">Newsletter</a>
+        </div>
         <div class="chrome-toggle" aria-label="Theme toggle">
           <span class="mono chrome-toggle-label">Light</span>
           <button id="themeToggle" class="switch" type="button" role="switch" aria-checked="false">
@@ -39,7 +40,6 @@
       </div>
     </header>
 
-  <div class="app">
     <main class="page">
       <section class="hero" aria-label="Guides">
         <nav class="breadcrumb mono" style="margin-bottom: 20px; font-size: 11px; color: var(--page-muted);">
@@ -1401,44 +1401,13 @@
         });
       }
     }
-    
-    // Force fixed header on mobile
-    function forceFixedHeader() {
-      if (window.innerWidth <= 720) {
-        const header = document.querySelector('header.chrome');
-        if (header) {
-          header.style.position = 'fixed';
-          header.style.top = '0';
-          header.style.left = '0';
-          header.style.right = '0';
-          header.style.zIndex = '9999';
-          header.style.width = '100vw';
-          header.style.margin = '0';
-          header.style.transform = 'none';
-          header.style.willChange = 'auto';
-          
-          document.documentElement.style.transform = 'none';
-          document.documentElement.style.perspective = 'none';
-          document.documentElement.style.filter = 'none';
-          document.body.style.transform = 'none';
-          document.body.style.perspective = 'none';
-          document.body.style.filter = 'none';
-        }
-      }
-    }
-    
-    forceFixedHeader();
-    window.addEventListener('resize', forceFixedHeader);
-    window.addEventListener('orientationchange', () => {
-      setTimeout(forceFixedHeader, 100);
-    });
   </script>
 
       <footer class="footer" aria-label="Footer">
         <div class="footer-content">
           <div class="footer-main">
             <div class="footer-section">
-              <div class="footer-title mono">AI Tool Directory</div>
+              <div class="footer-title mono">Curated AI</div>
               <div class="footer-desc mono">A hand-picked directory of GenAI tools. Curated, not cluttered.</div>
             </div>
             
