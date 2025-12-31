@@ -27,14 +27,15 @@
 │   └── prompts.js          # Prompts library
 ├── dist/                   # Generated static pages
 │   ├── pages/              # Generated pages
-│   │   ├── tools/          # Individual tool pages
-│   │   ├── category/       # Category pages
-│   │   ├── guides/         # AEO guide pages
-│   │   ├── news/           # News article pages
-│   │   ├── compare/        # Comparison pages
-│   │   ├── best-for/       # Best-for pages
-│   │   ├── tags/           # Tag pages
-│   │   └── pricing/        # Pricing pages
+│   │   ├── tools/          # Individual tool pages (118)
+│   │   ├── alternatives/   # Alternatives pages (118)
+│   │   ├── category/       # Category pages (11)
+│   │   ├── guides/         # AEO guide pages (72)
+│   │   ├── news/           # News article pages (100+)
+│   │   ├── compare/        # Comparison pages (30)
+│   │   ├── best-for/       # Best-for pages (46)
+│   │   ├── tags/           # Tag pages (15)
+│   │   └── pricing/        # Pricing pages (3)
 │   ├── styles.css          # Copied CSS
 │   ├── sitemap.xml         # Generated sitemap
 │   └── robots.txt          # Generated robots file
@@ -87,10 +88,14 @@
 3. **Test locally**: `python3 -m http.server 8000`
 4. **Deploy**: Upload `dist/` and root HTML files
 
-## SEO Features (2025-12-29)
+## SEO Features (2025-12-31)
 
 - **QUICK ANSWER boxes**: All 72 guide pages include prominent one-sentence answers at the top for featured snippet optimization
 - **FEATURED IN GUIDES**: All tool pages link back to 3-5 relevant guides for entity reinforcement
+- **EXPLORE ALTERNATIVES**: All 118 tool pages include links to alternatives pages for better internal linking
+- **Alternatives pages**: 118 new pages targeting "[Tool] alternatives" keywords (e.g., "Suno alternatives", "Midjourney alternatives")
+- **Keyword optimization**: All 16 high-value ranking keywords optimized across pages
+- **Sitemap**: 538 total URLs including all alternatives, tools, categories, guides, and comparisons
 - **Thin page audit**: Documentation in `docs/THIN_PAGE_AUDIT.md` identifies 24 guides for consolidation
 - **Update cadence**: Process documented in `docs/UPDATE_CADENCE.md` for 30-45 day content refresh cycles
 

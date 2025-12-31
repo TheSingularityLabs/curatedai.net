@@ -415,7 +415,8 @@ node build-seo.js
 ```
 
 This generates:
-- **Individual tool pages** (`dist/pages/tools/*.html`) - 119+ pages
+- **Individual tool pages** (`dist/pages/tools/*.html`) - 118 pages
+- **Alternatives pages** (`dist/pages/alternatives/*.html`) - 118 pages (one per tool)
 - **Category pages** (`dist/pages/category/*.html`) - 11 pages
 - **Best For pages** (`dist/pages/best-for/*.html`) - 46 pages
 - **Pricing pages** (`dist/pages/pricing/*.html`) - 3 pages
@@ -423,11 +424,11 @@ This generates:
 - **Comparison pages** (`dist/pages/compare/*.html`) - 30 pages
 - **AEO Guide pages** (`dist/pages/guides/*.html`) - 72 pages (with QUICK ANSWER boxes)
 - **Guides index** (`guides.html`) - 1 page
-- **News article pages** (`dist/pages/news/*.html`) - 14 pages
-- **Sitemap** (`dist/sitemap.xml`) - includes all pages including `ideas.html`
+- **News article pages** (`dist/pages/news/*.html`) - 100+ pages
+- **Sitemap** (`dist/sitemap.xml`) - includes all pages (538 total URLs)
 - **Robots.txt** (`dist/robots.txt`)
 
-**Total: ~230+ static pages** for SEO coverage.
+**Total: 538 URLs** in sitemap for SEO coverage.
 
 ### Navigation Links
 
