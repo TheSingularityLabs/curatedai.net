@@ -20041,6 +20041,11 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://curatedai.net/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://curatedai.net/index.html</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
