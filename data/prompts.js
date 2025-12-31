@@ -4395,6 +4395,203 @@ export const PROMPTS = [
       "Define audience: 'demographic', 'behavioral', 'geographic', 'random split'"
     ],
     example: "Create A/B test variants for social media ad. Include: 1) Hypothesis, 2) Variant A, 3) Variant B, 4) Additional variants, 5) Testing methodology, 6) Success criteria, 7) Analysis framework, 8) Implementation plan."
+  },
+
+  // More Nano Banana Prompts - Image Generation
+  {
+    id: "nano-architectural-interiors",
+    title: "Architectural Interiors",
+    category: "photography",
+    tool: "nano-banana",
+    description: "Generate photorealistic architectural interior shots with professional lighting",
+    prompt: "architectural interior, [room type], modern design, natural lighting, wide angle view, photorealistic, 4K quality, professional architecture photography, sharp details, realistic materials",
+    tags: ["architecture", "interior", "photorealistic", "4k"],
+    useCase: "Architecture visualization, real estate marketing, interior design, portfolio work",
+    tips: [
+      "Specify room: 'living room', 'kitchen', 'bedroom', 'office', 'restaurant'",
+      "Add style: 'modern', 'minimalist', 'industrial', 'luxury', 'scandinavian'",
+      "Include lighting: 'natural daylight', 'golden hour', 'evening ambiance', 'studio lighting'",
+      "Specify camera: 'wide angle', 'fisheye', 'standard view'"
+    ],
+    example: "architectural interior, modern living room, minimalist design, natural lighting, wide angle view, photorealistic, 4K quality, professional architecture photography, sharp details, realistic materials"
+  },
+  {
+    id: "nano-fashion-photography",
+    title: "Fashion Photography",
+    category: "photography",
+    tool: "nano-banana",
+    description: "Create high-end fashion photography with studio-quality lighting",
+    prompt: "fashion photography, [subject description], professional studio lighting, high fashion, editorial style, 4K quality, sharp focus, photorealistic, commercial photography",
+    tags: ["fashion", "portrait", "commercial", "4k"],
+    useCase: "Fashion campaigns, lookbooks, editorial shoots, brand marketing",
+    tips: [
+      "Specify subject: 'model in designer dress', 'streetwear outfit', 'accessories'",
+      "Add style: 'editorial', 'runway', 'street style', 'high fashion', 'commercial'",
+      "Include lighting: 'dramatic studio', 'soft natural', 'high contrast', 'rim lighting'",
+      "Add mood: 'elegant', 'edgy', 'minimalist', 'luxury'"
+    ],
+    example: "fashion photography, model in designer evening gown, professional studio lighting, high fashion, editorial style, 4K quality, sharp focus, photorealistic, commercial photography"
+  },
+  {
+    id: "nano-food-photography",
+    title: "Food Photography",
+    category: "photography",
+    tool: "nano-banana",
+    description: "Generate appetizing food photography for menus and marketing",
+    prompt: "food photography, [dish description], appetizing, professional food styling, natural lighting, shallow depth of field, 4K quality, sharp details, photorealistic, commercial photography",
+    tags: ["food", "commercial", "photorealistic", "4k"],
+    useCase: "Restaurant menus, food blogs, cookbooks, marketing materials",
+    tips: [
+      "Specify dish: 'pasta', 'dessert', 'breakfast', 'gourmet meal', 'beverage'",
+      "Add styling: 'rustic', 'minimalist', 'luxury', 'casual', 'fine dining'",
+      "Include lighting: 'natural window light', 'soft studio', 'warm ambient'",
+      "Specify focus: 'shallow depth of field', 'everything in focus', 'selective focus'"
+    ],
+    example: "food photography, gourmet pasta dish, appetizing, professional food styling, natural lighting, shallow depth of field, 4K quality, sharp details, photorealistic, commercial photography"
+  },
+  {
+    id: "nano-landscape-photography",
+    title: "Landscape Photography",
+    category: "photography",
+    tool: "nano-banana",
+    description: "Create stunning landscape photography with natural lighting",
+    prompt: "landscape photography, [location/scene], natural lighting, golden hour, wide angle, photorealistic, 4K quality, dramatic sky, sharp details, professional photography",
+    tags: ["landscape", "nature", "photorealistic", "4k"],
+    useCase: "Travel photography, nature photography, stock images, wall art",
+    tips: [
+      "Specify location: 'mountain range', 'beach sunset', 'forest', 'desert', 'cityscape'",
+      "Add time: 'golden hour', 'blue hour', 'midday', 'sunset', 'sunrise'",
+      "Include weather: 'clear sky', 'dramatic clouds', 'misty', 'stormy'",
+      "Specify composition: 'wide angle', 'panoramic', 'vertical', 'rule of thirds'"
+    ],
+    example: "landscape photography, mountain range at sunset, natural lighting, golden hour, wide angle, photorealistic, 4K quality, dramatic sky, sharp details, professional photography"
+  },
+  {
+    id: "nano-abstract-art",
+    title: "Abstract Art Generation",
+    category: "design-branding",
+    tool: "nano-banana",
+    description: "Generate abstract artistic images with creative compositions",
+    prompt: "abstract art, [style description], vibrant colors, creative composition, artistic, 4K quality, high detail, photorealistic textures, modern art",
+    tags: ["abstract", "art", "creative", "4k"],
+    useCase: "Art prints, digital art, creative projects, backgrounds, branding",
+    tips: [
+      "Specify style: 'geometric', 'fluid', 'minimalist', 'colorful', 'monochrome'",
+      "Add colors: 'vibrant', 'pastel', 'bold', 'muted', 'neon'",
+      "Include texture: 'smooth', 'textured', 'layered', 'gradient'",
+      "Specify mood: 'energetic', 'calm', 'dramatic', 'playful'"
+    ],
+    example: "abstract art, geometric patterns with vibrant colors, creative composition, artistic, 4K quality, high detail, photorealistic textures, modern art"
+  },
+
+  // Role-Based LLM Agent Prompts (Tool-Agnostic)
+  {
+    id: "writer-agent-creative-fiction",
+    title: "Writer Agent: Creative Fiction",
+    category: "llm-workflows",
+    tool: "llm",
+    description: "Act as a creative fiction writer to craft engaging stories, narratives, and character development",
+    prompt: "You are a creative fiction writer. Write [story type] about [topic/theme]. Requirements: 1) Develop compelling characters with depth and motivation, 2) Create vivid settings with sensory details, 3) Build narrative tension and pacing, 4) Use dialogue that reveals character and advances plot, 5) Show rather than tell through actions and descriptions, 6) Include plot twists or unexpected developments, 7) End with satisfying resolution or cliffhanger. Write in [style/tone].",
+    tags: ["llm", "writer", "creative", "fiction", "storytelling"],
+    useCase: "Short stories, novels, screenplays, creative writing, character development",
+    tips: [
+      "Specify story type: 'short story', 'novel chapter', 'flash fiction', 'screenplay'",
+      "Define genre: 'sci-fi', 'fantasy', 'mystery', 'romance', 'literary fiction'",
+      "Set tone: 'dark', 'humorous', 'dramatic', 'lighthearted', 'suspenseful'",
+      "Include length: '500 words', '2000 words', 'full chapter'",
+      "Add requirements: 'first person', 'third person', 'multiple POVs'"
+    ],
+    example: "You are a creative fiction writer. Write a short story about a time traveler who discovers they're their own ancestor. Requirements: 1) Develop compelling characters with depth and motivation, 2) Create vivid settings with sensory details, 3) Build narrative tension and pacing, 4) Use dialogue that reveals character and advances plot, 5) Show rather than tell through actions and descriptions, 6) Include plot twists or unexpected developments, 7) End with satisfying resolution or cliffhanger. Write in a suspenseful, thought-provoking tone."
+  },
+  {
+    id: "writer-agent-content-creation",
+    title: "Writer Agent: Content Creation",
+    category: "llm-workflows",
+    tool: "llm",
+    description: "Act as a content writer to create engaging blog posts, articles, and marketing copy",
+    prompt: "You are a professional content writer. Create [content type] about [topic]. Requirements: 1) Hook readers with compelling headline and introduction, 2) Structure content with clear sections and subheadings, 3) Use engaging, conversational tone while maintaining authority, 4) Include specific examples, data, or case studies, 5) Add actionable takeaways or practical tips, 6) Optimize for [target audience], 7) Include call-to-action. Write [word count] words in [tone/style].",
+    tags: ["llm", "writer", "content", "marketing", "blogging"],
+    useCase: "Blog posts, articles, marketing copy, social media content, newsletters",
+    tips: [
+      "Specify content type: 'blog post', 'article', 'email newsletter', 'social media post'",
+      "Define target audience: 'beginners', 'professionals', 'business owners', 'consumers'",
+      "Set tone: 'professional', 'casual', 'friendly', 'authoritative', 'conversational'",
+      "Include SEO: 'include keywords', 'optimize for search', 'include meta description'",
+      "Add format: 'listicle', 'how-to', 'opinion piece', 'case study'"
+    ],
+    example: "You are a professional content writer. Create a blog post about AI tools for small businesses. Requirements: 1) Hook readers with compelling headline and introduction, 2) Structure content with clear sections and subheadings, 3) Use engaging, conversational tone while maintaining authority, 4) Include specific examples, data, or case studies, 5) Add actionable takeaways or practical tips, 6) Optimize for small business owners, 7) Include call-to-action. Write 1500 words in a friendly, professional tone."
+  },
+  {
+    id: "research-agent-multi-source-synthesis",
+    title: "Research Agent: Multi-Source Synthesis",
+    category: "llm-workflows",
+    tool: "llm",
+    description: "Act as a research agent to synthesize information from multiple sources with citations",
+    prompt: "You are a research agent. Synthesize information from the following sources about [topic]: [Sources/URLs]. Requirements: 1) Extract key findings from each source, 2) Identify common themes and consensus points, 3) Note conflicting viewpoints and debates, 4) Highlight gaps or contradictions in the research, 5) Provide comprehensive analysis with proper citations, 6) Include methodology notes where relevant, 7) Suggest areas for further research. Format: [academic paper/executive summary/detailed report]. Citation style: [APA/MLA/Chicago].",
+    tags: ["llm", "research", "synthesis", "citations", "academic"],
+    useCase: "Literature reviews, research papers, competitive analysis, market research, fact-checking",
+    tips: [
+      "Provide multiple sources: research papers, articles, reports, websites",
+      "Specify output format: 'academic paper', 'executive summary', 'detailed analysis', 'brief report'",
+      "Request citation style: 'APA', 'MLA', 'Chicago', 'IEEE', 'Harvard'",
+      "Add focus: 'recent studies only', 'peer-reviewed sources', 'include statistics'",
+      "Specify depth: 'comprehensive', 'summary', 'detailed analysis'"
+    ],
+    example: "You are a research agent. Synthesize information from the following sources about AI in healthcare: [5 research papers, 3 industry reports]. Requirements: 1) Extract key findings from each source, 2) Identify common themes and consensus points, 3) Note conflicting viewpoints and debates, 4) Highlight gaps or contradictions in the research, 5) Provide comprehensive analysis with proper citations, 6) Include methodology notes where relevant, 7) Suggest areas for further research. Format: academic paper. Citation style: APA."
+  },
+  {
+    id: "research-agent-citation-requests",
+    title: "Research Agent: Citation Requests",
+    category: "llm-workflows",
+    tool: "llm",
+    description: "Act as a research agent to find and cite credible sources for claims and statements",
+    prompt: "You are a research agent. For the following claim/statement: '[claim]', provide: 1) Verification of accuracy, 2) Credible sources that support or refute this claim (with URLs, dates, authors), 3) Context and nuance around the claim, 4) Confidence level (high/medium/low) for each source, 5) Any conflicting evidence or counterarguments, 6) Recommended sources for further reading. Format citations in [APA/MLA/Chicago] style. Prioritize: [peer-reviewed/academic/industry reports/recent sources].",
+    tags: ["llm", "research", "citations", "fact-checking", "verification"],
+    useCase: "Fact-checking, academic writing, journalism, research verification, citation building",
+    tips: [
+      "Specify claim clearly with context",
+      "Request source types: 'peer-reviewed', 'academic', 'industry reports', 'news articles'",
+      "Set recency: 'recent sources only', 'within last 5 years', 'historical sources'",
+      "Add verification level: 'high confidence only', 'include all evidence'",
+      "Specify citation format: 'APA', 'MLA', 'Chicago', 'IEEE'"
+    ],
+    example: "You are a research agent. For the following claim/statement: 'AI can improve diagnostic accuracy in medical imaging by 20-30%', provide: 1) Verification of accuracy, 2) Credible sources that support or refute this claim (with URLs, dates, authors), 3) Context and nuance around the claim, 4) Confidence level (high/medium/low) for each source, 5) Any conflicting evidence or counterarguments, 6) Recommended sources for further reading. Format citations in APA style. Prioritize: peer-reviewed academic sources from the last 3 years."
+  },
+  {
+    id: "analysis-agent-data-analysis",
+    title: "Analysis Agent: Data Analysis",
+    category: "llm-workflows",
+    tool: "llm",
+    description: "Act as a data analyst to interpret data, identify patterns, and provide insights",
+    prompt: "You are a data analyst. Analyze the following data: [data/context]. Provide: 1) Key metrics and statistics summary, 2) Trends and patterns identified, 3) Outliers or anomalies detected, 4) Comparative analysis (if applicable), 5) Actionable insights and recommendations, 6) Potential limitations or caveats, 7) Visualizations or charts that would help (describe them). Focus on: [business impact/user behavior/performance metrics/etc.].",
+    tags: ["llm", "analysis", "data", "insights", "business"],
+    useCase: "Business intelligence, performance analysis, user behavior analysis, market research, reporting",
+    tips: [
+      "Provide data clearly: 'sales data', 'user metrics', 'survey results', 'performance data'",
+      "Specify focus: 'revenue trends', 'user engagement', 'conversion rates', 'operational efficiency'",
+      "Request format: 'executive summary', 'detailed report', 'dashboard insights', 'presentation'",
+      "Add timeframe: 'Q1 2024', 'last 6 months', 'year-over-year', 'monthly trends'",
+      "Include comparisons: 'vs previous period', 'vs competitors', 'vs industry benchmarks'"
+    ],
+    example: "You are a data analyst. Analyze the following e-commerce sales data: [monthly sales, conversion rates, traffic sources for last 12 months]. Provide: 1) Key metrics and statistics summary, 2) Trends and patterns identified, 3) Outliers or anomalies detected, 4) Comparative analysis (if applicable), 5) Actionable insights and recommendations, 6) Potential limitations or caveats, 7) Visualizations or charts that would help (describe them). Focus on: revenue growth and conversion optimization opportunities."
+  },
+  {
+    id: "analysis-agent-business-analysis",
+    title: "Analysis Agent: Business Analysis",
+    category: "llm-workflows",
+    tool: "llm",
+    description: "Act as a business analyst to evaluate strategies, market opportunities, and competitive positioning",
+    prompt: "You are a business analyst. Analyze [business situation/strategy/market opportunity]. Provide: 1) SWOT analysis (Strengths, Weaknesses, Opportunities, Threats), 2) Market opportunity assessment, 3) Competitive landscape analysis, 4) Risk assessment and mitigation strategies, 5) Financial implications and projections, 6) Strategic recommendations with priorities, 7) Implementation roadmap. Context: [industry/company size/market]. Focus on: [growth/revenue/competitive advantage/etc.].",
+    tags: ["llm", "analysis", "business", "strategy", "consulting"],
+    useCase: "Strategic planning, market analysis, competitive research, business planning, investment analysis",
+    tips: [
+      "Specify business context: 'startup', 'SMB', 'enterprise', 'specific industry'",
+      "Define focus: 'market entry', 'product launch', 'expansion', 'optimization', 'pivot'",
+      "Add timeframe: 'short-term (3-6 months)', 'medium-term (1-2 years)', 'long-term (3-5 years)'",
+      "Include constraints: 'budget limitations', 'resource constraints', 'market conditions'",
+      "Request format: 'executive summary', 'detailed analysis', 'presentation', 'action plan'"
+    ],
+    example: "You are a business analyst. Analyze entering the AI tools market with a new SaaS product. Provide: 1) SWOT analysis (Strengths, Weaknesses, Opportunities, Threats), 2) Market opportunity assessment, 3) Competitive landscape analysis, 4) Risk assessment and mitigation strategies, 5) Financial implications and projections, 6) Strategic recommendations with priorities, 7) Implementation roadmap. Context: B2B SaaS startup targeting small businesses. Focus on: market entry strategy and competitive positioning."
   }
   
 ];

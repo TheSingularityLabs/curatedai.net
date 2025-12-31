@@ -246,6 +246,7 @@ pre {
 .chrome {
   padding: 12px 0 0;
   position: relative;
+  background: var(--card-bg);
 }
 
 /* Mobile only: Override base position immediately */
@@ -262,14 +263,11 @@ pre {
 .chrome-pill {
   flex: 0 0 auto;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.65);
+  background: var(--card-bg);
   color: var(--page-text);
   padding: 10px 14px;
   border-radius: 14px;
   font-size: 13px;
-}
-body[data-theme="dark"] .chrome-pill {
-  background: rgba(24, 24, 27, 0.6);
 }
 .chrome-spacer {
   flex: 1 1 auto;
@@ -3025,9 +3023,7 @@ body[data-theme="light"] .limitations-list li {
     right: 0 !important;
     width: 100vw !important;
     z-index: 9999 !important;
-    background: var(--bg) !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
+    background: var(--card-bg) !important;
     border-bottom: 1px solid var(--line) !important;
     margin-bottom: 0 !important;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08) !important;
@@ -3096,12 +3092,10 @@ body[data-theme="light"] .limitations-list li {
     min-width: 55px !important;
     padding: 3px 5px !important; /* Compact padding */
     flex-shrink: 0;
-    background: var(--bg) !important;
+    background: var(--card-bg) !important;
     border: 1px solid var(--line) !important;
     border-radius: 6px !important;
     z-index: 10 !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
