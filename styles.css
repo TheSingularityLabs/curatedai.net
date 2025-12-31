@@ -3014,11 +3014,11 @@ body[data-theme="light"] .limitations-list li {
     overflow-x: hidden;
   }
   
-  /* Fixed header on mobile - IMPROVED SPACING & TOUCH TARGETS */
+  /* Fixed header on mobile - THIN with better gaps & touch targets */
   body > header.chrome,
   header.chrome,
   .chrome {
-    padding: 6px 8px 8px !important;
+    padding: 2px 6px 4px !important; /* Thin header */
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
@@ -3035,7 +3035,7 @@ body[data-theme="light"] .limitations-list li {
   
   .chrome-bar {
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 6px; /* Better gap between elements */
     justify-content: space-between;
     align-items: flex-start;
     padding: 0;
@@ -3057,7 +3057,7 @@ body[data-theme="light"] .limitations-list li {
   .chrome-links-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px !important; /* Increased gap for easier tapping */
+    gap: 6px !important; /* Better gap between links */
     flex: 1 1 auto;
     justify-content: flex-start;
     min-width: 0;
@@ -3066,9 +3066,9 @@ body[data-theme="light"] .limitations-list li {
   }
   
   .chrome-link {
-    font-size: 10px !important;
-    padding: 8px 10px !important; /* Increased padding for larger touch target */
-    min-height: 36px !important; /* Minimum 36px for better touch target (44px ideal but we're constrained) */
+    font-size: 9px !important;
+    padding: 6px 8px !important; /* Good padding for touch, but not too tall */
+    min-height: 32px !important; /* Good touch target without making header thick */
     min-width: 44px !important; /* Minimum width for touch target */
     -webkit-tap-highlight-color: var(--accent-medium);
     white-space: nowrap;
@@ -3087,14 +3087,14 @@ body[data-theme="light"] .limitations-list li {
     background: var(--accent-light) !important;
   }
   
-  /* Move toggle to top-right on mobile - LARGER TOUCH TARGET */
+  /* Move toggle to top-right on mobile - GOOD TOUCH TARGET */
   .chrome-toggle {
     position: absolute !important;
-    top: 6px !important;
-    right: 8px !important;
-    min-height: 36px !important; /* Larger touch target */
+    top: 2px !important;
+    right: 6px !important;
+    min-height: 32px !important; /* Good touch target */
     min-width: 60px !important; /* Ensure enough width */
-    padding: 6px 8px !important; /* More padding */
+    padding: 4px 6px !important; /* Compact but tappable */
     flex-shrink: 0;
     background: var(--bg) !important;
     border: 1px solid var(--line) !important;
@@ -3115,17 +3115,17 @@ body[data-theme="light"] .limitations-list li {
   }
   
   .chrome-toggle-label {
-    font-size: 9px !important;
+    font-size: 8px !important;
   }
   
   .switch {
-    width: 40px !important; /* Slightly larger for easier tapping */
-    height: 22px !important;
+    width: 38px !important; /* Good size for tapping */
+    height: 20px !important;
   }
   
   .switch-knob {
-    width: 16px !important; /* Larger knob */
-    height: 16px !important;
+    width: 14px !important;
+    height: 14px !important;
   }
   
   .switch[aria-checked="true"] .switch-knob {
@@ -3134,7 +3134,7 @@ body[data-theme="light"] .limitations-list li {
   
   /* Add padding to app to account for fixed header */
   .app {
-    padding-top: 55px !important; /* Increased to account for larger header */
+    padding-top: 45px !important; /* Thin header = less padding needed */
   }
   
   /* On very small screens, wrap navigation to new line */
