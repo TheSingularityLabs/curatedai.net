@@ -1612,7 +1612,65 @@ function generateBestForPage(bestForTag) {
           <div class="results-title mono">RESULTS</div>
           <div class="results-meta mono">${tagTools.length} tools • curated</div>
         </div>
-        <div class="grid" role="list">
+        ${bestForTag === "Best for Speed" ? (() => {
+          // Group tools by primary modality for Speed page
+          const videoTools = tagTools.filter(t => t.modalities?.some(m => m.includes('video')));
+          const imageTools = tagTools.filter(t => t.modalities?.some(m => m.includes('image')) && !t.modalities?.some(m => m.includes('video')));
+          const audioTools = tagTools.filter(t => t.modalities?.some(m => m.includes('audio')));
+          const threeDTools = tagTools.filter(t => t.modalities?.some(m => m.includes('3d')));
+          const llmTools = tagTools.filter(t => t.modalities?.some(m => m.includes('multi-service') || m.includes('llm')));
+          
+          const renderToolCard = (tool) => {
+            const modality = tool.modalities?.[0] || 'AI tool';
+            const modalityLabel = getModalityLabel(modality);
+            const toolBestForClass = getBestForColorClass(tool.bestForTag);
+            const website = tool.links?.find(l => l.label === 'Website');
+            const price = pricingLabel(tool.pricing);
+            const whatItDoesText = tool.whatItDoes || tool.tagline || "";
+            const firstSentence = whatItDoesText.split(/[.!?]/)[0].trim();
+            const previewText = firstSentence.length > 200 ? firstSentence.slice(0, 200) + "..." : firstSentence;
+            
+            return `
+            <button class="card" type="button" onclick="window.location.href='../tools/${tool.id}.html'" style="text-align: left;">
+              <div class="card-header">
+                <div class="card-name">${escapeHtml(tool.name)}</div>
+                ${tool.tagline ? `<div class="card-tagline">${escapeHtml(tool.tagline)}</div>` : ""}
+              </div>
+              <div class="card-preview">${escapeHtml(previewText)}</div>
+              ${tool.whyPicked ? `<div class="card-why"><span class="muted">Why:</span> ${escapeHtml(tool.whyPicked)}</div>` : ""}
+              <div class="card-foot">
+                <span style="display:inline-flex; gap:10px; align-items:center; flex-wrap: wrap;">
+                  ${tool.pricing && norm(tool.pricing) !== "unknown" ? `<span class="price-pill">${escapeHtml(price)}</span>` : ""}
+                  ${tool.bestForTag ? `<span class="bestfor-tag ${toolBestForClass}">${escapeHtml(tool.bestForTag)}</span>` : ""}
+                </span>
+                <span class="card-actions">
+                  ${website ? `<a class="visit-btn" href="${website.url}" target="_blank" rel="noreferrer noopener" onclick="event.stopPropagation();">Visit</a>` : ""}
+                </span>
+              </div>
+            </button>
+            `;
+          };
+          
+          let html = '';
+          
+          if (videoTools.length > 0) {
+            html += `<div style="margin-bottom: 48px;"><div class="block-title" style="margin-bottom: 20px; font-size: 12px; opacity: 0.8;">VIDEO GENERATION</div><div class="grid" role="list">${videoTools.map(renderToolCard).join('')}</div></div>`;
+          }
+          if (imageTools.length > 0) {
+            html += `<div style="margin-bottom: 48px;"><div class="block-title" style="margin-bottom: 20px; font-size: 12px; opacity: 0.8;">IMAGE GENERATION</div><div class="grid" role="list">${imageTools.map(renderToolCard).join('')}</div></div>`;
+          }
+          if (audioTools.length > 0) {
+            html += `<div style="margin-bottom: 48px;"><div class="block-title" style="margin-bottom: 20px; font-size: 12px; opacity: 0.8;">AUDIO GENERATION</div><div class="grid" role="list">${audioTools.map(renderToolCard).join('')}</div></div>`;
+          }
+          if (threeDTools.length > 0) {
+            html += `<div style="margin-bottom: 48px;"><div class="block-title" style="margin-bottom: 20px; font-size: 12px; opacity: 0.8;">3D GENERATION</div><div class="grid" role="list">${threeDTools.map(renderToolCard).join('')}</div></div>`;
+          }
+          if (llmTools.length > 0) {
+            html += `<div style="margin-bottom: 48px;"><div class="block-title" style="margin-bottom: 20px; font-size: 12px; opacity: 0.8;">LLM INFERENCE</div><div class="grid" role="list">${llmTools.map(renderToolCard).join('')}</div></div>`;
+          }
+          
+          return html;
+        })() : `<div class="grid" role="list">
           ${tagTools.map(tool => {
             const modality = tool.modalities?.[0] || 'AI tool';
             const modalityLabel = getModalityLabel(modality);
