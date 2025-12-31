@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-Allow: /tools/
-Allow: /category/
-Allow: /news/
-
-Sitemap: https://curatedai.net/sitemap.xml

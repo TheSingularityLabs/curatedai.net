@@ -31,6 +31,7 @@ const MODALITIES = [
   "ide-coding",
   "llm",
   "multi-service-ai-platforms",
+  "agentic-browsers",
 ];
 
 const OUTPUT_DIR = './dist';
@@ -85,6 +86,7 @@ function getModalityLabel(modality) {
     "ide-coding": "IDEs & Coding Tools",
     "llm": "LLMs",
     "multi-service-ai-platforms": "Multi-Service Platforms",
+    "agentic-browsers": "Agentic Browsers",
   };
   return labels[modality] || modality;
 }

@@ -32,6 +32,7 @@ const MODALITY_CHIPS = [
   { id: "ide-coding", label: "IDEs & Coding" },
   { id: "llm", label: "LLMs" },
   { id: "multi-service-ai-platforms", label: "Multi-Service Platforms" },
+  { id: "agentic-browsers", label: "Agentic Browsers" },
 ];
 
 const state = {

@@ -13,6 +13,7 @@ export const MODALITIES = [
   "ide-coding",
   "llm",
   "multi-service-ai-platforms",
+  "agentic-browsers",
 ];
 
 /** @type {Array<import("../types").Tool>} */
@@ -8324,6 +8325,327 @@ export const TOOLS = [
       "Complex objects may require post-processing",
       "Very detailed custom requirements may need manual refinement",
       "Processing time may vary with model complexity"
+    ]
+  },
+  {
+    id: "perplexity-comet",
+    name: "Perplexity Comet",
+    tagline: "AI-powered browser with autonomous task automation",
+    whatItDoes: "An AI-powered web browser built on Chromium that integrates Perplexity's AI-assisted search engine. Comet can autonomously perform web tasks such as generating article summaries, sending emails, making purchases, conducting research, and managing tabs. Features include webpage summarization, image description, email composition, and continuous operation without supervision. Available for Windows, macOS, Android, and iOS. Initially part of Perplexity's paid plans, it became free for all users in late 2025.",
+    whyPicked: "Best mainstream agentic browser with comprehensive task automation and cross-platform availability.",
+    bestForTag: "Best for Research",
+    outcomes: ["web-automation", "research", "summaries"],
+    modalities: ["agentic-browsers"],
+    pricing: "free",
+    platform: ["windows", "macos", "android", "ios"],
+    hasApi: false,
+    openSource: false,
+    links: [
+      { label: "Website", url: "https://www.perplexity.ai/comet", type: "primary" },
+      { label: "Download", url: "https://www.perplexity.ai/comet", type: "download" }
+    ],
+    bestFor: ["Automated web research", "Article summarization", "Email composition", "Multi-step web tasks"],
+    addedAt: "2026-01-01",
+    curatedRank: 1,
+    tags: ["browser", "automation", "research", "agentic"],
+    strengths: [
+      "Autonomous task performance without supervision",
+      "Built-in Perplexity AI search integration",
+      "Cross-platform availability (Windows, macOS, Android, iOS)",
+      "Free for all users",
+      "Article summarization and research capabilities",
+      "Email composition and management",
+      "Continuous operation for background tasks"
+    ],
+    gettingStarted: "To get started with Perplexity Comet, download the browser from the Perplexity website for your platform (Windows, macOS, Android, or iOS). Once installed, open Comet and sign in with your Perplexity account (or create a free account). The AI assistant is integrated directly into the browser interface. You can ask it to summarize articles, compose emails, conduct research, or perform multi-step tasks. Simply describe what you want to accomplish, and Comet will autonomously navigate websites and complete the tasks.",
+    tips: [
+      "Use natural language to describe tasks - Comet understands complex multi-step requests",
+      "Leverage the built-in Perplexity search for research-heavy tasks",
+      "Comet can work continuously in the background - set it up for long-running research tasks",
+      "Take advantage of the article summarization feature for quick information gathering",
+      "Use Comet for email composition and management to save time",
+      "Experiment with multi-step task automation for complex workflows",
+      "Stay updated with security patches as AI browsers can have vulnerabilities"
+    ],
+    useCaseExamples: [
+      {
+        title: "Automated Research and Summarization",
+        description: "Use Comet to research topics across multiple websites and generate comprehensive summaries.",
+        steps: [
+          "Open Comet and describe your research topic",
+          "Comet will autonomously visit relevant websites",
+          "Review the generated summary and key findings",
+          "Ask follow-up questions for deeper research"
+        ]
+      },
+      {
+        title: "Email Composition and Management",
+        description: "Let Comet compose and send emails based on your requirements.",
+        steps: [
+          "Describe the email you want to send",
+          "Comet will draft the email with appropriate tone and content",
+          "Review and edit if needed",
+          "Send directly from the browser"
+        ]
+      },
+      {
+        title: "Multi-Step Web Task Automation",
+        description: "Automate complex workflows like booking appointments or comparing products.",
+        steps: [
+          "Describe the multi-step task you want to accomplish",
+          "Comet will navigate websites and perform actions autonomously",
+          "Monitor progress and provide additional guidance if needed",
+          "Review completed actions and results"
+        ]
+      }
+    ],
+    limitations: [
+      "Security vulnerabilities have been identified - stay updated with patches",
+      "May be susceptible to prompt injection attacks from malicious websites",
+      "Privacy concerns with data being sent to cloud-based AI services",
+      "Some complex tasks may require human oversight",
+      "Performance may vary depending on website complexity"
+    ]
+  },
+  {
+    id: "chatgpt-atlas",
+    name: "ChatGPT Atlas",
+    tagline: "OpenAI's AI browser with agent mode for autonomous tasks",
+    whatItDoes: "An AI-powered web browser developed by OpenAI, built on Chromium and integrating ChatGPT directly into the browsing experience. Features include webpage summarization, inline text editing, and an 'Agent Mode' that allows ChatGPT to autonomously perform online tasks such as researching topics, planning events, booking appointments, comparing products, and handling repetitive tasks. Currently available for macOS, with Windows, iOS, and Android versions planned. Atlas enables conversational interactions with web content and can navigate websites, fill out forms, and complete multi-step workflows without constant user supervision.",
+    whyPicked: "OpenAI's flagship agentic browser with powerful Agent Mode for autonomous task execution and seamless ChatGPT integration.",
+    bestForTag: "Best for Automation",
+    outcomes: ["web-automation", "research", "task-automation"],
+    modalities: ["agentic-browsers"],
+    pricing: "freemium",
+    platform: ["macos"],
+    hasApi: false,
+    openSource: false,
+    links: [
+      { label: "Website", url: "https://openai.com/atlas", type: "primary" },
+      { label: "Download", url: "https://openai.com/atlas", type: "download" }
+    ],
+    bestFor: ["Autonomous web task automation", "Webpage summarization", "Event planning and booking", "Product comparison"],
+    addedAt: "2026-01-01",
+    curatedRank: 2,
+    tags: ["browser", "automation", "chatgpt", "agentic"],
+    strengths: [
+      "Powerful Agent Mode for autonomous task execution",
+      "Seamless ChatGPT integration",
+      "Webpage summarization and inline editing",
+      "Multi-step task automation capabilities",
+      "Built on reliable Chromium engine",
+      "From OpenAI - strong AI capabilities",
+      "Conversational interaction with web content"
+    ],
+    gettingStarted: "To get started with ChatGPT Atlas, download the browser from OpenAI's website (currently available for macOS, with Windows, iOS, and Android versions coming soon). Install and launch Atlas, then sign in with your OpenAI account. The ChatGPT assistant is integrated directly into the browser. You can use it for webpage summarization, inline text editing, or activate Agent Mode for autonomous task execution. Simply describe what you want to accomplish, and Atlas will navigate websites and complete tasks autonomously.",
+    tips: [
+      "Activate Agent Mode for complex multi-step tasks that require autonomous execution",
+      "Use webpage summarization to quickly understand long articles or research papers",
+      "Leverage inline text editing for quick content modifications",
+      "Atlas can handle booking appointments and comparing products - describe your needs clearly",
+      "For research tasks, let Atlas visit multiple websites and synthesize information",
+      "Use conversational prompts - Atlas understands natural language instructions",
+      "Stay aware of security considerations and keep the browser updated"
+    ],
+    useCaseExamples: [
+      {
+        title: "Autonomous Event Planning and Booking",
+        description: "Let Atlas research venues, compare options, and book appointments automatically.",
+        steps: [
+          "Describe the event you're planning (type, date, location preferences)",
+          "Atlas will research venues and compare options",
+          "Review the recommendations",
+          "Instruct Atlas to book appointments or make reservations"
+        ]
+      },
+      {
+        title: "Product Research and Comparison",
+        description: "Automate product research across multiple websites and compare options.",
+        steps: [
+          "Describe the product you're looking for",
+          "Atlas will visit relevant websites and gather information",
+          "Review the comparison and key features",
+          "Make an informed decision based on Atlas's research"
+        ]
+      },
+      {
+        title: "Webpage Summarization and Analysis",
+        description: "Quickly understand long articles or research papers with AI-powered summarization.",
+        steps: [
+          "Navigate to the webpage you want to understand",
+          "Ask Atlas to summarize the content",
+          "Request specific information or deeper analysis",
+          "Use inline editing if you want to modify or annotate content"
+        ]
+      }
+    ],
+    limitations: [
+      "Currently macOS only - Windows, iOS, and Android versions coming soon",
+      "Security vulnerabilities have been identified - requires regular updates",
+      "Privacy concerns with data collection and cloud-based processing",
+      "May be susceptible to prompt injection attacks",
+      "Some tasks may require human oversight for accuracy",
+      "Agent Mode may not handle all edge cases perfectly"
+    ]
+  },
+  {
+    id: "opera-neon",
+    name: "Opera Neon",
+    tagline: "AI-powered browser with task automation and web app building",
+    whatItDoes: "An AI-powered browser developed by Opera that integrates AI deeply into the browsing experience. Neon functions both as a chatbot and an agent capable of performing tasks and building web applications. Offers access to advanced AI models including Gemini 3 Pro, GPT-5.1, and Veo 3.1, along with a deep research feature. Can autonomously execute web tasks, generate content, and even build web applications through AI assistance. Provides comprehensive AI integration for research, automation, and development workflows.",
+    whyPicked: "Premium agentic browser with advanced AI model access and web application building capabilities.",
+    bestForTag: "Best for Development",
+    outcomes: ["web-automation", "research", "development"],
+    modalities: ["agentic-browsers"],
+    pricing: "paid",
+    platform: ["windows", "macos", "linux"],
+    hasApi: false,
+    openSource: false,
+    links: [
+      { label: "Website", url: "https://www.opera.com/neon", type: "primary" },
+      { label: "Download", url: "https://www.opera.com/neon", type: "download" }
+    ],
+    bestFor: ["Web application building", "Advanced AI model access", "Deep research tasks", "Complex automation workflows"],
+    addedAt: "2026-01-01",
+    curatedRank: 3,
+    tags: ["browser", "automation", "development", "agentic"],
+    strengths: [
+      "Access to multiple advanced AI models (Gemini 3 Pro, GPT-5.1, Veo 3.1)",
+      "Can build web applications autonomously",
+      "Deep research capabilities",
+      "Dual functionality as chatbot and agent",
+      "Comprehensive task automation",
+      "Professional-grade AI integration"
+    ],
+    gettingStarted: "To get started with Opera Neon, download the browser from Opera's website for your platform (Windows, macOS, or Linux). Install and launch Neon, then sign up for a subscription ($19.90/month) to access the full AI features. Once subscribed, you'll have access to Gemini 3 Pro, GPT-5.1, and Veo 3.1 models. Use the AI assistant for research, task automation, or even building web applications. The browser integrates AI throughout the experience, allowing you to describe what you want to accomplish and let Neon handle the execution.",
+    tips: [
+      "Take advantage of the multiple AI model access - different models excel at different tasks",
+      "Use the deep research feature for comprehensive information gathering",
+      "Experiment with web application building - describe what you want to build and let Neon assist",
+      "Leverage the dual chatbot/agent functionality for both conversations and task execution",
+      "The paid subscription is required for full AI features - free tier has limited capabilities",
+      "Use Neon for complex multi-step workflows that require advanced AI capabilities",
+      "Combine different AI models for optimal results in different scenarios"
+    ],
+    useCaseExamples: [
+      {
+        title: "Building Web Applications",
+        description: "Use Neon's AI to build web applications by describing your requirements.",
+        steps: [
+          "Describe the web application you want to build",
+          "Neon will use AI to generate code and structure",
+          "Review and refine the generated application",
+          "Deploy or export the application"
+        ]
+      },
+      {
+        title: "Advanced Research with Multiple AI Models",
+        description: "Leverage different AI models for comprehensive research tasks.",
+        steps: [
+          "Use the deep research feature for your topic",
+          "Switch between Gemini 3 Pro, GPT-5.1 for different perspectives",
+          "Synthesize information from multiple AI models",
+          "Export or save research findings"
+        ]
+      },
+      {
+        title: "Complex Task Automation",
+        description: "Automate complex workflows using Neon's agent capabilities.",
+        steps: [
+          "Describe the multi-step workflow you want to automate",
+          "Neon will plan and execute the tasks autonomously",
+          "Monitor progress and provide guidance if needed",
+          "Review completed actions and results"
+        ]
+      }
+    ],
+    limitations: [
+      "Requires paid subscription ($19.90/month) for full features",
+      "May have learning curve for advanced features",
+      "Web application building may require technical knowledge for complex projects",
+      "Performance may vary depending on task complexity",
+      "Some features may be experimental and subject to change"
+    ]
+  },
+  {
+    id: "microsoft-edge-copilot",
+    name: "Microsoft Edge Copilot Mode",
+    tagline: "Free AI-powered browser with agentic task automation",
+    whatItDoes: "Microsoft Edge browser with integrated Copilot Mode, an AI-powered assistant that provides agentic capabilities for web navigation and task automation. Copilot is embedded throughout the browser, overseeing the address bar and new tabs, and providing contextual suggestions by analyzing all open tabs. Features include natural language navigation, tab comparison, content analysis, website discovery, making reservations, managing tasks, and performing complex actions with minimal clicks. Supports both voice and typed commands. Currently free during experimental phase, making it accessible for users wanting agentic browser capabilities without subscription costs.",
+    whyPicked: "Best free agentic browser option with comprehensive task automation and Microsoft's AI integration.",
+    bestForTag: "Best for Productivity",
+    outcomes: ["web-automation", "research", "productivity"],
+    modalities: ["agentic-browsers"],
+    pricing: "free",
+    platform: ["windows", "macos", "android", "ios"],
+    hasApi: false,
+    openSource: false,
+    bestFor: ["Free agentic browsing", "Task management and automation", "Content analysis and comparison", "Natural language navigation"],
+    addedAt: "2026-01-01",
+    curatedRank: 4,
+    tags: ["browser", "automation", "productivity", "agentic", "free"],
+    strengths: [
+      "Free during experimental phase",
+      "Cross-platform availability (Windows, macOS, Android, iOS)",
+      "Natural language commands (voice and typed)",
+      "Contextual suggestions based on open tabs",
+      "Task management and reservation capabilities",
+      "Tab comparison and content analysis",
+      "Integrated throughout browser experience",
+      "Microsoft's reliable AI infrastructure"
+    ],
+    gettingStarted: "To get started with Microsoft Edge Copilot Mode, download Microsoft Edge browser (if not already installed) from Microsoft's website. Open Edge and look for Copilot Mode features - they're integrated throughout the browser. You can access Copilot from the address bar, new tabs, or use voice/typed commands. Simply describe what you want to accomplish in natural language, and Copilot will help navigate, analyze content, compare tabs, or perform tasks. The feature is currently free during the experimental phase, so you can try all agentic capabilities without a subscription.",
+    tips: [
+      "Use natural language - Copilot understands conversational commands",
+      "Leverage tab comparison for research and analysis",
+      "Take advantage of voice commands for hands-free operation",
+      "Let Copilot analyze all open tabs for contextual suggestions",
+      "Use for making reservations and managing tasks directly in browser",
+      "Experiment with complex multi-step actions - Copilot can handle them",
+      "The experimental phase is free - take advantage while it lasts"
+    ],
+    useCaseExamples: [
+      {
+        title: "Content Analysis and Tab Comparison",
+        description: "Use Copilot to analyze and compare content across multiple tabs.",
+        steps: [
+          "Open multiple tabs with related content",
+          "Ask Copilot to compare or analyze the tabs",
+          "Review the AI-generated comparison and insights",
+          "Use findings for research or decision-making"
+        ]
+      },
+      {
+        title: "Task Management and Reservations",
+        description: "Let Copilot handle reservations and task management autonomously.",
+        steps: [
+          "Describe the task or reservation you need",
+          "Copilot will navigate to relevant websites",
+          "Fill out forms and complete actions",
+          "Confirm and review completed tasks"
+        ]
+      },
+      {
+        title: "Natural Language Web Navigation",
+        description: "Navigate the web using conversational commands.",
+        steps: [
+          "Use voice or type commands in natural language",
+          "Copilot will understand and navigate accordingly",
+          "Get contextual suggestions based on your browsing",
+          "Complete tasks with minimal clicks"
+        ]
+      }
+    ],
+    limitations: [
+      "Currently in experimental phase - features may change",
+      "May require Microsoft account for full functionality",
+      "Some advanced features may be limited compared to paid alternatives",
+      "Performance may vary depending on task complexity",
+      "Cross-platform features may differ between platforms"
+    ],
+    links: [
+      { label: "Website", url: "https://www.microsoft.com/edge", type: "primary" },
+      { label: "Download", url: "https://www.microsoft.com/edge/download", type: "download" }
     ]
   },
 ];
