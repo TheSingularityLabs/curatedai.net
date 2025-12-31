@@ -47,6 +47,10 @@
     {
       "source": "/robots.txt",
       "destination": "/dist/robots.txt"
+    },
+    {
+      "source": "/styles.css",
+      "destination": "/dist/styles.css"
     }
   ],
   "headers": [

@@ -1469,6 +1469,11 @@ body[data-theme="dark"] .bestfor-default { border-color: rgba(234, 179, 8, 0.35)
   letter-spacing: -0.005em;
   opacity: 0.92;
 }
+
+.drawer-text.mono,
+.drawer-sub.mono {
+  font-family: var(--mono) !important;
+}
 .drawer-details {
   display: grid;
   gap: 8px;
@@ -1513,6 +1518,11 @@ body[data-theme="dark"] .block-title {
   font-size: 13px;
   line-height: 1.65;
   color: var(--page-text);
+}
+
+.bullets.mono,
+.bullets.mono li {
+  font-family: var(--mono) !important;
 }
 
 .bullets li {
