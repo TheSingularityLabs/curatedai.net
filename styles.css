@@ -3014,11 +3014,11 @@ body[data-theme="light"] .limitations-list li {
     overflow-x: hidden;
   }
   
-  /* Fixed header on mobile - does not scroll - THINNER */
+  /* Fixed header on mobile - IMPROVED SPACING & TOUCH TARGETS */
   body > header.chrome,
   header.chrome,
   .chrome {
-    padding: 2px 6px 4px !important;
+    padding: 6px 8px 8px !important;
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
@@ -3035,7 +3035,7 @@ body[data-theme="light"] .limitations-list li {
   
   .chrome-bar {
     flex-wrap: wrap;
-    gap: 2px;
+    gap: 6px;
     justify-content: space-between;
     align-items: flex-start;
     padding: 0;
@@ -3050,69 +3050,91 @@ body[data-theme="light"] .limitations-list li {
   }
   
   .chrome-spacer {
-    flex: 0 0 2px;
-    min-width: 2px;
+    flex: 0 0 6px;
+    min-width: 6px;
   }
   
   .chrome-links-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 2px;
+    gap: 6px !important; /* Increased gap for easier tapping */
     flex: 1 1 auto;
     justify-content: flex-start;
     min-width: 0;
-    padding-right: 85px !important; /* Space for toggle */
-    max-width: calc(100% - 85px) !important; /* Ensure links don't extend into toggle area */
+    padding-right: 95px !important; /* Space for toggle */
+    max-width: calc(100% - 95px) !important; /* Ensure links don't extend into toggle area */
   }
   
   .chrome-link {
-    font-size: 9px !important;
-    padding: 3px 5px !important;
-    min-height: 24px !important;
+    font-size: 10px !important;
+    padding: 8px 10px !important; /* Increased padding for larger touch target */
+    min-height: 36px !important; /* Minimum 36px for better touch target (44px ideal but we're constrained) */
+    min-width: 44px !important; /* Minimum width for touch target */
     -webkit-tap-highlight-color: var(--accent-medium);
     white-space: nowrap;
     flex-shrink: 0;
     overflow: visible;
     text-overflow: clip;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 8px !important;
+    transition: all 0.2s ease !important;
   }
   
-  /* Move toggle to top-right on mobile - above navigation - COMPACT */
+  .chrome-link:active {
+    transform: scale(0.95) !important;
+    background: var(--accent-light) !important;
+  }
+  
+  /* Move toggle to top-right on mobile - LARGER TOUCH TARGET */
   .chrome-toggle {
     position: absolute !important;
-    top: 2px !important;
-    right: 6px !important;
-    min-height: 24px !important;
-    padding: 2px 4px !important;
+    top: 6px !important;
+    right: 8px !important;
+    min-height: 36px !important; /* Larger touch target */
+    min-width: 60px !important; /* Ensure enough width */
+    padding: 6px 8px !important; /* More padding */
     flex-shrink: 0;
     background: var(--bg) !important;
     border: 1px solid var(--line) !important;
-    border-radius: 6px !important;
+    border-radius: 8px !important;
     z-index: 10 !important;
     backdrop-filter: blur(10px) !important;
     -webkit-backdrop-filter: blur(10px) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    transition: all 0.2s ease !important;
+  }
+  
+  .chrome-toggle:active {
+    transform: scale(0.95) !important;
+    background: var(--accent-light) !important;
   }
   
   .chrome-toggle-label {
-    font-size: 8px !important;
+    font-size: 9px !important;
   }
   
   .switch {
-    width: 36px !important;
-    height: 18px !important;
+    width: 40px !important; /* Slightly larger for easier tapping */
+    height: 22px !important;
   }
   
   .switch-knob {
-    width: 12px !important;
-    height: 12px !important;
+    width: 16px !important; /* Larger knob */
+    height: 16px !important;
   }
   
   .switch[aria-checked="true"] .switch-knob {
     transform: translateX(18px) !important;
   }
   
-  /* Add padding to app to account for fixed header - REDUCED */
+  /* Add padding to app to account for fixed header */
   .app {
-    padding-top: 45px !important;
+    padding-top: 55px !important; /* Increased to account for larger header */
   }
   
   /* On very small screens, wrap navigation to new line */
