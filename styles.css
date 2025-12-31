@@ -2899,7 +2899,6 @@ body[data-theme="light"] .limitations-list li {
   .app {
     margin: 0 auto;
     padding: 0 12px;
-    padding-top: 70px !important;
     border-radius: 16px;
     position: static;
     transform: none;
