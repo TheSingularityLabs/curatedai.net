@@ -5,7 +5,6 @@ function getEls() {
   return {
     q: document.getElementById("q"),
     chips: document.getElementById("chips"),
-    newThisWeek: document.getElementById("newThisWeek"),
     grid: document.getElementById("grid"),
     resultMeta: document.getElementById("resultMeta"),
     themeToggle: document.getElementById("themeToggle"),
@@ -158,7 +157,8 @@ function matchesFilters(t) {
     if (!ms.includes(state.modality)) return false;
   }
 
-  if (els.newThisWeek.checked && !isNewThisWeek(t)) return false;
+  // "New this week" filter removed - all tools are new since site just launched
+  // Can re-enable later when only some tools are new
   return true;
 }
 
@@ -317,7 +317,7 @@ function updateEmptyState() {
   if (!emptyState) return;
   
   const hasSearch = els.q && els.q.value.trim().length > 0;
-  const hasFilter = state.modality !== "all" || (els.newThisWeek && els.newThisWeek.checked);
+  const hasFilter = state.modality !== "all";
   
   // Update message based on what's active
   const messageEl = emptyState.querySelector('.mono');
@@ -625,7 +625,7 @@ function wireEvents() {
     });
   });
 
-  els.newThisWeek.addEventListener("change", () => render());
+  // "New this week" toggle removed - can re-enable later
 
   els.themeToggle.addEventListener("click", () => {
     applyTheme(state.theme === "dark" ? "light" : "dark");
@@ -888,7 +888,7 @@ function clearAllFilters() {
   try {
     if (els.q) els.q.value = "";
     state.modality = "all";
-    if (els.newThisWeek) els.newThisWeek.checked = false;
+    // "New this week" filter removed
     render();
     if (els.q) els.q.focus();
   } catch (error) {
