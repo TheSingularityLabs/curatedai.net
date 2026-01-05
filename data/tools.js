@@ -1649,7 +1649,7 @@ export const TOOLS = [
     id: "black-forest-labs",
     name: "Black Forest Labs",
     tagline: "FLUX image model family (provider site)",
-    whatItDoes: "Publishes the FLUX family of state-of-the-art image generation models including FLUX.1, FLUX.1-dev, FLUX.2, and specialized variants. Provides open-source and commercial models with exceptional quality and prompt adherence for modern image generation workflows. FLUX models represent cutting-edge diffusion technology with superior text rendering, style control, and image quality. Offers multiple model variants optimized for different use cases including speed, quality, and specialized applications.",
+    whatItDoes: "Publishes the FLUX family of state-of-the-art image generation models including FLUX.1, FLUX.1-dev, FLUX.2, and specialized variants. Provides open-source models with exceptional quality and prompt adherence for modern image generation workflows. FLUX models represent cutting-edge diffusion technology with superior text rendering, style control, and image quality. Offers multiple model variants optimized for different use cases including speed, quality, and specialized applications.",
     whyPicked: "Important modern image model family to know and track, representing the cutting edge of open-source image generation.",
     bestForTag: "Best for Images",
     outcomes: ["images"],
@@ -1657,7 +1657,7 @@ export const TOOLS = [
     pricing: "unknown",
     platform: ["web", "api"],
     hasApi: "unknown",
-    openSource: "unknown",
+    openSource: true,
     links: [
       { label: "Website", url: "https://blackforestlabs.ai/", type: "primary" },
       { label: "Documentation", url: "https://blackforestlabs.ai/docs", type: "docs" },
@@ -3240,7 +3240,7 @@ export const TOOLS = [
     pricing: "unknown",
     platform: ["api"],
     hasApi: true,
-    openSource: false,
+    openSource: true,
     links: [
       { label: "Website", url: "https://bfl.ai/", type: "primary" },
       { label: "Documentation", url: "https://bfl.ai/docs", type: "docs" },
@@ -3312,7 +3312,7 @@ export const TOOLS = [
     pricing: "unknown",
     platform: ["api"],
     hasApi: true,
-    openSource: false,
+    openSource: true,
     links: [
       { label: "Website", url: "https://bfl.ai/", type: "primary" },
       { label: "Documentation", url: "https://bfl.ai/docs", type: "docs" },
@@ -3443,6 +3443,225 @@ export const TOOLS = [
       "GPU resources needed for optimal performance",
       "Model quality varies by version and fine-tuning",
       "Extensive customization may have learning curve"
+    ],
+  },
+  {
+    id: "z-image",
+    name: "Z-Image",
+    tagline: "Ultra-fast photorealistic image generation with bilingual text rendering",
+    whatItDoes: "Generates high-quality photorealistic images from text prompts using Tongyi-MAI's Z-Image model with Single-Stream Diffusion Transformer (S3-DiT) architecture. Produces images in seconds with exceptional detail, lighting, and texture control. Features three variants: Z-Image-Turbo for ultra-fast generation, Z-Image-Base for community fine-tuning, and Z-Image-Edit for precise image editing. Excels at bilingual text rendering, accurately generating both Chinese and English text within images with commercial-grade quality.",
+    whyPicked: "Ultra-fast photorealistic generation with superior bilingual text rendering, making it ideal for designs requiring text-in-image accuracy.",
+    bestForTag: "Best for Speed",
+    outcomes: ["images"],
+    modalities: ["text-to-image"],
+    pricing: "freemium",
+    platform: ["web", "api"],
+    hasApi: true,
+    openSource: true,
+    links: [
+      { label: "Website", url: "https://zimageai.io/", type: "primary" },
+      { label: "Documentation", url: "https://zimageai.io/docs", type: "docs" },
+      { label: "GitHub", url: "https://github.com/Tongyi-MAI", type: "github" }
+    ],
+    bestFor: ["Fast photorealistic generation", "Text-in-image designs", "Bilingual content"],
+    addedAt: "2026-01-01",
+    curatedRank: 35,
+    tags: ["images", "t2i", "photorealistic", "text-rendering"],
+    strengths: [
+      "Ultra-fast generation with minimal inference steps (8 steps)",
+      "Superior bilingual text rendering (Chinese and English)",
+      "Photorealistic quality with fine detail control",
+      "Multiple variants for different use cases",
+      "Efficient performance (runs on 16GB VRAM)",
+      "Open-source with community support"
+    ],
+    gettingStarted: "Visit Z-Image website or access through API. Choose the appropriate variant: Z-Image-Turbo for speed, Z-Image-Base for customization, or Z-Image-Edit for image editing. Enter your text prompt, specifying any text you want rendered in the image. Generate images with fast iteration. For local deployment, download model weights from GitHub and set up the generation environment. The model is optimized for efficiency and can run on consumer GPUs.",
+    tips: [
+      "Specify text content clearly in prompts for best bilingual rendering",
+      "Use Z-Image-Turbo for fastest generation when speed is priority",
+      "Leverage Z-Image-Edit for precise image modifications",
+      "Experiment with different aspect ratios for varied compositions",
+      "Use detailed prompts for photorealistic results",
+      "Take advantage of efficient inference for rapid iteration",
+      "Check GitHub for community implementations and tools"
+    ],
+    useCaseExamples: [
+      {
+        title: "Fast Photorealistic Image Generation",
+        description: "Generate high-quality photorealistic images quickly for design projects.",
+        steps: [
+          "Choose Z-Image-Turbo for fastest generation",
+          "Write detailed prompt describing the scene and style",
+          "Specify any text content you want in the image",
+          "Generate and review results",
+          "Iterate with refined prompts if needed",
+          "Export final images for your project"
+        ]
+      },
+      {
+        title: "Bilingual Text-in-Image Designs",
+        description: "Create designs with accurate Chinese and English text rendering.",
+        steps: [
+          "Include both Chinese and English text in your prompt",
+          "Specify text placement and style preferences",
+          "Generate images with text rendering",
+          "Review text accuracy and readability",
+          "Refine prompts for better text placement",
+          "Export designs with accurate bilingual text"
+        ]
+      }
+    ],
+    limitations: [
+      "Model variants may have different capabilities and requirements",
+      "Very complex scenes may require multiple iterations",
+      "Text rendering quality may vary by prompt complexity",
+      "Local deployment may require technical setup"
+    ],
+  },
+  {
+    id: "qwen-image",
+    name: "Qwen-Image",
+    tagline: "20B parameter model with exceptional text rendering and image editing",
+    whatItDoes: "Generates high-quality images from text prompts using Alibaba's Tongyi Qianwen 20-billion parameter MMDiT model. Excels at complex text rendering with commercial-grade quality, supporting multi-line layouts and paragraph-level text generation in both Chinese and English. Provides advanced image editing capabilities including style transfer, object insertion/removal, and detail enhancement. Ranks first in multiple public benchmark tests, surpassing similar open-source models with superior prompt understanding and visual quality.",
+    whyPicked: "Top-performing open-source model with exceptional text rendering and advanced image editing capabilities, optimized for efficient deployment.",
+    bestForTag: "Best for Text Rendering",
+    outcomes: ["images"],
+    modalities: ["text-to-image"],
+    pricing: "free",
+    platform: ["api", "local"],
+    hasApi: true,
+    openSource: true,
+    links: [
+      { label: "Website", url: "https://qwenimages.com/", type: "primary" },
+      { label: "Documentation", url: "https://qwenimages.com/docs", type: "docs" },
+      { label: "GitHub", url: "https://github.com/QwenLM/Qwen-Image", type: "github" }
+    ],
+    bestFor: ["Complex text rendering", "Image editing", "Commercial-grade output"],
+    addedAt: "2026-01-01",
+    curatedRank: 36,
+    tags: ["images", "t2i", "text-rendering", "editing"],
+    strengths: [
+      "Exceptional text rendering with commercial-grade quality",
+      "Advanced image editing capabilities",
+      "Top benchmark performance among open-source models",
+      "Efficient deployment (runs on single RTX 3090 GPU)",
+      "Multi-line and paragraph-level text generation",
+      "Open-source with commercial use support"
+    ],
+    gettingStarted: "Visit Qwen-Image website or access through API. For local deployment, download model weights from GitHub and set up the generation environment. The model is optimized to run on a single RTX 3090 GPU. Enter text prompts with specific text content you want rendered. Use advanced editing features for style transfer, object manipulation, and detail enhancement. Review benchmark results and documentation for best practices. The model supports commercial use with proper licensing.",
+    tips: [
+      "Specify text content clearly for best rendering results",
+      "Use multi-line text prompts for paragraph-level generation",
+      "Leverage editing features for precise image modifications",
+      "Take advantage of efficient deployment for local use",
+      "Review benchmark comparisons for quality expectations",
+      "Experiment with different editing modes",
+      "Check GitHub for latest updates and community examples"
+    ],
+    useCaseExamples: [
+      {
+        title: "Commercial Text-in-Image Designs",
+        description: "Create professional designs with accurate text rendering.",
+        steps: [
+          "Write detailed prompt including text content and design style",
+          "Specify text layout and typography preferences",
+          "Generate images with commercial-grade text rendering",
+          "Review text accuracy and readability",
+          "Use editing features for refinements if needed",
+          "Export final designs for commercial use"
+        ]
+      },
+      {
+        title: "Advanced Image Editing Workflow",
+        description: "Leverage Qwen-Image's editing capabilities for precise modifications.",
+        steps: [
+          "Start with base image generation or upload reference",
+          "Use style transfer for artistic transformations",
+          "Apply object insertion or removal as needed",
+          "Enhance details with detail enhancement features",
+          "Review and refine edited images",
+          "Export final results"
+        ]
+      }
+    ],
+    limitations: [
+      "GPU requirements for optimal performance",
+      "Complex editing operations may require multiple steps",
+      "Text rendering quality may vary by prompt complexity",
+      "Local setup may require technical expertise"
+    ],
+  },
+  {
+    id: "flux-2-pro",
+    name: "FLUX.2 Pro",
+    tagline: "Ultra-fast text-to-image model with photorealistic results and minimal latency",
+    whatItDoes: "Generates high-quality photorealistic images from text prompts using Black Forest Labs' FLUX.2 Pro model. Ultra-fast text-to-image model optimized for speed with turbo diffusion core, delivering results in seconds with minimal VRAM usage (8-12GB). Produces high-fidelity outputs with sharper textures, balanced lighting, and consistent subjects suitable for concept art, product shots, and professional workflows. Optimized for fast, in-browser creative workflows with easy export and sharing capabilities. Latest iteration of the FLUX model family with improved speed and quality.",
+    whyPicked: "Ultra-fast image generation with photorealistic quality, optimized for rapid iteration and professional workflows with minimal hardware requirements.",
+    bestForTag: "Best for Speed",
+    outcomes: ["images"],
+    modalities: ["text-to-image"],
+    pricing: "unknown",
+    platform: ["web", "api"],
+    hasApi: true,
+    openSource: true,
+    links: [
+      { label: "Website", url: "https://blackforestlabs.ai/", type: "primary" },
+      { label: "Documentation", url: "https://blackforestlabs.ai/docs", type: "docs" },
+      { label: "API Docs", url: "https://blackforestlabs.ai/api", type: "api" }
+    ],
+    bestFor: ["High-quality image generation", "Professional projects", "Style control"],
+    addedAt: "2026-01-01",
+    curatedRank: 37,
+    tags: ["images", "t2i", "quality", "professional"],
+    strengths: [
+      "Ultra-fast generation with turbo diffusion core",
+      "High-fidelity photorealistic outputs",
+      "Low hardware footprint (8-12GB VRAM)",
+      "Optimized for fast iteration and feedback loops",
+      "Sharper textures and balanced lighting",
+      "Easy export and sharing capabilities"
+    ],
+    gettingStarted: "Visit Black Forest Labs website to learn about FLUX.2 Pro. Access through official web interface or API. The model is optimized for fast generation with minimal VRAM requirements (8-12GB). Enter text prompts describing your desired image. Generate images quickly with photorealistic results. Use for rapid prototyping, batch generation, and consistent character/style generation. Export high-quality results for presentations, mockups, and handoff. Check documentation for latest features and best practices.",
+    tips: [
+      "Use detailed, descriptive prompts for best results",
+      "Experiment with different style parameters",
+      "Leverage superior prompt adherence for complex scenes",
+      "Use appropriate aspect ratios for your use case",
+      "Take advantage of advanced text rendering for text-in-image designs",
+      "Monitor for model updates and improvements",
+      "Check official channels for latest features and capabilities"
+    ],
+    useCaseExamples: [
+      {
+        title: "Professional Image Generation",
+        description: "Generate high-quality images for professional projects.",
+        steps: [
+          "Access FLUX Pro through web interface or API",
+          "Write detailed prompt with style and composition details",
+          "Select appropriate aspect ratio and style parameters",
+          "Generate images with state-of-the-art quality",
+          "Review and refine with additional prompts if needed",
+          "Export final images for professional use"
+        ]
+      },
+      {
+        title: "Complex Scene Generation",
+        description: "Leverage superior prompt adherence for complex, detailed scenes.",
+        steps: [
+          "Write comprehensive prompt describing all scene elements",
+          "Specify lighting, composition, and style preferences",
+          "Use advanced style controls for fine-tuning",
+          "Generate images with exceptional detail and coherence",
+          "Review prompt adherence and visual quality",
+          "Refine and export final results"
+        ]
+      }
+    ],
+    limitations: [
+      "Pricing and availability may vary",
+      "API access may require subscription",
+      "Some features may be platform-specific",
+      "Model updates may require workflow adjustments"
     ],
   },
   // Image → Image
@@ -4409,7 +4628,7 @@ export const TOOLS = [
     pricing: "unknown",
     platform: ["api"],
     hasApi: true,
-    openSource: false,
+    openSource: true,
     links: [
       { label: "Website", url: "https://bfl.ai/", type: "primary" },
       { label: "Documentation", url: "https://bfl.ai/docs", type: "docs" },
@@ -4699,7 +4918,7 @@ export const TOOLS = [
     pricing: "unknown",
     platform: ["api"],
     hasApi: true,
-    openSource: false,
+    openSource: true,
     links: [
       { label: "Website", url: "https://bfl.ai/", type: "primary" },
       { label: "Documentation", url: "https://bfl.ai/docs", type: "docs" },
@@ -4985,7 +5204,7 @@ export const TOOLS = [
     pricing: "unknown",
     platform: ["api"],
     hasApi: true,
-    openSource: false,
+    openSource: true,
     links: [
       { label: "Website", url: "https://bfl.ai/", type: "primary" },
       { label: "Documentation", url: "https://bfl.ai/docs", type: "docs" },
@@ -5057,7 +5276,7 @@ export const TOOLS = [
     pricing: "unknown",
     platform: ["api"],
     hasApi: true,
-    openSource: false,
+    openSource: true,
     links: [
       { label: "Website", url: "https://bfl.ai/", type: "primary" },
       { label: "Documentation", url: "https://bfl.ai/docs", type: "docs" },
@@ -5908,78 +6127,6 @@ export const TOOLS = [
       "Multi-reference may increase processing time",
       "API rate limits may apply",
       "Very complex multi-reference combinations may require experimentation"
-    ],
-  },
-  {
-    id: "qwen-image",
-    name: "Qwen Image",
-    tagline: "High-quality image generation from Alibaba",
-    whatItDoes: "Generates high-quality images from text prompts using Alibaba's Qwen Image model. Part of the Qwen multimodal AI series, designed for producing detailed and coherent images with strong prompt understanding and visual quality. Represents Alibaba's advanced image generation technology with superior prompt adherence, visual coherence, and detail preservation. Integrated into the broader Qwen multimodal ecosystem, enabling seamless integration with other Qwen AI capabilities for comprehensive content creation workflows.",
-    whyPicked: "High-quality image generation from a major AI research organization with strong prompt understanding and coherent visual outputs.",
-    bestForTag: "Best for Quality",
-    outcomes: ["images"],
-    modalities: ["text-to-image"],
-    pricing: "unknown",
-    platform: ["api"],
-    hasApi: true,
-    openSource: false,
-    links: [
-      { label: "Website", url: "https://qwenlm.github.io/", type: "primary" },
-      { label: "Documentation", url: "https://qwenlm.github.io/docs", type: "docs" },
-      { label: "API Docs", url: "https://qwenlm.github.io/api", type: "api" }
-    ],
-    bestFor: ["High-quality generation", "Prompt understanding", "Coherent visuals", "Multimodal AI"],
-    addedAt: "2025-12-25",
-    curatedRank: 77,
-    tags: ["images", "t2i", "alibaba", "qwen"],
-    strengths: [
-      "High-quality image generation from Alibaba",
-      "Strong prompt understanding and adherence",
-      "Coherent visual outputs",
-      "Part of Qwen multimodal ecosystem",
-      "Detailed and coherent image production"
-    ],
-    gettingStarted: "Access Qwen Image through Alibaba API. Obtain API credentials and set up integration. Enter detailed text prompts describing desired images. Generate high-quality images with strong prompt understanding. Review visual coherence and detail quality. Iterate by refining prompts. Integrate with other Qwen multimodal capabilities if needed. Use for high-quality image generation workflows. Check Qwen website for current pricing and API access options.",
-    tips: [
-      "Use detailed prompts for best results",
-      "Leverage strong prompt understanding",
-      "Review visual coherence in outputs",
-      "Generate multiple variations to find best results",
-      "Use for high-quality image generation",
-      "Integrate with Qwen multimodal ecosystem",
-      "Experiment with different prompt styles"
-    ],
-    useCaseExamples: [
-      {
-        title: "High-Quality Image Generation",
-        description: "Generate high-quality images with strong prompt understanding.",
-        steps: [
-          "Set up API integration",
-          "Write detailed prompts",
-          "Generate images with Qwen Image",
-          "Review prompt adherence and visual quality",
-          "Iterate by refining prompts",
-          "Export for use in projects"
-        ]
-      },
-      {
-        title: "Multimodal Content Creation",
-        description: "Use Qwen Image within Qwen multimodal ecosystem.",
-        steps: [
-          "Set up Qwen multimodal integration",
-          "Use Qwen Image for image generation",
-          "Combine with other Qwen capabilities",
-          "Create comprehensive content workflows",
-          "Review integrated outputs",
-          "Use for multimodal content creation"
-        ]
-      }
-    ],
-    limitations: [
-      "Pricing information may vary - check official website",
-      "Very complex prompts may require multiple iterations",
-      "API rate limits may apply",
-      "Processing time may vary with prompt complexity"
     ],
   },
   {
@@ -8646,6 +8793,304 @@ export const TOOLS = [
     links: [
       { label: "Website", url: "https://www.microsoft.com/edge", type: "primary" },
       { label: "Download", url: "https://www.microsoft.com/edge/download", type: "download" }
+    ]
+  },
+  {
+    id: "manus-ai",
+    name: "Manus AI",
+    tagline: "Autonomous AI agent for complex task execution",
+    whatItDoes: "Manus is an autonomous AI agent developed by Butterfly Effect Pte. Ltd. (acquired by Meta Platforms in December 2025) designed to independently perform complex real-world tasks without continuous human guidance. Launched in March 2025, Manus leverages real-time data retrieval, multi-step reasoning, and API integrations to execute complex analytics, research, and task automation. The agent can handle tasks from simple prompts to complex multi-step workflows, making it suitable for research, data analysis, and autonomous task execution. Meta acquired Manus for over $2 billion to enhance its AI assistant and enterprise tools, integrating the technology into products like Meta AI.",
+    whyPicked: "Pioneering autonomous AI agent platform with proven real-world task execution capabilities, now backed by Meta's resources.",
+    bestForTag: "Best for Automation",
+    outcomes: ["text"],
+    modalities: ["llm"],
+    pricing: "unknown",
+    platform: ["api"],
+    hasApi: true,
+    openSource: false,
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Manus_%28AI_agent%29", type: "primary" }
+    ],
+    bestFor: ["Autonomous task execution", "Complex research and analytics", "Multi-step workflow automation", "Enterprise AI agents", "API integration tasks"],
+    addedAt: "2026-01-01",
+    curatedRank: 85,
+    tags: ["agent", "automation", "meta", "llm", "research"],
+    strengths: [
+      "Autonomous task execution without continuous human oversight",
+      "Real-time data retrieval and multi-step reasoning",
+      "API integration capabilities for complex workflows",
+      "Proven technology acquired by Meta for $2+ billion",
+      "Suitable for research, analytics, and enterprise automation"
+    ],
+    gettingStarted: "Manus AI was acquired by Meta in December 2025. Access to Manus technology is now integrated into Meta's AI products. For enterprise use, contact Meta for API access and integration options. The technology focuses on autonomous task execution, so prepare clear task descriptions and desired outcomes. Integration typically requires API setup and configuration for your specific use cases.",
+    tips: [
+      "Use clear, specific prompts for best task execution results",
+      "Leverage API integrations for complex multi-step workflows",
+      "Monitor autonomous task execution for quality assurance",
+      "Combine with other tools for comprehensive automation solutions",
+      "Consider Meta AI integration for broader capabilities"
+    ],
+    useCaseExamples: [
+      {
+        title: "Autonomous Research and Analysis",
+        description: "Use Manus to conduct complex research tasks autonomously with multi-step reasoning.",
+        steps: [
+          "Define research objectives and data requirements",
+          "Manus will retrieve relevant data and perform analysis",
+          "Review generated insights and findings",
+          "Iterate on research questions for deeper analysis"
+        ]
+      },
+      {
+        title: "Enterprise Task Automation",
+        description: "Automate complex business workflows with autonomous AI agent capabilities.",
+        steps: [
+          "Identify repetitive or complex tasks suitable for automation",
+          "Configure Manus with required API integrations",
+          "Set up task workflows and execution parameters",
+          "Monitor and refine autonomous task execution"
+        ]
+      }
+    ],
+    limitations: [
+      "Access now controlled by Meta after acquisition",
+      "Pricing and availability may be limited to enterprise customers",
+      "Autonomous execution may require oversight for critical tasks",
+      "API access and integration details may be subject to Meta's policies"
+    ]
+  },
+  {
+    id: "baidu-ernie-4-5",
+    name: "Baidu ERNIE 4.5",
+    tagline: "Baidu's advanced multimodal LLM",
+    whatItDoes: "Baidu ERNIE 4.5 (Enhanced Representation through Knowledge Integration) is a family of large language models released by Baidu in November 2025. The ERNIE 4.5 model family includes 10 variants ranging from 0.3 billion to 424 billion total parameters, utilizing a Mixture-of-Experts (MoE) architecture for efficient inference. Open-sourced under the Apache 2.0 license in June 2025, ERNIE 4.5 demonstrates strong performance in Chinese natural language processing, multimodal understanding, and various AI benchmarks. The model excels in common-sense reasoning, optical character recognition, and Chinese language tasks. Available through ERNIE Bot (web interface) and Baidu's Qianfan platform (API access), with open-source model weights available for local deployment.",
+    whyPicked: "Leading Chinese LLM with strong multilingual capabilities, open-source availability, and cost-efficient MoE architecture.",
+    bestForTag: "Best for Chinese",
+    outcomes: ["text"],
+    modalities: ["llm"],
+    pricing: "freemium",
+    platform: ["web", "api", "local"],
+    hasApi: true,
+    openSource: true,
+    links: [
+      { label: "ERNIE Bot", url: "https://yiyan.baidu.com/", type: "primary" },
+      { label: "Qianfan Platform", url: "https://cloud.baidu.com/product/qianfan", type: "api" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ernie_Bot", type: "docs" }
+    ],
+    bestFor: ["Chinese language applications", "Multimodal AI tasks", "Cost-efficient LLM deployment", "Open-source AI projects", "Enterprise AI solutions"],
+    addedAt: "2026-01-01",
+    curatedRank: 75,
+    tags: ["llm", "chinese", "open-source", "baidu", "multimodal", "ernie"],
+    strengths: [
+      "Strong Chinese natural language processing capabilities",
+      "Open-source under Apache 2.0 license",
+      "MoE architecture with 10 model variants (0.3B to 424B parameters)",
+      "Cost-efficient inference with selective parameter activation",
+      "Multimodal understanding capabilities",
+      "Strong performance in common-sense reasoning and OCR tasks",
+      "Available through web, API, and local deployment"
+    ],
+    gettingStarted: "Access ERNIE 4.5 through Baidu's ERNIE Bot at yiyan.baidu.com for web interface. For API access, sign up for Baidu Qianfan platform at cloud.baidu.com/product/qianfan and obtain API credentials. For local deployment, download open-source model weights from Baidu's repositories (check official announcements for model release locations). Use the REST API to integrate ERNIE 4.5 into your applications. Free tier includes limited access. Paid plans offer higher rate limits and access to larger models.",
+    tips: [
+      "Leverage strong Chinese language capabilities for Chinese-English applications",
+      "Use MoE architecture for cost-efficient inference",
+      "Take advantage of open-source availability for privacy-sensitive deployments",
+      "Explore multimodal capabilities for image-text tasks",
+      "Use appropriate model size based on computational resources",
+      "Follow Baidu's documentation for optimal prompt engineering in Chinese",
+      "Combine API and local deployment for flexible workflows"
+    ],
+    useCaseExamples: [
+      {
+        title: "Chinese Language Content Generation",
+        description: "Generate high-quality Chinese content with cultural awareness and natural language understanding.",
+        steps: [
+          "Access ERNIE Bot or Qianfan API",
+          "Provide prompts in Chinese or mixed Chinese-English",
+          "Generate content with proper cultural context",
+          "Review and refine outputs for quality"
+        ]
+      },
+      {
+        title: "Multimodal AI Applications",
+        description: "Use ERNIE 4.5 for tasks requiring both text and image understanding.",
+        steps: [
+          "Set up API access or local deployment",
+          "Provide text prompts with image inputs",
+          "Leverage multimodal understanding capabilities",
+          "Process results for your specific use case"
+        ]
+      }
+    ],
+    limitations: [
+      "Primary strength in Chinese language - English performance may be lower than specialized English models",
+      "Open-source model availability may vary by variant",
+      "API access may require Baidu Cloud account",
+      "Documentation primarily in Chinese",
+      "Some features may be region-restricted"
+    ]
+  },
+  {
+    id: "glm-4-5",
+    name: "GLM-4.5",
+    tagline: "Zhipu AI's advanced multilingual LLM",
+    whatItDoes: "GLM-4.5 (General Language Model) is Zhipu AI's latest large language model in the ChatGLM/GLM series, released in 2025. Building on the success of previous GLM models, GLM-4.5 offers enhanced reasoning capabilities, improved multilingual support (with strong Chinese and English capabilities), and advanced instruction-following. The model is designed for both chat and completion tasks, with support for long context windows and fine-tuned variants for specific use cases. GLM-4.5 maintains Zhipu AI's focus on efficient inference and cost-effective deployment. Available through Zhipu AI's platform (web interface and API) with options for local deployment of open-source variants.",
+    whyPicked: "Advanced Chinese LLM with strong multilingual capabilities, efficient inference, and comprehensive deployment options.",
+    bestForTag: "Best for Multilingual",
+    outcomes: ["text"],
+    modalities: ["llm"],
+    pricing: "freemium",
+    platform: ["web", "api", "local"],
+    hasApi: true,
+    openSource: true,
+    links: [
+      { label: "Website", url: "https://www.zhipuai.cn/", type: "primary" },
+      { label: "Documentation", url: "https://www.zhipuai.cn/docs", type: "docs" },
+      { label: "API Docs", url: "https://www.zhipuai.cn/api", type: "api" }
+    ],
+    bestFor: ["Chinese-English applications", "Multilingual content generation", "Cost-efficient LLM deployment", "Long-context reasoning", "Enterprise AI solutions"],
+    addedAt: "2026-01-01",
+    curatedRank: 80,
+    tags: ["llm", "chinese", "open-source", "zhipu", "multilingual", "glm"],
+    strengths: [
+      "Strong Chinese and English language capabilities",
+      "Enhanced reasoning and instruction-following",
+      "Efficient inference with optimized architecture",
+      "Long context window support",
+      "Open-source variants available",
+      "Cost-effective pricing for API access",
+      "Comprehensive deployment options (web, API, local)"
+    ],
+    gettingStarted: "Visit zhipuai.cn to access GLM-4.5 through the web interface. For API access, sign up for Zhipu AI platform and obtain API credentials. Use the REST API to integrate GLM-4.5 into your applications. For local deployment, check Zhipu AI's GitHub or official repositories for open-source model weights and deployment instructions. Free tier includes limited access. Paid plans offer higher rate limits and access to larger models.",
+    tips: [
+      "Leverage strong Chinese-English bilingual capabilities",
+      "Use for long-context reasoning tasks",
+      "Take advantage of efficient inference for cost savings",
+      "Explore open-source variants for local deployment",
+      "Use appropriate model size based on your needs",
+      "Follow Zhipu AI's documentation for optimal prompt engineering",
+      "Combine web, API, and local deployment for flexible workflows"
+    ],
+    useCaseExamples: [
+      {
+        title: "Bilingual Content Generation",
+        description: "Generate high-quality content in both Chinese and English with proper context understanding.",
+        steps: [
+          "Access GLM-4.5 through web or API",
+          "Provide prompts in Chinese, English, or mixed languages",
+          "Generate content with appropriate language and cultural context",
+          "Review and refine outputs for quality"
+        ]
+      },
+      {
+        title: "Long-Context Analysis",
+        description: "Use GLM-4.5's long context window for comprehensive document analysis and reasoning.",
+        steps: [
+          "Prepare documents or text for analysis",
+          "Use API or local deployment for processing",
+          "Leverage long context capabilities for comprehensive understanding",
+          "Extract insights and generate summaries"
+        ]
+      }
+    ],
+    limitations: [
+      "Primary strength in Chinese and English - other languages may have limited support",
+      "Open-source availability may vary by model variant",
+      "API access may require Zhipu AI account setup",
+      "Some documentation may be primarily in Chinese",
+      "Performance may vary depending on specific use case"
+    ]
+  },
+  {
+    id: "hymotion-1-0",
+    name: "Hymotion 1.0",
+    tagline: "Tencent's text-to-3D motion generation model",
+    whatItDoes: "Hymotion 1.0 (also known as HY-Motion 1.0 or Hunyuan Motion 1.0) is Tencent's open-source, billion-parameter text-to-3D motion generation model released in December 2025. Built on a Diffusion Transformer (DiT) architecture with flow matching, it generates high-fidelity, smooth, and diverse 3D character animations from natural language descriptions. Trained on over 3,000 hours of diverse motion data covering 200+ motion categories including locomotion, sports, fitness, social interactions, and daily activities. The model employs a three-stage training paradigm: large-scale pretraining, high-quality fine-tuning with 400 hours of curated text-motion pairs, and reinforcement learning for physical plausibility. Supports standard 3D formats (FBX, BVH, GLTF) for seamless integration with Blender, Unity, and Unreal Engine. Available through web demo, open-source model weights on GitHub and Hugging Face, and API access.",
+    whyPicked: "Tencent's cutting-edge open-source text-to-3D motion model with production-ready output and extensive motion category support.",
+    bestForTag: "Best for 3D Motion",
+    outcomes: ["3d", "animations"],
+    modalities: ["text-to-3d"],
+    pricing: "free",
+    platform: ["web", "api", "local"],
+    hasApi: true,
+    openSource: true,
+    links: [
+      { label: "Website", url: "https://hy-motion.ai/en", type: "primary" },
+      { label: "Tencent Hunyuan", url: "https://hunyuan.tencent.com/motion", type: "primary" },
+      { label: "GitHub", url: "https://github.com/Tencent-Hunyuan/HY-Motion-1.0", type: "github" },
+      { label: "Hugging Face", url: "https://huggingface.co/tencent/HY-Motion-1.0", type: "community" },
+      { label: "Demo", url: "https://hymotion.app/", type: "primary" }
+    ],
+    bestFor: ["3D character animation", "Game development", "Film and animation production", "Virtual reality experiences", "Rapid motion prototyping"],
+    addedAt: "2026-01-01",
+    curatedRank: 82,
+    tags: ["3d", "motion", "animation", "tencent", "open-source", "text-to-3d"],
+    strengths: [
+      "Billion-parameter DiT architecture with flow matching",
+      "Trained on 3,000+ hours of diverse motion data",
+      "Supports 200+ motion categories",
+      "Open-source under permissive license",
+      "Production-ready exports (FBX, BVH, GLTF)",
+      "Seamless integration with Blender, Unity, Unreal Engine",
+      "Three-stage training for high quality and physical plausibility",
+      "Free web demo available"
+    ],
+    gettingStarted: "Visit hy-motion.ai/en or hymotion.app for the free web demo. Enter a natural language description of the motion you want (e.g., 'a person walking slowly', 'jumping with arms raised'). The model will generate a 3D animation. For local deployment, download model weights from GitHub (github.com/Tencent-Hunyuan/HY-Motion-1.0) or Hugging Face (huggingface.co/tencent/HY-Motion-1.0). Follow the setup instructions to run the model locally. Export animations in FBX, BVH, or GLTF format for use in your 3D software. For API access, check Tencent's Hunyuan platform documentation.",
+    tips: [
+      "Use clear, descriptive natural language prompts for best results",
+      "Specify motion details like speed, intensity, and style",
+      "Export in FBX format for Unity and Unreal Engine",
+      "Use BVH format for Blender and motion capture workflows",
+      "GLTF format works well for web-based 3D applications",
+      "Experiment with different motion categories for diverse results",
+      "Combine multiple motion sequences for complex animations",
+      "Use the reinforcement learning features for physically plausible motions"
+    ],
+    useCaseExamples: [
+      {
+        title: "Game Character Animation",
+        description: "Rapidly prototype character movements for game development without manual animation.",
+        steps: [
+          "Describe the desired character motion in natural language",
+          "Generate animation using web demo or local deployment",
+          "Review motion quality and physical plausibility",
+          "Export in FBX or GLTF format",
+          "Import into Unity or Unreal Engine",
+          "Apply to character rigs and refine as needed"
+        ]
+      },
+      {
+        title: "Film Animation Production",
+        description: "Streamline animation workflow by generating complex motion sequences from text.",
+        steps: [
+          "Break down animation requirements into motion descriptions",
+          "Generate individual motion sequences",
+          "Review and refine generated animations",
+          "Export in BVH or FBX format for Blender or other 3D software",
+          "Combine and edit sequences as needed",
+          "Integrate into final animation pipeline"
+        ]
+      },
+      {
+        title: "VR Character Interactions",
+        description: "Create realistic character animations for immersive VR experiences.",
+        steps: [
+          "Define interaction motions needed for VR scenarios",
+          "Generate diverse motion sequences for different interactions",
+          "Export animations in compatible formats",
+          "Import into VR development platform",
+          "Test and refine for immersive experience",
+          "Optimize for real-time performance"
+        ]
+      }
+    ],
+    limitations: [
+      "Motion quality may vary depending on prompt specificity",
+      "Complex multi-character interactions may require additional work",
+      "Very specific or unusual motions may need fine-tuning",
+      "Local deployment requires significant computational resources",
+      "Some motion categories may have better quality than others",
+      "Integration with 3D software may require format conversion"
     ]
   },
 ];
