@@ -229,11 +229,11 @@ function generateMetaTags(tool) {
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(metaDesc)}">
     <meta name="keywords" content="${escapeHtml(keywords)}">
-    <link rel="canonical" href="https://curatedai.net/tools/${tool.id}.html">
+    <link rel="canonical" href="https://www.curatedai.net/tools/${tool.id}.html">
     <meta property="og:title" content="${escapeHtml(title)}">
     <meta property="og:description" content="${escapeHtml(ogDesc)}">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://curatedai.net/tools/${tool.id}.html">
+    <meta property="og:url" content="https://www.curatedai.net/tools/${tool.id}.html">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${escapeHtml(tool.name)}">
     <meta name="twitter:description" content="${escapeHtml(ogDesc)}">
@@ -511,19 +511,19 @@ function generateStructuredData(tool) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://curatedai.net/"
+        "item": "https://www.curatedai.net/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": modalityLabel,
-        "item": `https://curatedai.net/category/${modality}.html`
+        "item": `https://www.curatedai.net/category/${modality}.html`
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": tool.name,
-        "item": `https://curatedai.net/tools/${tool.id}.html`
+        "item": `https://www.curatedai.net/tools/${tool.id}.html`
       }
     ]
   };
@@ -1220,7 +1220,7 @@ function generateCategoryPage(modality) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Best ${label} AI Tools (2026) | AI Tool Directory</title>
   <meta name="description" content="Discover the best ${label} AI tools. Compare ${modalityTools.length} curated tools for ${label.toLowerCase()} generation. Hand-picked by experts.">
-  <link rel="canonical" href="https://curatedai.net/category/${modality}.html">
+  <link rel="canonical" href="https://www.curatedai.net/category/${modality}.html">
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
   <script type="application/ld+json">
@@ -1229,7 +1229,7 @@ function generateCategoryPage(modality) {
     "@type": "CollectionPage",
     "name": "Best ${label} AI Tools (2026)",
     "description": "Curated directory of ${modalityTools.length} top ${label.toLowerCase()} AI tools. Each tool is hand-picked for quality, reliability, and unique capabilities.",
-    "url": "https://curatedai.net/category/${modality}.html",
+    "url": "https://www.curatedai.net/category/${modality}.html",
     "mainEntity": {
       "@type": "ItemList",
       "numberOfItems": ${modalityTools.length},
@@ -1241,7 +1241,7 @@ function generateCategoryPage(modality) {
             "@type": "SoftwareApplication",
             "name": "${escapeHtml(tool.name)}",
             "description": "${escapeHtml((tool.whatItDoes || tool.tagline || '').substring(0, 200))}",
-            "url": "https://curatedai.net/tools/${tool.id}.html",
+            "url": "https://www.curatedai.net/tools/${tool.id}.html",
             "applicationCategory": "AI Tool",
             "operatingSystem": "${(tool.platform || []).join(', ')}",
             "offers": {
@@ -1553,7 +1553,7 @@ function generateBestForPage(bestForTag) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Tools for ${tagLabel === 'Developers' ? 'Developers' : tagLabel} (2026) | Best ${tagLabel === 'Developers' ? 'Developer' : tagLabel} AI Tools</title>
   <meta name="description" content="${tagLabel === 'Developers' ? `AI tools for developers: ${tagTools.length} curated developer AI tools, personally tested. Find the best coding, IDE, and development AI tools for 2026.` : `Discover the best AI tools for ${tagLabel.toLowerCase()}. Compare ${tagTools.length} curated tools hand-picked for ${tagLabel.toLowerCase()} use cases.`}">
-  <link rel="canonical" href="https://curatedai.net/best-for/${tagSlug}.html">
+  <link rel="canonical" href="https://www.curatedai.net/best-for/${tagSlug}.html">
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
 </head>
@@ -1796,7 +1796,7 @@ function generatePricingPage(pricingTier) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${pricingTier === 'free' ? 'Free AI Tools 2026' : tierLabel + ' AI Tools (2026)'} | Curated AI Tool Directory</title>
   <meta name="description" content="${pricingTier === 'free' ? `Free AI tools 2026: ${tierTools.length} curated free AI tools, personally tested. No credit card required. Find the best free text-to-video, image-to-image, coding, and LLM tools.` : `Discover ${tierLabel.toLowerCase()} AI tools. Compare ${tierTools.length} curated ${tierLabel.toLowerCase()} tools for generative AI. Hand-picked by experts.`}">
-  <link rel="canonical" href="https://curatedai.net/pricing/${tierSlug}.html">
+  <link rel="canonical" href="https://www.curatedai.net/pricing/${tierSlug}.html">
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
 </head>
@@ -2007,7 +2007,7 @@ function generateComparisonPage(tool1, tool2) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${escapeHtml(tool1.name)} vs ${escapeHtml(tool2.name)} (2026) | AI Tool Comparison</title>
   <meta name="description" content="Compare ${escapeHtml(tool1.name)} and ${escapeHtml(tool2.name)}: features, pricing, API availability, and use cases. Find the best ${modalityLabel.toLowerCase()} tool for your needs.">
-  <link rel="canonical" href="https://curatedai.net/compare/${comparisonSlug}.html">
+  <link rel="canonical" href="https://www.curatedai.net/compare/${comparisonSlug}.html">
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
 </head>
@@ -2272,7 +2272,7 @@ function generateTagPage(tag) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${tagLabel} AI Tools (2026) | AI Tool Directory</title>
   <meta name="description" content="Discover ${tagLabel.toLowerCase()} AI tools. Compare ${tagTools.length} curated tools with ${tagLabel.toLowerCase()} capabilities. Hand-picked by experts.">
-  <link rel="canonical" href="https://curatedai.net/tags/${tagSlug}.html">
+  <link rel="canonical" href="https://www.curatedai.net/tags/${tagSlug}.html">
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
 </head>
@@ -2527,7 +2527,7 @@ function generateNewsPage(newsItem) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${escapeHtml(newsItem.title)} | AI News</title>
   <meta name="description" content="${escapeHtml(enhancedSummary.substring(0, 155))}">
-  <link rel="canonical" href="https://curatedai.net/news/${newsItem.id}.html">
+  <link rel="canonical" href="https://www.curatedai.net/news/${newsItem.id}.html">
   <meta property="og:title" content="${escapeHtml(newsItem.title)}">
   <meta property="og:description" content="${escapeHtml(enhancedSummary.substring(0, 200))}">
   <meta property="og:image" content="${thumbnail}">
@@ -20274,19 +20274,19 @@ function generateGuidePage(guide) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://curatedai.net/index.html"
+        "item": "https://www.curatedai.net/index.html"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Guides",
-        "item": "https://curatedai.net/guides.html"
+        "item": "https://www.curatedai.net/guides.html"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": guide.title,
-        "item": `https://curatedai.net/guides/${guide.slug}.html`
+        "item": `https://www.curatedai.net/guides/${guide.slug}.html`
       }
     ]
   };
@@ -20309,7 +20309,7 @@ function generateGuidePage(guide) {
     "dateModified": lastUpdated,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://curatedai.net/guides/${guide.slug}.html`
+      "@id": `https://www.curatedai.net/guides/${guide.slug}.html`
     }
   };
   
@@ -20326,11 +20326,11 @@ function generateGuidePage(guide) {
   <title>${escapeHtml(guide.title)} | AI Tool Directory</title>
   <meta name="description" content="${escapeHtml(guide.description)}">
   <meta name="keywords" content="${escapeHtml(guide.keywords)}">
-  <link rel="canonical" href="https://curatedai.net/guides/${guide.slug}.html">
+  <link rel="canonical" href="https://www.curatedai.net/guides/${guide.slug}.html">
   <meta property="og:title" content="${escapeHtml(guide.title)}">
   <meta property="og:description" content="${escapeHtml(guide.description)}">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://curatedai.net/guides/${guide.slug}.html">
+  <meta property="og:url" content="https://www.curatedai.net/guides/${guide.slug}.html">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeHtml(guide.title)}">
   <meta name="twitter:description" content="${escapeHtml(guide.description)}">
@@ -20616,11 +20616,11 @@ function generateGuidesIndexPage() {
   <title>AI Tools Guides & Tutorials | AI Tool Directory</title>
   <meta name="description" content="Complete guides and tutorials for AI tools. Learn how AI tools work, compare options, and master content creation with AI. Expert-curated educational content.">
   <meta name="keywords" content="ai tools guides, ai tools tutorials, how to use ai tools, ai tools explained, learn ai tools">
-  <link rel="canonical" href="https://curatedai.net/guides.html">
+  <link rel="canonical" href="https://www.curatedai.net/guides.html">
   <meta property="og:title" content="AI Tools Guides & Tutorials">
   <meta property="og:description" content="Complete guides and tutorials for AI tools. Learn how AI tools work, compare options, and master content creation with AI.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://curatedai.net/guides.html">
+  <meta property="og:url" content="https://www.curatedai.net/guides.html">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -21024,7 +21024,7 @@ function generateAlternativesPage(tool) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${escapeHtml(tool.name)} Alternatives (2026) | Best ${modalityLabel} AI Tools</title>
   <meta name="description" content="${escapeHtml(tool.name)} alternatives: ${alternatives.length} curated ${modalityLabel.toLowerCase()} AI tools similar to ${escapeHtml(tool.name)}. Compare features, pricing, and use cases to find the best alternative.">
-  <link rel="canonical" href="https://curatedai.net/alternatives/${toolSlug}.html">
+  <link rel="canonical" href="https://www.curatedai.net/alternatives/${toolSlug}.html">
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
   <script type="application/ld+json">
@@ -21033,7 +21033,7 @@ function generateAlternativesPage(tool) {
     "@type": "CollectionPage",
     "name": "${escapeHtml(tool.name)} Alternatives (2026)",
     "description": "Curated list of ${alternatives.length} ${modalityLabel.toLowerCase()} AI tools that are alternatives to ${escapeHtml(tool.name)}.",
-    "url": "https://curatedai.net/alternatives/${toolSlug}.html"
+    "url": "https://www.curatedai.net/alternatives/${toolSlug}.html"
   }
   </script>
 </head>
@@ -21256,30 +21256,30 @@ topTags.forEach(tag => {
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://curatedai.net/</loc>
+    <loc>https://www.curatedai.net/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://curatedai.net/news.html</loc>
+    <loc>https://www.curatedai.net/news.html</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://curatedai.net/ideas.html</loc>
+    <loc>https://www.curatedai.net/ideas.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   ${tools.map(tool => `
   <url>
-    <loc>https://curatedai.net/tools/${tool.id}.html</loc>
+    <loc>https://www.curatedai.net/tools/${tool.id}.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   `).join('')}
   ${MODALITIES.map(modality => `
   <url>
-    <loc>https://curatedai.net/category/${modality}.html</loc>
+    <loc>https://www.curatedai.net/category/${modality}.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -21288,7 +21288,7 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     const tagSlug = slugify(bestForTag.replace(/^Best for /i, ''));
     return `
   <url>
-    <loc>https://curatedai.net/best-for/${tagSlug}.html</loc>
+    <loc>https://www.curatedai.net/best-for/${tagSlug}.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -21300,7 +21300,7 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
       const tierSlug = slugify(tier);
       return `
   <url>
-    <loc>https://curatedai.net/pricing/${tierSlug}.html</loc>
+    <loc>https://www.curatedai.net/pricing/${tierSlug}.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -21310,7 +21310,7 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   }).filter(Boolean).join('')}
   ${news.map(newsItem => `
   <url>
-    <loc>https://curatedai.net/news/${newsItem.id}.html</loc>
+    <loc>https://www.curatedai.net/news/${newsItem.id}.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -21321,7 +21321,7 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     const comparisonSlug = `${slug1}-vs-${slug2}`;
     return `
   <url>
-    <loc>https://curatedai.net/compare/${comparisonSlug}.html</loc>
+    <loc>https://www.curatedai.net/compare/${comparisonSlug}.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -21331,7 +21331,7 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     const toolSlug = slugify(tool.id);
     return `
   <url>
-    <loc>https://curatedai.net/alternatives/${toolSlug}.html</loc>
+    <loc>https://www.curatedai.net/alternatives/${toolSlug}.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -21341,56 +21341,56 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     const tagSlug = slugify(tag);
     return `
   <url>
-    <loc>https://curatedai.net/tags/${tagSlug}.html</loc>
+    <loc>https://www.curatedai.net/tags/${tagSlug}.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
     `;
   }).join('')}
   <url>
-    <loc>https://curatedai.net/guides.html</loc>
+    <loc>https://www.curatedai.net/guides.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   ${AEO_GUIDES.map(guide => `
   <url>
-    <loc>https://curatedai.net/guides/${guide.slug}.html</loc>
+    <loc>https://www.curatedai.net/guides/${guide.slug}.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   `).join('')}
   <url>
-    <loc>https://curatedai.net/directory.html</loc>
+    <loc>https://www.curatedai.net/directory.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://curatedai.net/prompts.html</loc>
+    <loc>https://www.curatedai.net/prompts.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://curatedai.net/newsletter.html</loc>
+    <loc>https://www.curatedai.net/newsletter.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://curatedai.net/about.html</loc>
+    <loc>https://www.curatedai.net/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://curatedai.net/privacy.html</loc>
+    <loc>https://www.curatedai.net/privacy.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://curatedai.net/terms.html</loc>
+    <loc>https://www.curatedai.net/terms.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://curatedai.net/index.html</loc>
+    <loc>https://www.curatedai.net/index.html</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -21403,7 +21403,7 @@ console.log('✓ Generated: sitemap.xml');
 const robotsTxt = `User-agent: *
 Allow: /
 
-Sitemap: https://curatedai.net/sitemap.xml
+Sitemap: https://www.curatedai.net/sitemap.xml
 `;
 
 fs.writeFileSync(path.join(OUTPUT_DIR, 'robots.txt'), robotsTxt);
