@@ -19,7 +19,7 @@ export const NEWS = [
   // Dates are optional; add YYYY-MM-DD when you post daily items.
   {
     id: "slabs-short-oc4CGYhG2wQ",
-    date: "2026-01-01",
+    date: "2026-01-04",
     source: "youtube",
     title: "Anthropic's 'Do More' Bet + OpenAI Audio Hardware + Mercor $10B Reshapes Work + more",
     url: "https://www.youtube.com/shorts/oc4CGYhG2wQ",
@@ -27,7 +27,7 @@ export const NEWS = [
   },
   {
     id: "slabs-short-iOgOB6AwSzs",
-    date: "2025-12-31",
+    date: "2026-01-02",
     source: "youtube",
     title: "Biggest Tech IPOs Coming + Yann LeCun Leaves Meta + Tesla AI Scales 2026 + more",
     url: "https://www.youtube.com/shorts/iOgOB6AwSzs",
