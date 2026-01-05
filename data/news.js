@@ -15,8 +15,32 @@
 
 /** @type {NewsItem[]} */
 export const NEWS = [
-  // 100 total YouTube Shorts from @thesingularitylabs (all news-related)
+  // 103 total YouTube Shorts from @thesingularitylabs (all news-related)
   // Dates are optional; add YYYY-MM-DD when you post daily items.
+  {
+    id: "slabs-short-oc4CGYhG2wQ",
+    date: "2026-01-01",
+    source: "youtube",
+    title: "Anthropic's 'Do More' Bet + OpenAI Audio Hardware + Mercor $10B Reshapes Work + more",
+    url: "https://www.youtube.com/shorts/oc4CGYhG2wQ",
+    summary: "Anthropic's 'Do More' bet announced. OpenAI audio hardware plans revealed. Mercor $10B deal reshapes work",
+  },
+  {
+    id: "slabs-short-iOgOB6AwSzs",
+    date: "2025-12-31",
+    source: "youtube",
+    title: "Biggest Tech IPOs Coming + Yann LeCun Leaves Meta + Tesla AI Scales 2026 + more",
+    url: "https://www.youtube.com/shorts/iOgOB6AwSzs",
+    summary: "Biggest tech IPOs coming. Yann LeCun leaves Meta. Tesla AI scales for 2026",
+  },
+  {
+    id: "slabs-short-JA0ekc4FFDE",
+    date: "2025-12-30",
+    source: "youtube",
+    title: "OpenAI Head of Preparedness + Nvidia Groq $150B Deal + VC Funding Fell 17% + more",
+    url: "https://www.youtube.com/shorts/JA0ekc4FFDE",
+    summary: "OpenAI Head of Preparedness appointed. Nvidia Groq $150B deal. VC funding fell 17%",
+  },
   {
     id: "slabs-short-bXdEf875YyU",
     date: "2025-12-29",
