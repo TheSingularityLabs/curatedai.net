@@ -3,19 +3,6 @@
   "outputDirectory": ".",
   "installCommand": "",
   "framework": null,
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.curatedai.net"
-        }
-      ],
-      "destination": "https://www.curatedai.net/:path*",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
       "source": "/tools/:path*",
@@ -60,10 +47,6 @@
     {
       "source": "/robots.txt",
       "destination": "/dist/robots.txt"
-    },
-    {
-      "source": "/styles.css",
-      "destination": "/dist/styles.css"
     }
   ],
   "headers": [
