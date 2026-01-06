@@ -12418,7 +12418,7 @@ def generate_with_logging(prompt, api_key):
     `,
     keywords: 'text to image ai tools, best text to image ai, text to image comparison, ai image generation tools, text to image ai 2025',
     category: 'text-to-image',
-    lastUpdated: '2025-12-28'
+    lastUpdated: '2026-01-06'
   },
   {
     slug: 'best-image-to-video-ai-tools-2025',
@@ -13572,7 +13572,7 @@ def generate_with_logging(prompt, api_key):
     `,
     keywords: 'best text to 3d ai tools, text to 3d ai, text to 3d generator, ai 3d model generator, text to mesh ai, 3d asset generation',
     category: 'text-to-3d',
-    lastUpdated: '2025-12-27'
+    lastUpdated: '2026-01-06'
   },
   {
     slug: 'what-are-the-best-image-to-3d-ai-tools',
@@ -14408,7 +14408,7 @@ def generate_with_logging(prompt, api_key):
     `,
     keywords: 'best llm 2025, best large language model, chatgpt vs claude vs gemini, which llm to use, llm comparison 2025',
     category: 'llm',
-    lastUpdated: '2025-12-27'
+    lastUpdated: '2026-01-06'
   },
   {
     slug: 'what-is-an-llm-complete-guide',
