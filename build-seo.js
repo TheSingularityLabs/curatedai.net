@@ -12064,6 +12064,30 @@ def generate_with_logging(prompt, api_key):
             <div class="matrix-cell" style="background: rgba(34, 197, 94, 0.2);">Very Good</div>
             <div class="matrix-cell">Flexible Workflows</div>
           </div>
+          <div class="matrix-row">
+            <div class="matrix-label">Z-Image</div>
+            <div class="matrix-cell" style="background: rgba(59, 130, 246, 0.15);">Very Good</div>
+            <div class="matrix-cell" style="background: rgba(99, 102, 241, 0.2);">Excellent</div>
+            <div class="matrix-cell" style="background: rgba(34, 197, 94, 0.25);">Excellent</div>
+            <div class="matrix-cell" style="background: rgba(34, 197, 94, 0.2);">Very Good</div>
+            <div class="matrix-cell">Speed + Text</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-label">Qwen-Image</div>
+            <div class="matrix-cell" style="background: rgba(59, 130, 246, 0.15);">Very Good</div>
+            <div class="matrix-cell" style="background: rgba(99, 102, 241, 0.2);">Excellent</div>
+            <div class="matrix-cell" style="background: rgba(34, 197, 94, 0.2);">Very Good</div>
+            <div class="matrix-cell" style="background: rgba(99, 102, 241, 0.2);">Excellent</div>
+            <div class="matrix-cell">Text Rendering</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-label">FLUX.2 Pro</div>
+            <div class="matrix-cell" style="background: rgba(59, 130, 246, 0.15);">Very Good</div>
+            <div class="matrix-cell" style="background: rgba(99, 102, 241, 0.2);">Excellent</div>
+            <div class="matrix-cell" style="background: rgba(34, 197, 94, 0.25);">Excellent</div>
+            <div class="matrix-cell" style="background: rgba(34, 197, 94, 0.2);">Very Good</div>
+            <div class="matrix-cell">Fast Quality</div>
+          </div>
         </div>
       </div>
 
@@ -12155,6 +12179,87 @@ def generate_with_logging(prompt, api_key):
 
       <h4>Stable Diffusion: Best for Customization and Control</h4>
       <p><a href="/dist/pages/tools/stable-diffusion.html">Stable Diffusion</a> offers the most control through its open-source ecosystem, LoRA fine-tuning, and extensive customization options. Ideal for users who need complete control over the generation process.</p>
+
+      <h4>Z-Image: Best for Ultra-Fast Generation with Bilingual Text</h4>
+      <p><a href="/dist/pages/tools/z-image.html">Z-Image</a> generates photorealistic images in seconds using Tongyi-MAI's S3-DiT architecture with minimal inference steps (8 steps). Excels at bilingual text rendering, accurately generating both Chinese and English text within images with commercial-grade quality. Features three variants: Z-Image-Turbo for ultra-fast generation, Z-Image-Base for community fine-tuning, and Z-Image-Edit for precise image editing.</p>
+      
+      <div class="chart-container">
+        <div class="chart-title">Z-Image Capabilities</div>
+        <div class="breakdown-cards">
+          <div class="breakdown-card">
+            <div class="breakdown-percentage">96%</div>
+            <div class="breakdown-label">Speed</div>
+          </div>
+          <div class="breakdown-card">
+            <div class="breakdown-percentage">94%</div>
+            <div class="breakdown-label">Text Rendering</div>
+          </div>
+          <div class="breakdown-card">
+            <div class="breakdown-percentage">92%</div>
+            <div class="breakdown-label">Quality</div>
+          </div>
+          <div class="breakdown-card">
+            <div class="breakdown-percentage">90%</div>
+            <div class="breakdown-label">Efficiency</div>
+          </div>
+        </div>
+      </div>
+
+      <p><strong>Best for:</strong> Fast photorealistic generation, text-in-image designs, bilingual content, rapid iteration workflows</p>
+
+      <h4>Qwen-Image: Best for Commercial-Grade Text Rendering</h4>
+      <p><a href="/dist/pages/tools/qwen-image.html">Qwen-Image</a> is Alibaba's 20-billion parameter open-source model that ranks first in multiple benchmark tests. Excels at complex text rendering with commercial-grade quality, supporting multi-line layouts and paragraph-level text generation in both Chinese and English. Provides advanced image editing capabilities including style transfer, object insertion/removal, and detail enhancement. Optimized to run on a single RTX 3090 GPU for efficient local deployment.</p>
+      
+      <div class="chart-container">
+        <div class="chart-title">Qwen-Image Performance</div>
+        <div class="metric-cards">
+          <div class="metric-card">
+            <div class="metric-number">98%</div>
+            <div class="metric-label">Text Rendering</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">95%</div>
+            <div class="metric-label">Benchmark Score</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">92%</div>
+            <div class="metric-label">Editing Quality</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">88%</div>
+            <div class="metric-label">Efficiency</div>
+          </div>
+        </div>
+      </div>
+
+      <p><strong>Best for:</strong> Complex text rendering, image editing, commercial-grade output, open-source projects</p>
+
+      <h4>FLUX.2 Pro: Best for Ultra-Fast Photorealistic Quality</h4>
+      <p><a href="/dist/pages/tools/flux-2-pro.html">FLUX.2 Pro</a> is Black Forest Labs' latest ultra-fast text-to-image model optimized for speed with turbo diffusion core, delivering results in seconds with minimal VRAM usage (8-12GB). Produces high-fidelity photorealistic outputs with sharper textures, balanced lighting, and consistent subjects suitable for concept art, product shots, and professional workflows. Open-source with easy export and sharing capabilities.</p>
+      
+      <div class="chart-container">
+        <div class="chart-title">FLUX.2 Pro Performance</div>
+        <div class="breakdown-cards">
+          <div class="breakdown-card">
+            <div class="breakdown-percentage">97%</div>
+            <div class="breakdown-label">Speed</div>
+          </div>
+          <div class="breakdown-card">
+            <div class="breakdown-percentage">95%</div>
+            <div class="breakdown-label">Quality</div>
+          </div>
+          <div class="breakdown-card">
+            <div class="breakdown-percentage">93%</div>
+            <div class="breakdown-label">Efficiency</div>
+          </div>
+          <div class="breakdown-card">
+            <div class="breakdown-percentage">91%</div>
+            <div class="breakdown-label">Prompt Following</div>
+          </div>
+        </div>
+      </div>
+
+      <p><strong>Best for:</strong> High-quality image generation, professional projects, rapid iteration, style control</p>
 
       <div class="chart-container">
         <div class="chart-title">Tool Usage by Workflow Type</div>
@@ -12301,7 +12406,9 @@ def generate_with_logging(prompt, api_key):
       <h3 id="quick-tips">Quick Tips for Best Results</h3>
       <ul>
         <li><strong>Start with GPT-Image 1.5</strong> if you need production-quality outputs with strong prompt adherence</li>
-        <li><strong>Use Flux 1 schnell</strong> for fast iteration without sacrificing quality</li>
+        <li><strong>Use Flux 1 schnell or FLUX.2 Pro</strong> for fast iteration without sacrificing quality</li>
+        <li><strong>Choose Z-Image</strong> for ultra-fast generation with bilingual text rendering capabilities</li>
+        <li><strong>Opt for Qwen-Image</strong> if you need commercial-grade text rendering and advanced image editing</li>
         <li><strong>Choose Midjourney</strong> for artistic projects where aesthetic quality matters more than exact prompt matching</li>
         <li><strong>Opt for Stable Diffusion</strong> if you need complete control and customization through LoRAs and fine-tuning</li>
         <li><strong>Test multiple tools</strong> with your actual prompts before committing to one</li>
@@ -13224,6 +13331,15 @@ def generate_with_logging(prompt, api_key):
             <div class="matrix-cell" style="background: rgba(99, 102, 241, 0.2);">Excellent</div>
             <div class="matrix-cell">Best Quality</div>
           </div>
+          <div class="matrix-row">
+            <div class="matrix-label">Hymotion 1.0</div>
+            <div class="matrix-cell" style="background: rgba(99, 102, 241, 0.2);">Excellent</div>
+            <div class="matrix-cell" style="background: rgba(34, 197, 94, 0.25);">Excellent</div>
+            <div class="matrix-cell" style="background: rgba(99, 102, 241, 0.2);">Multiple</div>
+            <div class="matrix-cell" style="background: rgba(99, 102, 241, 0.2);">Yes</div>
+            <div class="matrix-cell" style="background: rgba(99, 102, 241, 0.2);">Excellent</div>
+            <div class="matrix-cell">3D Motion</div>
+          </div>
         </div>
       </div>
 
@@ -13366,6 +13482,53 @@ def generate_with_logging(prompt, api_key):
       </div>
 
       <p><strong>Best for:</strong> Highest quality 3D generation, professional workflows, game assets, VR applications, open-source projects</p>
+
+      <h4>Hymotion 1.0: Best for 3D Character Animation</h4>
+      <p><a href="/dist/pages/tools/hymotion-1-0.html">Hymotion 1.0</a> is Tencent's open-source text-to-3D motion generation model released in December 2025. Built on a Diffusion Transformer (DiT) architecture with flow matching, it generates high-fidelity, smooth, and diverse 3D character animations from natural language descriptions. Trained on over 3,000 hours of diverse motion data covering 200+ motion categories including locomotion, sports, fitness, social interactions, and daily activities. Supports standard 3D formats (FBX, BVH, GLTF) for seamless integration with Blender, Unity, and Unreal Engine.</p>
+      
+      <div class="chart-container">
+        <div class="chart-title">Hymotion 1.0 Capabilities</div>
+        <div class="capability-scores">
+          <div class="capability-item">
+            <div class="capability-label">
+              <span>Motion Quality</span>
+              <span class="capability-value">96%</span>
+            </div>
+            <div class="capability-bar">
+              <div class="capability-fill" style="width: 96%; background: linear-gradient(90deg, #3b82f6, #6366f1);"></div>
+            </div>
+          </div>
+          <div class="capability-item">
+            <div class="capability-label">
+              <span>Motion Categories</span>
+              <span class="capability-value">200+</span>
+            </div>
+            <div class="capability-bar">
+              <div class="capability-fill" style="width: 95%; background: linear-gradient(90deg, #10b981, #34d399);"></div>
+            </div>
+          </div>
+          <div class="capability-item">
+            <div class="capability-label">
+              <span>Export Formats</span>
+              <span class="capability-value">3</span>
+            </div>
+            <div class="capability-bar">
+              <div class="capability-fill" style="width: 100%; background: linear-gradient(90deg, #f59e0b, #fbbf24);"></div>
+            </div>
+          </div>
+          <div class="capability-item">
+            <div class="capability-label">
+              <span>Physical Plausibility</span>
+              <span class="capability-value">94%</span>
+            </div>
+            <div class="capability-bar">
+              <div class="capability-fill" style="width: 94%; background: linear-gradient(90deg, #8b5cf6, #a855f7);"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p><strong>Best for:</strong> 3D character animation, game development, film and animation production, virtual reality experiences, rapid motion prototyping</p>
 
       <div class="chart-container">
         <div class="chart-title">Text-to-3D Use Case Distribution</div>
@@ -14010,6 +14173,30 @@ def generate_with_logging(prompt, api_key):
             <div class="matrix-cell">Paid</div>
             <div class="matrix-cell">No</div>
           </div>
+          <div class="matrix-row">
+            <div class="matrix-label">Baidu ERNIE 4.5</div>
+            <div class="matrix-cell" style="background: rgba(59, 130, 246, 0.2);">Very Good</div>
+            <div class="matrix-cell">Large</div>
+            <div class="matrix-cell" style="background: rgba(16, 185, 129, 0.2);">Yes</div>
+            <div class="matrix-cell">Freemium</div>
+            <div class="matrix-cell" style="background: rgba(16, 185, 129, 0.2);">Yes</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-label">GLM-4.5</div>
+            <div class="matrix-cell" style="background: rgba(59, 130, 246, 0.2);">Very Good</div>
+            <div class="matrix-cell">Large</div>
+            <div class="matrix-cell">No</div>
+            <div class="matrix-cell">Freemium</div>
+            <div class="matrix-cell" style="background: rgba(16, 185, 129, 0.2);">Yes</div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-label">Manus AI</div>
+            <div class="matrix-cell" style="background: rgba(99, 102, 241, 0.2);">Excellent</div>
+            <div class="matrix-cell">Standard</div>
+            <div class="matrix-cell">No</div>
+            <div class="matrix-cell">Unknown</div>
+            <div class="matrix-cell">No</div>
+          </div>
         </div>
       </div>
 
@@ -14103,6 +14290,30 @@ def generate_with_logging(prompt, api_key):
       <p><strong>Getting Started:</strong> Subscribe to X Premium to access Grok. Once subscribed, access Grok through the X interface on web or mobile. Start chatting with Grok about current events, trending topics, or general questions. Grok has access to real-time X posts and can provide context about current discussions.</p>
       <p><strong>Pro Tips:</strong> Ask about current events and trending topics for real-time insights. Leverage X platform integration for social media context. Use for creative writing with distinctive personality. Take advantage of real-time web search capabilities. Ask about trending topics for current discussions.</p>
 
+      <h4>7. Baidu ERNIE 4.5 - Best for Chinese Language & Cost-Efficient MoE</h4>
+      <p><strong>Baidu ERNIE 4.5</strong> (Enhanced Representation through Knowledge Integration) is Baidu's family of large language models released in November 2025. The ERNIE 4.5 model family includes 10 variants ranging from 0.3 billion to 424 billion total parameters, utilizing a Mixture-of-Experts (MoE) architecture for efficient inference. Open-sourced under the Apache 2.0 license in June 2025, ERNIE 4.5 demonstrates strong performance in Chinese natural language processing, multimodal understanding, and various AI benchmarks.</p>
+      <p>ERNIE 4.5 excels in common-sense reasoning, optical character recognition, and Chinese language tasks. The MoE architecture enables cost-efficient inference by selectively activating only relevant expert parameters, making it ideal for high-volume use cases. The model supports multimodal understanding, combining text and image inputs for comprehensive analysis.</p>
+      <p><strong>Best for:</strong> Chinese language applications, multimodal AI tasks, cost-efficient LLM deployment, open-source AI projects, enterprise AI solutions</p>
+      <p><strong>Pricing:</strong> Freemium model with free tier including limited access. Paid plans offer higher rate limits and access to larger models. API pricing is cost-effective due to MoE architecture.</p>
+      <p><strong>Getting Started:</strong> Access ERNIE 4.5 through Baidu's ERNIE Bot at yiyan.baidu.com for web interface. For API access, sign up for Baidu Qianfan platform at cloud.baidu.com/product/qianfan and obtain API credentials. For local deployment, download open-source model weights from Baidu's repositories. Use the REST API to integrate ERNIE 4.5 into your applications.</p>
+      <p><strong>Pro Tips:</strong> Leverage strong Chinese language capabilities for Chinese-English applications. Use MoE architecture for cost-efficient inference. Take advantage of open-source availability for privacy-sensitive deployments. Explore multimodal capabilities for image-text tasks. Use appropriate model size based on computational resources.</p>
+
+      <h4>8. GLM-4.5 - Best for Multilingual & Long-Context</h4>
+      <p><strong>GLM-4.5</strong> (General Language Model) is Zhipu AI's latest large language model in the ChatGLM/GLM series, released in 2025. Building on the success of previous GLM models, GLM-4.5 offers enhanced reasoning capabilities, improved multilingual support (with strong Chinese and English capabilities), and advanced instruction-following. The model is designed for both chat and completion tasks, with support for long context windows and fine-tuned variants for specific use cases.</p>
+      <p>GLM-4.5 maintains Zhipu AI's focus on efficient inference and cost-effective deployment. The model excels at bilingual content generation, long-context analysis, and multilingual applications. Available through Zhipu AI's platform (web interface and API) with options for local deployment of open-source variants.</p>
+      <p><strong>Best for:</strong> Chinese-English applications, multilingual content generation, cost-efficient LLM deployment, long-context reasoning, enterprise AI solutions</p>
+      <p><strong>Pricing:</strong> Freemium model with free tier including limited access. Paid plans offer higher rate limits and access to larger models. API pricing is cost-effective for high-volume use cases.</p>
+      <p><strong>Getting Started:</strong> Visit zhipuai.cn to access GLM-4.5 through the web interface. For API access, sign up for Zhipu AI platform and obtain API credentials. Use the REST API to integrate GLM-4.5 into your applications. For local deployment, check Zhipu AI's GitHub or official repositories for open-source model weights and deployment instructions.</p>
+      <p><strong>Pro Tips:</strong> Leverage strong Chinese-English bilingual capabilities. Use for long-context reasoning tasks. Take advantage of efficient inference for cost savings. Explore open-source variants for local deployment. Use appropriate model size based on your needs.</p>
+
+      <h4>9. Manus AI - Best for Autonomous Task Execution</h4>
+      <p><strong>Manus AI</strong> is an autonomous AI agent developed by Butterfly Effect Pte. Ltd. (acquired by Meta Platforms in December 2025) designed to independently perform complex real-world tasks without continuous human guidance. Launched in March 2025, Manus leverages real-time data retrieval, multi-step reasoning, and API integrations to execute complex analytics, research, and task automation.</p>
+      <p>The agent can handle tasks from simple prompts to complex multi-step workflows, making it suitable for research, data analysis, and autonomous task execution. Meta acquired Manus for over $2 billion to enhance its AI assistant and enterprise tools, integrating the technology into products like Meta AI. Manus represents a new class of autonomous agents that can execute tasks end-to-end without constant human oversight.</p>
+      <p><strong>Best for:</strong> Autonomous task execution, complex research and analytics, multi-step workflow automation, enterprise AI agents, API integration tasks</p>
+      <p><strong>Pricing:</strong> Access now controlled by Meta after acquisition. Pricing and availability may be limited to enterprise customers. Contact Meta for API access and integration options.</p>
+      <p><strong>Getting Started:</strong> Manus AI was acquired by Meta in December 2025. Access to Manus technology is now integrated into Meta's AI products. For enterprise use, contact Meta for API access and integration options. The technology focuses on autonomous task execution, so prepare clear task descriptions and desired outcomes.</p>
+      <p><strong>Pro Tips:</strong> Use clear, specific prompts for best task execution results. Leverage API integrations for complex multi-step workflows. Monitor autonomous task execution for quality assurance. Combine with other tools for comprehensive automation solutions. Consider Meta AI integration for broader capabilities.</p>
+
       <div class="chart-container">
         <div class="chart-title">LLM Use Case Breakdown</div>
         <div class="pie-chart">
@@ -14166,7 +14377,15 @@ def generate_with_logging(prompt, api_key):
             </div>
             <div class="decision-path">
               <div class="decision-label">Open-Source</div>
-              <div class="decision-node">→ Llama 4</div>
+              <div class="decision-node">→ Llama 4 / ERNIE 4.5 / GLM-4.5</div>
+            </div>
+            <div class="decision-path">
+              <div class="decision-label">Chinese Language</div>
+              <div class="decision-node">→ Baidu ERNIE 4.5 / GLM-4.5</div>
+            </div>
+            <div class="decision-path">
+              <div class="decision-label">Autonomous Tasks</div>
+              <div class="decision-node">→ Manus AI</div>
             </div>
           </div>
         </div>
@@ -14180,6 +14399,9 @@ def generate_with_logging(prompt, api_key):
         <li><strong>DeepSeek-R1:</strong> Best cost-effective option with strong reasoning capabilities</li>
         <li><strong>Llama 4:</strong> Best open-source option with extended context windows and multimodal support</li>
         <li><strong>Grok 4.1:</strong> Best for real-time information and X platform integration</li>
+        <li><strong>Baidu ERNIE 4.5:</strong> Best for Chinese language applications and cost-efficient MoE architecture</li>
+        <li><strong>GLM-4.5:</strong> Best for multilingual content and long-context reasoning</li>
+        <li><strong>Manus AI:</strong> Best for autonomous task execution and complex workflow automation</li>
       </ul>
 
       <p>Explore our curated selection of <a href="/category/llm.html">LLM tools</a> to find the right model for your needs. For foundational knowledge, see our guide on <a href="/dist/pages/guides/what-is-an-llm-complete-guide.html">what is an LLM</a>.</p>
