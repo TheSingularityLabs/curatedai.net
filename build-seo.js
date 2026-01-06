@@ -13332,7 +13332,7 @@ def generate_with_logging(prompt, api_key):
             <div class="matrix-cell">Best Quality</div>
           </div>
           <div class="matrix-row">
-            <div class="matrix-label">Hymotion 1.0</div>
+            <div class="matrix-label"><a href="/dist/pages/tools/hymotion-1-0.html" style="color: rgba(59, 130, 246, 0.9); text-decoration: underline; text-underline-offset: 2px;">Hymotion 1.0</a></div>
             <div class="matrix-cell" style="background: rgba(99, 102, 241, 0.2);">Excellent</div>
             <div class="matrix-cell" style="background: rgba(34, 197, 94, 0.25);">Excellent</div>
             <div class="matrix-cell" style="background: rgba(99, 102, 241, 0.2);">Multiple</div>
