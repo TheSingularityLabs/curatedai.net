@@ -696,7 +696,7 @@ function generateToolPage(tool) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   ${generateMetaTags(tool)}
-  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
   <script type="application/ld+json">
 ${JSON.stringify(generateStructuredData(tool), null, 2)}
@@ -1221,7 +1221,7 @@ function generateCategoryPage(modality) {
   <title>Best ${label} AI Tools (2026) | AI Tool Directory</title>
   <meta name="description" content="Discover the best ${label} AI tools. Compare ${modalityTools.length} curated tools for ${label.toLowerCase()} generation. Hand-picked by experts.">
   <link rel="canonical" href="https://www.curatedai.net/category/${modality}.html">
-  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
   <script type="application/ld+json">
   {
@@ -1554,7 +1554,7 @@ function generateBestForPage(bestForTag) {
   <title>AI Tools for ${tagLabel === 'Developers' ? 'Developers' : tagLabel} (2026) | Best ${tagLabel === 'Developers' ? 'Developer' : tagLabel} AI Tools</title>
   <meta name="description" content="${tagLabel === 'Developers' ? `AI tools for developers: ${tagTools.length} curated developer AI tools, personally tested. Find the best coding, IDE, and development AI tools for 2026.` : `Discover the best AI tools for ${tagLabel.toLowerCase()}. Compare ${tagTools.length} curated tools hand-picked for ${tagLabel.toLowerCase()} use cases.`}">
   <link rel="canonical" href="https://www.curatedai.net/best-for/${tagSlug}.html">
-  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body data-theme="light">
@@ -1797,7 +1797,7 @@ function generatePricingPage(pricingTier) {
   <title>${pricingTier === 'free' ? 'Free AI Tools 2026' : tierLabel + ' AI Tools (2026)'} | Curated AI Tool Directory</title>
   <meta name="description" content="${pricingTier === 'free' ? `Free AI tools 2026: ${tierTools.length} curated free AI tools, personally tested. No credit card required. Find the best free text-to-video, image-to-image, coding, and LLM tools.` : `Discover ${tierLabel.toLowerCase()} AI tools. Compare ${tierTools.length} curated ${tierLabel.toLowerCase()} tools for generative AI. Hand-picked by experts.`}">
   <link rel="canonical" href="https://www.curatedai.net/pricing/${tierSlug}.html">
-  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body data-theme="light">
@@ -2008,7 +2008,7 @@ function generateComparisonPage(tool1, tool2) {
   <title>${escapeHtml(tool1.name)} vs ${escapeHtml(tool2.name)} (2026) | AI Tool Comparison</title>
   <meta name="description" content="Compare ${escapeHtml(tool1.name)} and ${escapeHtml(tool2.name)}: features, pricing, API availability, and use cases. Find the best ${modalityLabel.toLowerCase()} tool for your needs.">
   <link rel="canonical" href="https://www.curatedai.net/compare/${comparisonSlug}.html">
-  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body data-theme="light">
@@ -2273,7 +2273,7 @@ function generateTagPage(tag) {
   <title>${tagLabel} AI Tools (2026) | AI Tool Directory</title>
   <meta name="description" content="Discover ${tagLabel.toLowerCase()} AI tools. Compare ${tagTools.length} curated tools with ${tagLabel.toLowerCase()} capabilities. Hand-picked by experts.">
   <link rel="canonical" href="https://www.curatedai.net/tags/${tagSlug}.html">
-  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body data-theme="light">
@@ -2532,7 +2532,7 @@ function generateNewsPage(newsItem) {
   <meta property="og:description" content="${escapeHtml(enhancedSummary.substring(0, 200))}">
   <meta property="og:image" content="${thumbnail}">
   <meta property="og:type" content="article">
-  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
   <script type="application/ld+json">
 ${JSON.stringify({
@@ -20556,7 +20556,7 @@ function generateGuidePage(guide) {
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeHtml(guide.title)}">
   <meta name="twitter:description" content="${escapeHtml(guide.description)}">
-  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/dist/styles.css">
   <script type="application/ld+json">
 ${JSON.stringify(structuredData, null, 2)}
@@ -21247,7 +21247,7 @@ function generateAlternativesPage(tool) {
   <title>${escapeHtml(tool.name)} Alternatives (2026) | Best ${modalityLabel} AI Tools</title>
   <meta name="description" content="${escapeHtml(tool.name)} alternatives: ${alternatives.length} curated ${modalityLabel.toLowerCase()} AI tools similar to ${escapeHtml(tool.name)}. Compare features, pricing, and use cases to find the best alternative.">
   <link rel="canonical" href="https://www.curatedai.net/alternatives/${toolSlug}.html">
-  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
   <script type="application/ld+json">
   {
