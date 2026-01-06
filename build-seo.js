@@ -14174,7 +14174,7 @@ def generate_with_logging(prompt, api_key):
             <div class="matrix-cell">No</div>
           </div>
           <div class="matrix-row">
-            <div class="matrix-label">Baidu ERNIE 4.5</div>
+            <div class="matrix-label"><a href="/dist/pages/tools/baidu-ernie-4-5.html" style="color: rgba(59, 130, 246, 0.9); text-decoration: underline; text-underline-offset: 2px;">Baidu ERNIE 4.5</a></div>
             <div class="matrix-cell" style="background: rgba(59, 130, 246, 0.2);">Very Good</div>
             <div class="matrix-cell">Large</div>
             <div class="matrix-cell" style="background: rgba(16, 185, 129, 0.2);">Yes</div>
@@ -14182,7 +14182,7 @@ def generate_with_logging(prompt, api_key):
             <div class="matrix-cell" style="background: rgba(16, 185, 129, 0.2);">Yes</div>
           </div>
           <div class="matrix-row">
-            <div class="matrix-label">GLM-4.5</div>
+            <div class="matrix-label"><a href="/dist/pages/tools/glm-4-5.html" style="color: rgba(59, 130, 246, 0.9); text-decoration: underline; text-underline-offset: 2px;">GLM-4.5</a></div>
             <div class="matrix-cell" style="background: rgba(59, 130, 246, 0.2);">Very Good</div>
             <div class="matrix-cell">Large</div>
             <div class="matrix-cell">No</div>
@@ -14190,7 +14190,7 @@ def generate_with_logging(prompt, api_key):
             <div class="matrix-cell" style="background: rgba(16, 185, 129, 0.2);">Yes</div>
           </div>
           <div class="matrix-row">
-            <div class="matrix-label">Manus AI</div>
+            <div class="matrix-label"><a href="/dist/pages/tools/manus-ai.html" style="color: rgba(59, 130, 246, 0.9); text-decoration: underline; text-underline-offset: 2px;">Manus AI</a></div>
             <div class="matrix-cell" style="background: rgba(99, 102, 241, 0.2);">Excellent</div>
             <div class="matrix-cell">Standard</div>
             <div class="matrix-cell">No</div>
