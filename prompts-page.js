@@ -336,19 +336,19 @@ function renderCard(p) {
   const modality = CATEGORY_TO_MODALITY[p.category];
   const categoryLink = modality ? `/dist/pages/category/${modality}.html` : null;
 
-  // Category badge color
+  // Category badge color - each category has a unique, distinct color
   const categoryColors = {
-    "llm-workflows": { bg: "rgba(59, 130, 246, 0.1)", border: "rgba(59, 130, 246, 0.3)", text: "#3b82f6" },
-    "development-ai": { bg: "rgba(139, 92, 246, 0.1)", border: "rgba(139, 92, 246, 0.3)", text: "#8b5cf6" },
-    "video-production": { bg: "rgba(239, 68, 68, 0.1)", border: "rgba(239, 68, 68, 0.3)", text: "#ef4444" },
-    "photography": { bg: "rgba(236, 72, 153, 0.1)", border: "rgba(236, 72, 153, 0.3)", text: "#ec4899" },
-    "audio-production": { bg: "rgba(14, 165, 233, 0.1)", border: "rgba(14, 165, 233, 0.3)", text: "#0ea5e9" },
-    "image-editing": { bg: "rgba(34, 197, 94, 0.1)", border: "rgba(34, 197, 94, 0.3)", text: "#22c55e" },
-    "video-game-style": { bg: "rgba(245, 158, 11, 0.1)", border: "rgba(245, 158, 11, 0.3)", text: "#f59e0b" },
-    "3d-visualization": { bg: "rgba(168, 85, 247, 0.1)", border: "rgba(168, 85, 247, 0.3)", text: "#a855f7" },
-    "design-branding": { bg: "rgba(251, 146, 60, 0.1)", border: "rgba(251, 146, 60, 0.3)", text: "#fb923c" },
-    "templates": { bg: "rgba(107, 114, 128, 0.1)", border: "rgba(107, 114, 128, 0.3)", text: "#6b7280" },
-    "studio-setup": { bg: "rgba(20, 184, 166, 0.1)", border: "rgba(20, 184, 166, 0.3)", text: "#14b8a6" }
+    "llm-workflows": { bg: "rgba(59, 130, 246, 0.1)", border: "rgba(59, 130, 246, 0.3)", text: "#3b82f6" }, // Blue
+    "development-ai": { bg: "rgba(139, 92, 246, 0.1)", border: "rgba(139, 92, 246, 0.3)", text: "#8b5cf6" }, // Purple
+    "video-production": { bg: "rgba(239, 68, 68, 0.1)", border: "rgba(239, 68, 68, 0.3)", text: "#ef4444" }, // Red
+    "photography": { bg: "rgba(236, 72, 153, 0.1)", border: "rgba(236, 72, 153, 0.3)", text: "#ec4899" }, // Pink
+    "audio-production": { bg: "rgba(14, 165, 233, 0.1)", border: "rgba(14, 165, 233, 0.3)", text: "#0ea5e9" }, // Cyan
+    "image-editing": { bg: "rgba(34, 197, 94, 0.1)", border: "rgba(34, 197, 94, 0.3)", text: "#22c55e" }, // Green
+    "video-game-style": { bg: "rgba(217, 70, 239, 0.1)", border: "rgba(217, 70, 239, 0.3)", text: "#d946ef" }, // Magenta (changed from amber)
+    "3d-visualization": { bg: "rgba(16, 185, 129, 0.1)", border: "rgba(16, 185, 129, 0.3)", text: "#10b981" }, // Emerald (changed from purple)
+    "design-branding": { bg: "rgba(249, 115, 22, 0.1)", border: "rgba(249, 115, 22, 0.3)", text: "#f97316" }, // Orange/Coral (changed to distinct orange)
+    "templates": { bg: "rgba(107, 114, 128, 0.1)", border: "rgba(107, 114, 128, 0.3)", text: "#6b7280" }, // Gray
+    "studio-setup": { bg: "rgba(20, 184, 166, 0.1)", border: "rgba(20, 184, 166, 0.3)", text: "#14b8a6" } // Teal
   };
   const catColor = categoryColors[p.category] || { bg: "rgba(107, 114, 128, 0.1)", border: "rgba(107, 114, 128, 0.3)", text: "#6b7280" };
 
