@@ -1886,15 +1886,46 @@ body[data-theme="light"] .results .bullets li:hover {
   .guide-content-grid {
     padding: 0 16px;
     gap: 24px;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
   }
   
   .guide-main-content {
     padding: 16px 0;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .guide-main-content * {
+    max-width: 100% !important;
+    box-sizing: border-box;
   }
   
   .guide-text {
     font-size: 13px !important;
     line-height: 1.7 !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  /* Ensure all guide content respects mobile width */
+  .guide-main-content .chart-container,
+  .guide-main-content .comparison-matrix,
+  .guide-main-content .process-steps,
+  .guide-main-content .timeline,
+  .guide-main-content .bar-chart {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Prevent horizontal scroll on guide pages */
+  .guide-page-container,
+  .guide-content-grid {
+    overflow-x: hidden;
+    width: 100%;
   }
 }
 
@@ -5218,6 +5249,69 @@ body[data-theme="light"] .tutorial-card:hover {
   .tutorials-grid {
     grid-template-columns: 1fr;
     gap: 8px;
+  }
+  
+  /* Chart containers - Mobile optimization */
+  .chart-container {
+    margin: 24px 0;
+    padding: 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .chart-container * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Comparison matrix - Mobile scrollable */
+  .comparison-matrix {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 24px -16px;
+    padding: 0 16px;
+    width: calc(100% + 32px);
+  }
+  
+  .comparison-matrix.minimal-matrix {
+    min-width: 600px; /* Ensure minimum width for readability */
+  }
+  
+  /* Bar charts - Mobile optimization */
+  .bar-chart {
+    margin: 16px 0;
+  }
+  
+  .bar-item {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .bar-label {
+    min-width: 100px;
+    font-size: 10px;
+  }
+  
+  .bar-value {
+    min-width: 40px;
+    font-size: 10px;
+  }
+  
+  /* Process steps - Mobile stack */
+  .process-steps {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .process-step {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Timeline - Mobile optimization */
+  .timeline {
+    padding-left: 24px;
+    margin: 20px 0;
   }
   
   /* New Creative Visuals - Mobile Optimization */
