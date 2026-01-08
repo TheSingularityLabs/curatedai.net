@@ -3521,7 +3521,7 @@ export const TOOLS = [
   {
     id: "qwen-image",
     name: "Qwen-Image",
-    tagline: "20B parameter model with exceptional text rendering and image editing",
+    tagline: "Open-source 20B model with commercial-grade text rendering and advanced image editing",
     whatItDoes: "Generates high-quality images from text prompts using Alibaba's Tongyi Qianwen 20-billion parameter MMDiT model. Excels at complex text rendering with commercial-grade quality, supporting multi-line layouts and paragraph-level text generation in both Chinese and English. Provides advanced image editing capabilities including style transfer, object insertion/removal, and detail enhancement. Ranks first in multiple public benchmark tests, surpassing similar open-source models with superior prompt understanding and visual quality.",
     whyPicked: "Top-performing open-source model with exceptional text rendering and advanced image editing capabilities, optimized for efficient deployment.",
     bestForTag: "Best for Text Rendering",
@@ -8798,7 +8798,7 @@ export const TOOLS = [
   {
     id: "manus-ai",
     name: "Manus AI",
-    tagline: "Autonomous AI agent for complex task execution",
+    tagline: "Autonomous AI agent for complex multi-step workflows and research automation",
     whatItDoes: "Manus is an autonomous AI agent developed by Butterfly Effect Pte. Ltd. (acquired by Meta Platforms in December 2025) designed to independently perform complex real-world tasks without continuous human guidance. Launched in March 2025, Manus leverages real-time data retrieval, multi-step reasoning, and API integrations to execute complex analytics, research, and task automation. The agent can handle tasks from simple prompts to complex multi-step workflows, making it suitable for research, data analysis, and autonomous task execution. Meta acquired Manus for over $2 billion to enhance its AI assistant and enterprise tools, integrating the technology into products like Meta AI.",
     whyPicked: "Pioneering autonomous AI agent platform with proven real-world task execution capabilities, now backed by Meta's resources.",
     bestForTag: "Best for Automation",
@@ -8809,7 +8809,8 @@ export const TOOLS = [
     hasApi: true,
     openSource: false,
     links: [
-      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Manus_%28AI_agent%29", type: "primary" }
+      { label: "Meta AI", url: "https://www.meta.ai/", type: "primary" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Manus_%28AI_agent%29", type: "docs" }
     ],
     bestFor: ["Autonomous task execution", "Complex research and analytics", "Multi-step workflow automation", "Enterprise AI agents", "API integration tasks"],
     addedAt: "2026-01-01",
@@ -8862,7 +8863,7 @@ export const TOOLS = [
   {
     id: "baidu-ernie-4-5",
     name: "Baidu ERNIE 4.5",
-    tagline: "Baidu's advanced multimodal LLM",
+    tagline: "Open-source MoE LLM with strong Chinese NLP and multimodal capabilities",
     whatItDoes: "Baidu ERNIE 4.5 (Enhanced Representation through Knowledge Integration) is a family of large language models released by Baidu in November 2025. The ERNIE 4.5 model family includes 10 variants ranging from 0.3 billion to 424 billion total parameters, utilizing a Mixture-of-Experts (MoE) architecture for efficient inference. Open-sourced under the Apache 2.0 license in June 2025, ERNIE 4.5 demonstrates strong performance in Chinese natural language processing, multimodal understanding, and various AI benchmarks. The model excels in common-sense reasoning, optical character recognition, and Chinese language tasks. Available through ERNIE Bot (web interface) and Baidu's Qianfan platform (API access), with open-source model weights available for local deployment.",
     whyPicked: "Leading Chinese LLM with strong multilingual capabilities, open-source availability, and cost-efficient MoE architecture.",
     bestForTag: "Best for Chinese",
@@ -8933,7 +8934,7 @@ export const TOOLS = [
   {
     id: "glm-4-5",
     name: "GLM-4.5",
-    tagline: "Zhipu AI's advanced multilingual LLM",
+    tagline: "Advanced multilingual LLM with enhanced reasoning and long-context support",
     whatItDoes: "GLM-4.5 (General Language Model) is Zhipu AI's latest large language model in the ChatGLM/GLM series, released in 2025. Building on the success of previous GLM models, GLM-4.5 offers enhanced reasoning capabilities, improved multilingual support (with strong Chinese and English capabilities), and advanced instruction-following. The model is designed for both chat and completion tasks, with support for long context windows and fine-tuned variants for specific use cases. GLM-4.5 maintains Zhipu AI's focus on efficient inference and cost-effective deployment. Available through Zhipu AI's platform (web interface and API) with options for local deployment of open-source variants.",
     whyPicked: "Advanced Chinese LLM with strong multilingual capabilities, efficient inference, and comprehensive deployment options.",
     bestForTag: "Best for Multilingual",
@@ -9004,7 +9005,7 @@ export const TOOLS = [
   {
     id: "hymotion-1-0",
     name: "Hymotion 1.0",
-    tagline: "Tencent's text-to-3D motion generation model",
+    tagline: "Open-source text-to-3D motion model with 200+ motion categories and production-ready exports",
     whatItDoes: "Hymotion 1.0 (also known as HY-Motion 1.0 or Hunyuan Motion 1.0) is Tencent's open-source, billion-parameter text-to-3D motion generation model released in December 2025. Built on a Diffusion Transformer (DiT) architecture with flow matching, it generates high-fidelity, smooth, and diverse 3D character animations from natural language descriptions. Trained on over 3,000 hours of diverse motion data covering 200+ motion categories including locomotion, sports, fitness, social interactions, and daily activities. The model employs a three-stage training paradigm: large-scale pretraining, high-quality fine-tuning with 400 hours of curated text-motion pairs, and reinforcement learning for physical plausibility. Supports standard 3D formats (FBX, BVH, GLTF) for seamless integration with Blender, Unity, and Unreal Engine. Available through web demo, open-source model weights on GitHub and Hugging Face, and API access.",
     whyPicked: "Tencent's cutting-edge open-source text-to-3D motion model with production-ready output and extensive motion category support.",
     bestForTag: "Best for 3D Motion",
