@@ -1911,8 +1911,23 @@ body[data-theme="light"] .results .bullets li:hover {
   }
   
   /* Ensure all guide content respects mobile width */
-  .guide-main-content .chart-container,
-  .guide-main-content .comparison-matrix,
+  .guide-main-content .chart-container {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .guide-main-content .comparison-matrix {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 24px -16px;
+    padding: 0 16px;
+    width: calc(100% + 32px);
+  }
+  
   .guide-main-content .process-steps,
   .guide-main-content .timeline,
   .guide-main-content .bar-chart {
@@ -1923,9 +1938,27 @@ body[data-theme="light"] .results .bullets li:hover {
   
   /* Prevent horizontal scroll on guide pages */
   .guide-page-container,
-  .guide-content-grid {
-    overflow-x: hidden;
+  .guide-content-grid,
+  body {
+    overflow-x: hidden !important;
     width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Ensure guide main content doesn't overflow */
+  .guide-main-content {
+    overflow-x: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  /* Fix any inline styles that might cause overflow */
+  .guide-main-content [style*="width"] {
+    max-width: 100% !important;
+  }
+  
+  .guide-main-content [style*="min-width"] {
+    min-width: 0 !important;
   }
 }
 
