@@ -4598,6 +4598,8 @@ body[data-theme="light"] .bar-fill {
   margin: 32px 0;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   border: 1px solid var(--line);
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .comparison-matrix.minimal-matrix {
@@ -5271,10 +5273,19 @@ body[data-theme="light"] .tutorial-card:hover {
     margin: 24px -16px;
     padding: 0 16px;
     width: calc(100% + 32px);
+    display: block;
   }
   
   .comparison-matrix.minimal-matrix {
     min-width: 600px; /* Ensure minimum width for readability */
+    display: grid;
+  }
+  
+  /* Wrap comparison matrix content in scrollable container */
+  .chart-container .comparison-matrix {
+    margin: 0;
+    width: 100%;
+    padding: 0;
   }
   
   /* Bar charts - Mobile optimization */
