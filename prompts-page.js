@@ -8,6 +8,7 @@ const CATEGORY_TO_MODALITY = {
   "video-production": "text-to-video",
   "audio-production": "text-to-audio",
   "image-editing": "image-to-image",
+  "video-game-style": "image-to-image",
   "3d-visualization": "text-to-3d",
   "llm-workflows": "llm",
   "development-ai": null, // Cross-modal category
@@ -234,6 +235,7 @@ const CATEGORY_LABELS = {
   "video-production": "Video Production",
   "audio-production": "Audio Production",
   "image-editing": "Image Editing",
+  "video-game-style": "Video Game Style",
   "3d-visualization": "3D & Visualization",
   "llm-workflows": "LLM Workflows",
   "development-ai": "Development & AI",
