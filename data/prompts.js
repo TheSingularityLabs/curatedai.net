@@ -4592,6 +4592,232 @@ export const PROMPTS = [
       "Request format: 'executive summary', 'detailed analysis', 'presentation', 'action plan'"
     ],
     example: "You are a business analyst. Analyze entering the AI tools market with a new SaaS product. Provide: 1) SWOT analysis (Strengths, Weaknesses, Opportunities, Threats), 2) Market opportunity assessment, 3) Competitive landscape analysis, 4) Risk assessment and mitigation strategies, 5) Financial implications and projections, 6) Strategic recommendations with priorities, 7) Implementation roadmap. Context: B2B SaaS startup targeting small businesses. Focus on: market entry strategy and competitive positioning."
+  },
+  
+  // GTA Style Image Conversion Prompts
+  {
+    id: "gta-1-style",
+    title: "GTA 1 Style Conversion",
+    category: "image-editing",
+    tool: "nano-banana",
+    description: "Convert images to GTA 1 (1997) top-down 2D pixelated graphics style",
+    prompt: "Convert this image into Grand Theft Auto 1 (1997) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT. Top-down 2D pixelated graphics: Classic DOS/Windows 95 era, top-down isometric view, pixelated sprites, retro 90s computer game aesthetic, low resolution, 2D graphics, classic arcade-style, primitive video game rendering, pixel art style. Apply the exact visual style, graphics quality, and aesthetic of GTA 1. Match the color grading, lighting, and rendering style of the game EXACTLY. The result must be INDISTINGUISHABLE from an actual screenshot from GTA 1.",
+    tags: ["gta", "video-game", "pixel-art", "retro", "style-transfer"],
+    useCase: "Retro game aesthetics, nostalgic content, pixel art transformations",
+    tips: [
+      "Best for portraits and character images",
+      "Preserves facial features while applying pixelated game filter",
+      "Works well with urban/crime-themed images"
+    ],
+    example: "Convert this image into Grand Theft Auto 1 (1997) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT."
+  },
+  {
+    id: "gta-london-style",
+    title: "GTA London 1969 Style Conversion",
+    category: "image-editing",
+    tool: "nano-banana",
+    description: "Convert images to GTA London 1969 (1999) top-down 2D pixelated graphics style",
+    prompt: "Convert this image into Grand Theft Auto London 1969 (1999) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT. Top-down 2D pixelated graphics: British setting expansion, top-down isometric view, pixelated sprites, 1960s London aesthetic, retro computer game graphics, 2D pixel art, classic DOS game style. Apply the exact visual style, graphics quality, and aesthetic of GTA London 1969. Match the color grading, lighting, and rendering style of the game EXACTLY. The result must be INDISTINGUISHABLE from an actual screenshot from GTA London 1969.",
+    tags: ["gta", "video-game", "pixel-art", "retro", "1960s", "style-transfer"],
+    useCase: "Retro game aesthetics, 1960s themed content, British aesthetic",
+    tips: [
+      "Perfect for 1960s-themed transformations",
+      "Maintains subject identity with retro game filter",
+      "Great for period-specific content"
+    ],
+    example: "Convert this image into Grand Theft Auto London 1969 (1999) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT."
+  },
+  {
+    id: "gta-2-style",
+    title: "GTA 2 Style Conversion",
+    category: "image-editing",
+    tool: "seedream",
+    description: "Convert images to GTA 2 (1999) top-down 2D cyberpunk graphics style",
+    prompt: "Convert this image into Grand Theft Auto 2 (1999) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT. Top-down 2D cyberpunk graphics: Isometric top-down view, pixelated sprites, cyberpunk/futuristic aesthetic, neon colors, retro computer game graphics, 2D pixel art, dark cyberpunk atmosphere, classic video game style. Apply the exact visual style, graphics quality, and aesthetic of GTA 2. Match the color grading, lighting, and rendering style of the game EXACTLY. The result must be INDISTINGUISHABLE from an actual screenshot from GTA 2.",
+    tags: ["gta", "video-game", "cyberpunk", "pixel-art", "retro", "style-transfer"],
+    useCase: "Cyberpunk aesthetics, futuristic content, neon-themed transformations",
+    tips: [
+      "Ideal for cyberpunk and futuristic themes",
+      "Enhances with neon color grading",
+      "Maintains subject while applying cyberpunk game filter"
+    ],
+    example: "Convert this image into Grand Theft Auto 2 (1999) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT."
+  },
+  {
+    id: "gta-3-style",
+    title: "GTA 3 Style Conversion",
+    category: "image-editing",
+    tool: "chatgpt",
+    description: "Convert images to GTA 3 (2001) classic PS2 era 3D graphics style",
+    prompt: "Convert this image into Grand Theft Auto 3 (2001) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT. Classic PS2 era 3D graphics: Low-poly 3D models, gritty textures, early 2000s PS2 aesthetic, blocky character models, limited color palette, PS2-era 3D rendering, urban crime atmosphere, classic Rockstar 3D game style, clearly video game graphics. Apply the exact visual style, graphics quality, and aesthetic of GTA 3. Match the color grading, lighting, and rendering style of the game EXACTLY. The result must be INDISTINGUISHABLE from an actual screenshot from GTA 3.",
+    tags: ["gta", "video-game", "ps2", "3d-graphics", "retro", "style-transfer"],
+    useCase: "Early 2000s game aesthetics, gritty urban transformations, PS2-era nostalgia",
+    tips: [
+      "Perfect for gritty urban/crime themes",
+      "Applies low-poly 3D game filter",
+      "Maintains subject identity with PS2-era graphics"
+    ],
+    example: "Convert this image into Grand Theft Auto 3 (2001) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT."
+  },
+  {
+    id: "gta-vice-city-style",
+    title: "GTA Vice City Style Conversion",
+    category: "image-editing",
+    tool: "nano-banana",
+    description: "Convert images to GTA Vice City (2002) vibrant 80s Miami PS2 graphics style",
+    prompt: "Convert this image into Grand Theft Auto Vice City (2002) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT. Vibrant 80s Miami PS2 graphics: Neon colors, retro 1980s aesthetic, pastel buildings, palm trees, Miami Vice style, vibrant color grading, 80s fashion and cars, tropical atmosphere, bright and colorful, PS2 3D rendering, video game graphics. Apply the exact visual style, graphics quality, and aesthetic of GTA Vice City. Match the color grading, lighting, and rendering style of the game EXACTLY. The result must be INDISTINGUISHABLE from an actual screenshot from GTA Vice City.",
+    tags: ["gta", "video-game", "80s", "miami", "neon", "vice-city", "style-transfer"],
+    useCase: "1980s aesthetic, Miami Vice style, vibrant colorful transformations",
+    tips: [
+      "Perfect for 80s-themed content",
+      "Enhances with neon and pastel colors",
+      "Great for tropical/vacation vibes"
+    ],
+    example: "Convert this image into Grand Theft Auto Vice City (2002) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT."
+  },
+  {
+    id: "gta-san-andreas-style",
+    title: "GTA San Andreas Style Conversion",
+    category: "image-editing",
+    tool: "seedream",
+    description: "Convert images to GTA San Andreas (2004) 90s California PS2 graphics style",
+    prompt: "Convert this image into Grand Theft Auto San Andreas (2004) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT. 90s California PS2 graphics: Improved PS2 3D graphics, diverse environments (urban, desert, countryside), 90s hip-hop culture, gangster aesthetic, more detailed than GTA3, California setting, improved character models, PS2-era video game rendering. Apply the exact visual style, graphics quality, and aesthetic of GTA San Andreas. Match the color grading, lighting, and rendering style of the game EXACTLY. The result must be INDISTINGUISHABLE from an actual screenshot from GTA San Andreas.",
+    tags: ["gta", "video-game", "90s", "california", "hip-hop", "san-andreas", "style-transfer"],
+    useCase: "1990s aesthetic, California vibes, hip-hop culture transformations",
+    tips: [
+      "Ideal for 90s-themed content",
+      "Works well with urban/street culture images",
+      "Enhanced PS2 graphics with better detail"
+    ],
+    example: "Convert this image into Grand Theft Auto San Andreas (2004) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT."
+  },
+  {
+    id: "gta-4-style",
+    title: "GTA 4 Style Conversion",
+    category: "image-editing",
+    tool: "chatgpt",
+    description: "Convert images to GTA 4 (2008) stylized HD video game graphics style",
+    prompt: "Convert this image into Grand Theft Auto 4 (2008) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT. Stylized HD video game graphics: Dark atmosphere with stylized rendering, HD game graphics (NOT photorealistic), video game aesthetic, stylized character models, game-like lighting and shadows, stylized textures, video game rendering engine, gritty urban game environment, Liberty City setting, clearly looks like a video game, stylized 3D graphics. Apply the exact visual style, graphics quality, and aesthetic of GTA 4. Match the color grading, lighting, and rendering style of the game EXACTLY. The result must be INDISTINGUISHABLE from an actual screenshot from GTA 4.",
+    tags: ["gta", "video-game", "hd", "stylized", "gritty", "style-transfer"],
+    useCase: "HD game aesthetics, dark urban transformations, stylized graphics",
+    tips: [
+      "Perfect for dark, gritty urban themes",
+      "HD but clearly video game graphics",
+      "Maintains stylized game look"
+    ],
+    example: "Convert this image into Grand Theft Auto 4 (2008) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT."
+  },
+  {
+    id: "gta-5-style",
+    title: "GTA 5 Style Conversion",
+    category: "image-editing",
+    tool: "nano-banana",
+    description: "Convert images to GTA 5 (2013) stylized modern video game graphics style",
+    prompt: "Convert this image into Grand Theft Auto 5 (2013) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT. Stylized modern video game graphics: Highly detailed but stylized game graphics (NOT photorealistic), Los Santos setting, video game rendering style, stylized lighting and shadows, game-like textures, diverse environments (city, desert, mountains), polished video game visuals, clearly looks like a video game, stylized character models, modern 3D game graphics. Apply the exact visual style, graphics quality, and aesthetic of GTA 5. Match the color grading, lighting, and rendering style of the game EXACTLY. The result must be INDISTINGUISHABLE from an actual screenshot from GTA 5.",
+    tags: ["gta", "video-game", "modern", "stylized", "los-santos", "style-transfer"],
+    useCase: "Modern game aesthetics, diverse environment transformations, polished graphics",
+    tips: [
+      "Most popular GTA style conversion",
+      "Works with diverse settings (urban, desert, mountains)",
+      "Polished but clearly video game graphics"
+    ],
+    example: "Convert this image into Grand Theft Auto 5 (2013) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT."
+  },
+  {
+    id: "gta-online-style",
+    title: "GTA Online Style Conversion",
+    category: "image-editing",
+    tool: "seedream",
+    description: "Convert images to GTA Online (2013-2024) enhanced GTA5 video game graphics style",
+    prompt: "Convert this image into Grand Theft Auto Online (2013-2024) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT. Enhanced GTA5 video game graphics: Updated and enhanced GTA5 graphics, multiplayer game aesthetic, polished video game visuals, stylized modern game graphics, Los Santos setting, clearly video game graphics, enhanced textures and lighting, stylized 3D rendering. Apply the exact visual style, graphics quality, and aesthetic of GTA Online. Match the color grading, lighting, and rendering style of the game EXACTLY. The result must be INDISTINGUISHABLE from an actual screenshot from GTA Online.",
+    tags: ["gta", "video-game", "online", "enhanced", "multiplayer", "style-transfer"],
+    useCase: "Enhanced modern game aesthetics, multiplayer-themed transformations",
+    tips: [
+      "Enhanced version of GTA 5 style",
+      "Polished multiplayer game graphics",
+      "Best for modern game aesthetic"
+    ],
+    example: "Convert this image into Grand Theft Auto Online (2013-2024) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT."
+  },
+  {
+    id: "gta-6-style",
+    title: "GTA 6 Style Conversion",
+    category: "image-editing",
+    tool: "chatgpt",
+    description: "Convert images to GTA 6 (2025) next-gen stylized video game graphics style",
+    prompt: "Convert this image into Grand Theft Auto 6 (2025) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT. Next-gen stylized video game graphics: Advanced next-generation game graphics, Vice City setting, cutting-edge video game rendering, stylized high-quality game visuals, modern game engine aesthetic, clearly video game graphics, stylized character models, next-gen game graphics (NOT photorealistic). Apply the exact visual style, graphics quality, and aesthetic of GTA 6. Match the color grading, lighting, and rendering style of the game EXACTLY. The result must be INDISTINGUISHABLE from an actual screenshot from GTA 6.",
+    tags: ["gta", "video-game", "next-gen", "2025", "vice-city", "cutting-edge", "style-transfer"],
+    useCase: "Next-generation game aesthetics, cutting-edge graphics transformations",
+    tips: [
+      "Latest GTA style with next-gen graphics",
+      "Advanced rendering but still clearly video game",
+      "Perfect for modern, high-quality game aesthetic"
+    ],
+    example: "Convert this image into Grand Theft Auto 6 (2025) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT."
+  },
+  {
+    id: "gta-chinatown-wars-style",
+    title: "GTA Chinatown Wars Style Conversion",
+    category: "image-editing",
+    tool: "nano-banana",
+    description: "Convert images to GTA Chinatown Wars (2009) cel-shaded comic book graphics style",
+    prompt: "Convert this image into Grand Theft Auto Chinatown Wars (2009) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT. Cel-shaded comic book graphics: DS/PSP handheld graphics, cel-shaded rendering style, comic book aesthetic, stylized visuals, handheld console graphics, unique art style, video game graphics, cel-shaded 3D models. Apply the exact visual style, graphics quality, and aesthetic of GTA Chinatown Wars. Match the color grading, lighting, and rendering style of the game EXACTLY. The result must be INDISTINGUISHABLE from an actual screenshot from GTA Chinatown Wars.",
+    tags: ["gta", "video-game", "cel-shaded", "comic-book", "handheld", "style-transfer"],
+    useCase: "Comic book aesthetics, cel-shaded transformations, unique art style",
+    tips: [
+      "Unique cel-shaded comic book look",
+      "Perfect for stylized, artistic transformations",
+      "Distinctive handheld game graphics"
+    ],
+    example: "Convert this image into Grand Theft Auto Chinatown Wars (2009) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT."
+  },
+  {
+    id: "gta-liberty-city-stories-style",
+    title: "GTA Liberty City Stories Style Conversion",
+    category: "image-editing",
+    tool: "seedream",
+    description: "Convert images to GTA Liberty City Stories (2005) PSP/PS2 prequel graphics style",
+    prompt: "Convert this image into Grand Theft Auto Liberty City Stories (2005) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT. PSP/PS2 prequel graphics: Similar to GTA3 PS2 style, portable console graphics, prequel to GTA3, Liberty City setting, PS2/PSP 3D rendering, video game graphics, handheld console aesthetic. Apply the exact visual style, graphics quality, and aesthetic of GTA Liberty City Stories. Match the color grading, lighting, and rendering style of the game EXACTLY. The result must be INDISTINGUISHABLE from an actual screenshot from GTA Liberty City Stories.",
+    tags: ["gta", "video-game", "psp", "ps2", "liberty-city", "prequel", "style-transfer"],
+    useCase: "PSP/PS2 game aesthetics, portable console graphics transformations",
+    tips: [
+      "Similar to GTA 3 but portable console optimized",
+      "Handheld game graphics aesthetic",
+      "Great for retro portable gaming look"
+    ],
+    example: "Convert this image into Grand Theft Auto Liberty City Stories (2005) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT."
+  },
+  {
+    id: "gta-vice-city-stories-style",
+    title: "GTA Vice City Stories Style Conversion",
+    category: "image-editing",
+    tool: "chatgpt",
+    description: "Convert images to GTA Vice City Stories (2006) PSP/PS2 prequel graphics style",
+    prompt: "Convert this image into Grand Theft Auto Vice City Stories (2006) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT. PSP/PS2 prequel graphics: Similar to Vice City PS2 style, portable console graphics, prequel to Vice City, 80s Miami setting, PS2/PSP 3D rendering, video game graphics, handheld console aesthetic. Apply the exact visual style, graphics quality, and aesthetic of GTA Vice City Stories. Match the color grading, lighting, and rendering style of the game EXACTLY. The result must be INDISTINGUISHABLE from an actual screenshot from GTA Vice City Stories.",
+    tags: ["gta", "video-game", "psp", "ps2", "vice-city", "80s", "miami", "style-transfer"],
+    useCase: "PSP/PS2 game aesthetics, 80s Miami portable console graphics",
+    tips: [
+      "Vice City style optimized for portable console",
+      "80s Miami aesthetic with handheld graphics",
+      "Perfect for portable gaming nostalgia"
+    ],
+    example: "Convert this image into Grand Theft Auto Vice City Stories (2006) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT."
+  },
+  {
+    id: "gta-advance-style",
+    title: "GTA Advance Style Conversion",
+    category: "image-editing",
+    tool: "nano-banana",
+    description: "Convert images to GTA Advance (2004) Game Boy Advance 2D graphics style",
+    prompt: "Convert this image into Grand Theft Auto Advance (2004) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT. Game Boy Advance 2D graphics: Handheld console graphics, top-down 2D view, pixelated sprites, Game Boy Advance resolution, portable game aesthetic, 2D pixel art, retro handheld game style. Apply the exact visual style, graphics quality, and aesthetic of GTA Advance. Match the color grading, lighting, and rendering style of the game EXACTLY. The result must be INDISTINGUISHABLE from an actual screenshot from GTA Advance.",
+    tags: ["gta", "video-game", "gba", "handheld", "pixel-art", "2d", "style-transfer"],
+    useCase: "Game Boy Advance aesthetics, retro handheld graphics transformations",
+    tips: [
+      "Classic Game Boy Advance pixel art style",
+      "Perfect for retro handheld gaming look",
+      "2D top-down pixelated aesthetic"
+    ],
+    example: "Convert this image into Grand Theft Auto Advance (2004) style graphics with ACCURATE VIDEO GAME FILTER while PRESERVING THE EXACT FACIAL FEATURES AND IDENTITY OF THE SUBJECT."
   }
   
 ];
