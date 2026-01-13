@@ -15,8 +15,48 @@
 
 /** @type {NewsItem[]} */
 export const NEWS = [
-  // 103 total YouTube Shorts from @thesingularitylabs (all news-related)
+  // 108 total YouTube Shorts from @thesingularitylabs (all news-related)
   // Dates are optional; add YYYY-MM-DD when you post daily items.
+  {
+    id: "slabs-short-3xdvcpVBeYI",
+    date: "2026-01-10",
+    source: "youtube",
+    title: "Anthropic Expands Healthcare + Walmart Teams With Gemini + Orchestral Replaces LangChains + more",
+    url: "https://www.youtube.com/shorts/3xdvcpVBeYI",
+    summary: "Anthropic expands healthcare initiatives. Walmart teams with Gemini for retail AI. Orchestral replaces LangChains in enterprise",
+  },
+  {
+    id: "slabs-short-yPb8OhyPwLI",
+    date: "2026-01-09",
+    source: "youtube",
+    title: "Elon Musk's OpenAI Lawsuit Trial + OpenAI Acquires Convogo + Snowflake Buys Observe + more",
+    url: "https://www.youtube.com/shorts/yPb8OhyPwLI",
+    summary: "Elon Musk's lawsuit against OpenAI will face a jury in March. OpenAI is acquiring the Convogo team. Snowflake buys Observe",
+  },
+  {
+    id: "slabs-short-wkhE9mbpJTE",
+    date: "2026-01-08",
+    source: "youtube",
+    title: "Anthropic Raising $10B at $350B + OpenAI ChatGPT Health + Ford AI Voice Level 3 + more",
+    url: "https://www.youtube.com/shorts/wkhE9mbpJTE",
+    summary: "Anthropic raising $10B at $350B valuation. OpenAI unveils ChatGPT Health. Ford plans AI voice assistant for Level 3 autonomy",
+  },
+  {
+    id: "slabs-short-k1Awko62pJ0",
+    date: "2026-01-07",
+    source: "youtube",
+    title: "xAI raised 20B + Government demands Musk's + California lawmaker proposes + more",
+    url: "https://www.youtube.com/shorts/k1Awko62pJ0",
+    summary: "xAI raised $20B Series E. Government demands Musk's X deals with Grok deepfakes. California lawmaker proposes AI regulations",
+  },
+  {
+    id: "slabs-short-1WFn-Z6owe8",
+    date: "2026-01-06",
+    source: "youtube",
+    title: "Nvidia Launches Rubin Chip + Amazon Alexa Web + Boston Dynamics Gemini + more",
+    url: "https://www.youtube.com/shorts/1WFn-Z6owe8",
+    summary: "Data centers added $6.5 billion. Nvidia launches powerful new Rubin chip. Amazon Alexa Web expands. Boston Dynamics integrates Gemini",
+  },
   {
     id: "slabs-short-oc4CGYhG2wQ",
     date: "2026-01-04",
