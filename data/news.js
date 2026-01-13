@@ -15,8 +15,16 @@
 
 /** @type {NewsItem[]} */
 export const NEWS = [
-  // 108 total YouTube Shorts from @thesingularitylabs (all news-related)
+  // 109 total YouTube Shorts from @thesingularitylabs (all news-related)
   // Dates are optional; add YYYY-MM-DD when you post daily items.
+  {
+    id: "slabs-short-biODMPYQnbo",
+    date: "2026-01-13",
+    source: "youtube",
+    title: "Apple Picks Gemini for Siri + Nvidia Microsoft Gene Therapies + more",
+    url: "https://www.youtube.com/shorts/biODMPYQnbo",
+    summary: "Apple picks Gemini for Siri integration. Nvidia and Microsoft partner on gene therapies. Major AI partnerships announced",
+  },
   {
     id: "slabs-short-3xdvcpVBeYI",
     date: "2026-01-10",
