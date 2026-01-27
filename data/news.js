@@ -15,8 +15,40 @@
 
 /** @type {NewsItem[]} */
 export const NEWS = [
-  // 199 total YouTube Shorts from @thesingularitylabs (all news-related)
+  // 212 total YouTube Shorts from @thesingularitylabs (all news-related)
   // Dates are optional; add YYYY-MM-DD when you post daily items.
+  {
+    id: "slabs-short-2kwTHOTQNxk",
+    date: "2026-01-27",
+    source: "youtube",
+    title: "AI2 Launches Open Coding Agents + Moonshot K2 5 + SpotDraft $400M",
+    url: "https://www.youtube.com/shorts/2kwTHOTQNxk",
+    summary: "AI2 Launches Open Coding Agents. Moonshot K2 5. SpotDraft $400M",
+  },
+  {
+    id: "slabs-short-iAbVpH41njc",
+    date: "2026-01-26",
+    source: "youtube",
+    title: "Claude Apps Integration + Clawdbot Goes Viral + Microsoft's New AI Chip",
+    url: "https://www.youtube.com/shorts/iAbVpH41njc",
+    summary: "Claude Apps Integration. Clawdbot Goes Viral. Microsoft's New AI Chip",
+  },
+  {
+    id: "slabs-short-ZljKf1VqWWc",
+    date: "2026-01-22",
+    source: "youtube",
+    title: "$480M AI Startup + OpenAI Age Prediction + Tesla Dojo3 Space AI",
+    url: "https://www.youtube.com/shorts/ZljKf1VqWWc",
+    summary: "$480M AI Startup. OpenAI Age Prediction. Tesla Dojo3 Space AI",
+  },
+  {
+    id: "slabs-short-PpH6GEkMGJg",
+    date: "2026-01-21",
+    source: "youtube",
+    title: "Privacy First ChatGPT Alternative + OpenAI's 2026 Strategy + xAI Data Center Blocked",
+    url: "https://www.youtube.com/shorts/PpH6GEkMGJg",
+    summary: "Privacy First ChatGPT Alternative. OpenAI's 2026 Strategy. xAI Data Center Blocked",
+  },
   {
     id: "slabs-short--h2jWCkASrM",
     date: "2026-01-19",
@@ -1702,12 +1734,84 @@ export const NEWS = [
     summary: "AI News Today – June 5",
   },
   {
+    id: "slabs-short-q_fHFyxNsok",
+    date: "2024-12-29",
+    source: "youtube",
+    title: "Camera movement is crazy #mochiai #generativeai #mmaudio #texttovideo",
+    url: "https://www.youtube.com/shorts/q_fHFyxNsok",
+    summary: "Camera movement is crazy #mochiai #generativeai #mmaudio #texttovideo",
+  },
+  {
+    id: "slabs-short-aZIMWWxwqBA",
+    date: "2024-12-29",
+    source: "youtube",
+    title: "Magical Relams #mochiai #generativeai #mmaudio #texttovideo",
+    url: "https://www.youtube.com/shorts/aZIMWWxwqBA",
+    summary: "Magical Relams #mochiai #generativeai #mmaudio #texttovideo",
+  },
+  {
     id: "slabs-short-V9BvxLWaI44",
     date: "2024-12-29",
     source: "youtube",
     title: "Particle simulations are maxxed out #mochiai #generativeai #mmaudio #texttovideo",
     url: "https://www.youtube.com/shorts/V9BvxLWaI44",
     summary: "Particle simulations are maxxed out #mochiai #generativeai #mmaudio #texttovideo",
+  },
+  {
+    id: "slabs-short-IPBTujrQSZM",
+    date: "2024-12-29",
+    source: "youtube",
+    title: "Night market simulations are insane #mochiai #generativeai #mmaudio #texttovideo",
+    url: "https://www.youtube.com/shorts/IPBTujrQSZM",
+    summary: "Night market simulations are insane #mochiai #generativeai #mmaudio #texttovideo",
+  },
+  {
+    id: "slabs-short-4fvnGL9bQJg",
+    date: "2024-12-29",
+    source: "youtube",
+    title: "Crystal Rendering is Insane #hailuo  #generativeai #mmaudio #texttovideo",
+    url: "https://www.youtube.com/shorts/4fvnGL9bQJg",
+    summary: "Crystal Rendering is Insane #hailuo  #generativeai #mmaudio #texttovideo",
+  },
+  {
+    id: "slabs-short-z-aI8XjVE-Q",
+    date: "2024-12-28",
+    source: "youtube",
+    title: "Until nature shows up #mochiai #generativeai #mmaudio #texttovideo",
+    url: "https://www.youtube.com/shorts/z-aI8XjVE-Q",
+    summary: "Until nature shows up #mochiai #generativeai #mmaudio #texttovideo",
+  },
+  {
+    id: "slabs-short-ekkSCP1Mdg0",
+    date: "2024-12-28",
+    source: "youtube",
+    title: "Would you survive this? #mochiai #generativeai #mmaudio #texttovideo",
+    url: "https://www.youtube.com/shorts/ekkSCP1Mdg0",
+    summary: "Would you survive this? #mochiai #generativeai #mmaudio #texttovideo",
+  },
+  {
+    id: "slabs-short-JHQre23hvQw",
+    date: "2024-12-28",
+    source: "youtube",
+    title: "What happens at the end? #mochiai #generativeai #mmaudio #texttovideo",
+    url: "https://www.youtube.com/shorts/JHQre23hvQw",
+    summary: "What happens at the end? #mochiai #generativeai #mmaudio #texttovideo",
+  },
+  {
+    id: "slabs-short-0wzn4-vz_tE",
+    date: "2024-12-28",
+    source: "youtube",
+    title: "Even Hollywood is taking notes #mochiai #generativeai #mmaudio #texttovideo",
+    url: "https://www.youtube.com/shorts/0wzn4-vz_tE",
+    summary: "Even Hollywood is taking notes #mochiai #generativeai #mmaudio #texttovideo",
+  },
+  {
+    id: "slabs-short-w-Pkw_WvHTc",
+    date: "2024-12-27",
+    source: "youtube",
+    title: "Cyberpunk City 🌆 #ai #hunyuan #mmaudio #generativeai",
+    url: "https://www.youtube.com/shorts/w-Pkw_WvHTc",
+    summary: "Cyberpunk City 🌆 #ai #hunyuan #mmaudio #generativeai",
   },
 ];
 
