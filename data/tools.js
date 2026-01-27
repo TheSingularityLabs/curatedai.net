@@ -14,6 +14,7 @@ export const MODALITIES = [
   "llm",
   "multi-service-ai-platforms",
   "agentic-browsers",
+  "ai-assistants",
 ];
 
 /** @type {Array<import("../types").Tool>} */
@@ -9092,6 +9093,91 @@ export const TOOLS = [
       "Local deployment requires significant computational resources",
       "Some motion categories may have better quality than others",
       "Integration with 3D software may require format conversion"
+    ]
+  },
+  {
+    id: "clawdbot",
+    name: "Clawdbot",
+    tagline: "Personal AI assistant that actually does things through messaging apps",
+    whatItDoes: "A personal AI assistant (also called Moltbot) that works through messaging apps like WhatsApp, Telegram, and other chat platforms you already use. Automates tasks across multiple services including email management (clearing inbox, sending emails), calendar management, flight check-ins, and more. Features persistent memory that learns your preferences and persona onboarding for personalized interactions. Operates entirely through chat interfaces, making it accessible from any device with messaging apps. The AI can autonomously perform tasks without requiring you to switch between different apps or services, acting as a unified assistant that handles your digital life through natural conversation.",
+    whyPicked: "Revolutionary personal AI assistant that works through messaging apps you already use, with persistent memory and multi-service task automation.",
+    bestForTag: "Best for Personal Automation",
+    outcomes: ["task-automation", "email-management", "calendar-management", "personal-assistant"],
+    modalities: ["ai-assistants"],
+    pricing: "unknown",
+    platform: ["web"],
+    hasApi: false,
+    openSource: false,
+    links: [
+      { label: "Website", url: "https://clawd.bot", type: "primary" }
+    ],
+    bestFor: [
+      "Managing email and calendar through chat",
+      "Automating personal tasks via messaging apps",
+      "Flight check-ins and travel management",
+      "Unified personal assistant across services"
+    ],
+    addedAt: "2026-01-27",
+    curatedRank: 1,
+    tags: ["assistant", "automation", "messaging", "personal", "email", "calendar"],
+    strengths: [
+      "Works through messaging apps you already use (WhatsApp, Telegram)",
+      "Persistent memory that learns your preferences",
+      "Persona onboarding for personalized experience",
+      "Multi-service integration (email, calendar, flights, etc.)",
+      "Chat-based interface - no need to learn new apps",
+      "Autonomous task execution without constant supervision",
+      "Unified assistant for multiple services"
+    ],
+    gettingStarted: "To get started with Clawdbot, visit the website at clawd.bot and follow the setup instructions. You'll connect Clawdbot to your preferred messaging app (WhatsApp, Telegram, or others). During onboarding, you'll set up your persona and preferences, which Clawdbot will remember. Once connected, simply chat with Clawdbot through your messaging app as you would with any contact. Ask it to manage your email, schedule calendar events, check you in for flights, or handle other tasks. Clawdbot will autonomously perform these tasks across the connected services.",
+    tips: [
+      "Set up your persona during onboarding - this helps Clawdbot understand your preferences and communication style",
+      "Be specific about tasks you want automated - the more detail you provide, the better Clawdbot can execute",
+      "Use natural language in your messages - Clawdbot understands conversational instructions",
+      "Take advantage of persistent memory - Clawdbot remembers your preferences and past interactions",
+      "Connect all relevant services (email, calendar, etc.) for maximum automation capabilities",
+      "Start with simple tasks and gradually expand to more complex workflows",
+      "Review completed tasks to ensure accuracy and provide feedback for improvement"
+    ],
+    useCaseExamples: [
+      {
+        title: "Email Management Through Chat",
+        description: "Clear your inbox and send emails without opening your email app.",
+        steps: [
+          "Message Clawdbot through WhatsApp or Telegram",
+          "Ask it to check your inbox and summarize important emails",
+          "Instruct it to respond to specific emails or clear spam",
+          "Review actions taken and confirm if needed"
+        ]
+      },
+      {
+        title: "Calendar and Flight Management",
+        description: "Manage your schedule and travel through simple chat commands.",
+        steps: [
+          "Ask Clawdbot to check your calendar for the week",
+          "Request it to schedule a meeting or event",
+          "For flights, ask it to check you in automatically",
+          "Get reminders and updates through your messaging app"
+        ]
+      },
+      {
+        title: "Multi-Service Task Automation",
+        description: "Automate complex workflows that span multiple services.",
+        steps: [
+          "Describe the multi-step task you need completed",
+          "Clawdbot will coordinate across email, calendar, and other services",
+          "Monitor progress through chat updates",
+          "Confirm completion and review results"
+        ]
+      }
+    ],
+    limitations: [
+      "Requires connection to messaging apps and service accounts",
+      "Privacy considerations with granting access to personal accounts",
+      "Task accuracy may vary depending on service complexity",
+      "Some services may have limitations on automated access",
+      "Requires stable internet connection for messaging app integration",
+      "May need human oversight for sensitive or critical tasks"
     ]
   },
 ];

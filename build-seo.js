@@ -32,6 +32,7 @@ const MODALITIES = [
   "llm",
   "multi-service-ai-platforms",
   "agentic-browsers",
+  "ai-assistants",
 ];
 
 const OUTPUT_DIR = './dist';
@@ -87,6 +88,7 @@ function getModalityLabel(modality) {
     "llm": "LLMs",
     "multi-service-ai-platforms": "Multi-Service Platforms",
     "agentic-browsers": "Agentic Browsers",
+    "ai-assistants": "AI Assistants",
   };
   return labels[modality] || modality;
 }
@@ -1218,8 +1220,8 @@ function generateCategoryPage(modality) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Best ${label} AI Tools (2026) | AI Tool Directory</title>
-  <meta name="description" content="Discover the best ${label} AI tools. Compare ${modalityTools.length} curated tools for ${label.toLowerCase()} generation. Hand-picked by experts.">
+  <title>Best ${label}${modality === 'ai-assistants' ? '' : ' AI Tools'} (2026) | AI Tool Directory</title>
+  <meta name="description" content="Discover the best ${label}${modality === 'ai-assistants' ? '' : ' AI tools'}. Compare ${modalityTools.length} curated ${modality === 'ai-assistants' ? 'assistants' : 'tools'}${modality === 'ai-assistants' ? '' : ` for ${label.toLowerCase()} generation`}. Hand-picked by experts.">
   <link rel="canonical" href="https://www.curatedai.net/category/${modality}.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
@@ -1285,8 +1287,8 @@ function generateCategoryPage(modality) {
     <main class="page">
       <section class="hero" aria-label="Category">
         <div class="kicker mono">${label.toUpperCase()} • CURATED</div>
-        <h1 class="title">Best ${label} AI Tools (2026)</h1>
-        <div class="micro mono" style="margin-top: -8px; margin-bottom: 16px;">${modality === 'multi-service-ai-platforms' ? `We've curated ${modalityTools.length} top ${label.toLowerCase()} that aggregate multiple AI models and services. Each platform is evaluated for model variety, API quality, infrastructure reliability, and developer experience.` : `We've curated ${modalityTools.length} top ${label.toLowerCase()} AI tools. Each tool is hand-picked for quality, reliability, and unique capabilities.`}</div>
+        <h1 class="title">Best ${label}${modality === 'ai-assistants' ? '' : ' AI Tools'} (2026)</h1>
+        <div class="micro mono" style="margin-top: -8px; margin-bottom: 16px;">${modality === 'multi-service-ai-platforms' ? `We've curated ${modalityTools.length} top ${label.toLowerCase()} that aggregate multiple AI models and services. Each platform is evaluated for model variety, API quality, infrastructure reliability, and developer experience.` : modality === 'ai-assistants' ? `We've curated ${modalityTools.length} top ${label.toLowerCase()} that automate tasks across multiple services. Each assistant is hand-picked for reliability, task automation capabilities, and user experience.` : `We've curated ${modalityTools.length} top ${label.toLowerCase()} AI tools. Each tool is hand-picked for quality, reliability, and unique capabilities.`}</div>
       </section>
       
       <section class="results" aria-label="Results" style="margin-top: 40px;">
