@@ -9097,17 +9097,17 @@ export const TOOLS = [
   },
   {
     id: "clawdbot",
-    name: "Clawdbot",
-    tagline: "Personal AI assistant that actually does things through messaging apps",
-    whatItDoes: "A personal AI assistant (also called Moltbot) that works through messaging apps like WhatsApp, Telegram, and other chat platforms you already use. Automates tasks across multiple services including email management (clearing inbox, sending emails), calendar management, flight check-ins, and more. Features persistent memory that learns your preferences and persona onboarding for personalized interactions. Operates entirely through chat interfaces, making it accessible from any device with messaging apps. The AI can autonomously perform tasks without requiring you to switch between different apps or services, acting as a unified assistant that handles your digital life through natural conversation.",
-    whyPicked: "Revolutionary personal AI assistant that works through messaging apps you already use, with persistent memory and multi-service task automation.",
+    name: "Moltbot",
+    tagline: "Open-source personal AI assistant that actually does things through messaging apps",
+    whatItDoes: "Moltbot (also known as Clawdbot) is an open-source personal AI assistant that works through messaging apps like WhatsApp, Telegram, and other chat platforms you already use. Automates tasks across multiple services including email management (clearing inbox, sending emails), calendar management, flight check-ins, and more. Features persistent memory that learns your preferences and persona onboarding for personalized interactions. Operates entirely through chat interfaces, making it accessible from any device with messaging apps. The AI can autonomously perform tasks without requiring you to switch between different apps or services, acting as a unified assistant that handles your digital life through natural conversation. As an open-source platform, Moltbot offers transparency, security, customization capabilities, and the option to self-host for maximum privacy and control.",
+    whyPicked: "Revolutionary open-source personal AI assistant that works through messaging apps you already use, with persistent memory, multi-service task automation, and self-hosting capabilities.",
     bestForTag: "Best for Personal Automation",
     outcomes: ["task-automation", "email-management", "calendar-management", "personal-assistant"],
     modalities: ["ai-assistants"],
     pricing: "unknown",
     platform: ["web"],
     hasApi: false,
-    openSource: false,
+    openSource: true,
     links: [
       { label: "Website", url: "https://clawd.bot", type: "primary" }
     ],
@@ -9115,36 +9115,42 @@ export const TOOLS = [
       "Managing email and calendar through chat",
       "Automating personal tasks via messaging apps",
       "Flight check-ins and travel management",
-      "Unified personal assistant across services"
+      "Unified personal assistant across services",
+      "Self-hosted AI assistant solutions",
+      "Privacy-focused task automation"
     ],
     addedAt: "2026-01-27",
     curatedRank: 1,
-    tags: ["assistant", "automation", "messaging", "personal", "email", "calendar"],
+    tags: ["assistant", "automation", "messaging", "personal", "email", "calendar", "open-source"],
     strengths: [
+      "Open-source platform - transparent, customizable, and self-hostable",
       "Works through messaging apps you already use (WhatsApp, Telegram)",
       "Persistent memory that learns your preferences",
       "Persona onboarding for personalized experience",
       "Multi-service integration (email, calendar, flights, etc.)",
       "Chat-based interface - no need to learn new apps",
       "Autonomous task execution without constant supervision",
-      "Unified assistant for multiple services"
+      "Unified assistant for multiple services",
+      "Community-driven development and improvements"
     ],
-    gettingStarted: "To get started with Clawdbot, visit the website at clawd.bot and follow the setup instructions. You'll connect Clawdbot to your preferred messaging app (WhatsApp, Telegram, or others). During onboarding, you'll set up your persona and preferences, which Clawdbot will remember. Once connected, simply chat with Clawdbot through your messaging app as you would with any contact. Ask it to manage your email, schedule calendar events, check you in for flights, or handle other tasks. Clawdbot will autonomously perform these tasks across the connected services.",
+    gettingStarted: "To get started with Moltbot, visit the website at clawd.bot and follow the setup instructions. Alternatively, you can self-host the open-source version for maximum privacy and control. You'll connect Moltbot to your preferred messaging app (WhatsApp, Telegram, or others). During onboarding, you'll set up your persona and preferences, which Moltbot will remember. Once connected, simply chat with Moltbot through your messaging app as you would with any contact. Ask it to manage your email, schedule calendar events, check you in for flights, or handle other tasks. Moltbot will autonomously perform these tasks across the connected services.",
     tips: [
-      "Set up your persona during onboarding - this helps Clawdbot understand your preferences and communication style",
-      "Be specific about tasks you want automated - the more detail you provide, the better Clawdbot can execute",
-      "Use natural language in your messages - Clawdbot understands conversational instructions",
-      "Take advantage of persistent memory - Clawdbot remembers your preferences and past interactions",
+      "Set up your persona during onboarding - this helps Moltbot understand your preferences and communication style",
+      "Be specific about tasks you want automated - the more detail you provide, the better Moltbot can execute",
+      "Use natural language in your messages - Moltbot understands conversational instructions",
+      "Take advantage of persistent memory - Moltbot remembers your preferences and past interactions",
       "Connect all relevant services (email, calendar, etc.) for maximum automation capabilities",
       "Start with simple tasks and gradually expand to more complex workflows",
-      "Review completed tasks to ensure accuracy and provide feedback for improvement"
+      "Review completed tasks to ensure accuracy and provide feedback for improvement",
+      "Consider self-hosting if you need maximum privacy and control over your data",
+      "Explore the open-source codebase to understand how Moltbot works and customize it to your needs"
     ],
     useCaseExamples: [
       {
         title: "Email Management Through Chat",
         description: "Clear your inbox and send emails without opening your email app.",
         steps: [
-          "Message Clawdbot through WhatsApp or Telegram",
+          "Message Moltbot through WhatsApp or Telegram",
           "Ask it to check your inbox and summarize important emails",
           "Instruct it to respond to specific emails or clear spam",
           "Review actions taken and confirm if needed"
@@ -9154,7 +9160,7 @@ export const TOOLS = [
         title: "Calendar and Flight Management",
         description: "Manage your schedule and travel through simple chat commands.",
         steps: [
-          "Ask Clawdbot to check your calendar for the week",
+          "Ask Moltbot to check your calendar for the week",
           "Request it to schedule a meeting or event",
           "For flights, ask it to check you in automatically",
           "Get reminders and updates through your messaging app"
@@ -9165,9 +9171,19 @@ export const TOOLS = [
         description: "Automate complex workflows that span multiple services.",
         steps: [
           "Describe the multi-step task you need completed",
-          "Clawdbot will coordinate across email, calendar, and other services",
+          "Moltbot will coordinate across email, calendar, and other services",
           "Monitor progress through chat updates",
           "Confirm completion and review results"
+        ]
+      },
+      {
+        title: "Self-Hosted Privacy-Focused Automation",
+        description: "Deploy Moltbot on your own infrastructure for maximum privacy.",
+        steps: [
+          "Clone the open-source repository from GitHub",
+          "Deploy Moltbot on your own servers or cloud infrastructure",
+          "Configure messaging app integrations and service connections",
+          "Enjoy full control over your data and AI assistant"
         ]
       }
     ],
@@ -9177,7 +9193,9 @@ export const TOOLS = [
       "Task accuracy may vary depending on service complexity",
       "Some services may have limitations on automated access",
       "Requires stable internet connection for messaging app integration",
-      "May need human oversight for sensitive or critical tasks"
+      "May need human oversight for sensitive or critical tasks",
+      "Self-hosting requires technical expertise and infrastructure management",
+      "Open-source nature means community support rather than dedicated customer service"
     ]
   },
 ];
