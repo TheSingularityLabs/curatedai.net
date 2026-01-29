@@ -22163,6 +22163,26 @@ ${JSON.stringify(faqSchema, null, 2)}
             </div>
           </div>
           
+          ${(() => {
+            // Render visible FAQ section if FAQs exist
+            if (faqSchema && faqSchema.mainEntity && faqSchema.mainEntity.length > 0) {
+              return `
+          <div class="block" style="margin-top: 40px;">
+            <div class="block-title">FREQUENTLY ASKED QUESTIONS</div>
+            <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 20px;">
+              ${faqSchema.mainEntity.map((faq, index) => `
+              <div style="padding: 20px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 12px; transition: all 0.2s;" onmouseover="this.style.borderColor='rgba(59, 130, 246, 0.4)'; this.style.background='rgba(59, 130, 246, 0.02)'" onmouseout="this.style.borderColor='var(--line)'; this.style.background='var(--card-bg)'">
+                <div style="font-size: 15px; font-weight: 700; color: var(--page-text); margin-bottom: 12px; font-family: var(--mono); line-height: 1.5;">${escapeHtml(faq.name)}</div>
+                <div style="font-size: 13px; color: var(--page-muted); line-height: 1.7; font-family: var(--mono);">${escapeHtml(faq.acceptedAnswer.text)}</div>
+              </div>
+              `).join('')}
+            </div>
+          </div>
+              `;
+            }
+            return '';
+          })()}
+          
           <div class="block">
             <div class="block-title">EXPLORE TOOLS</div>
             <p class="drawer-text">Ready to try AI tools? Explore our curated directory:</p>
