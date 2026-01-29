@@ -250,71 +250,129 @@ function generateStructuredData(tool) {
   // FAQ Schema - Unique, verified questions and answers for each tool
   const faqItems = [];
   
-  // Pricing FAQ - unique answer based on tool's specific pricing model
-  const pricingAnswer = tool.pricing === 'free' 
-    ? `Yes, ${tool.name} is completely free to use with no paid tiers or limitations.`
-    : tool.pricing === 'freemium'
-    ? `${tool.name} offers a free tier with limited features, plus paid plans for advanced capabilities and higher usage limits.`
-    : tool.pricing === 'paid'
-    ? `${tool.name} requires a paid subscription.`
-    : `Pricing information for ${tool.name} varies.`;
-  
-  faqItems.push({
-    "@type": "Question",
-    "name": `Is ${tool.name} free?`,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": pricingAnswer
-    }
-  });
-  
-  // Capabilities FAQ - unique answer using tool's specific bestFor and whatItDoes
-  let capabilitiesAnswer = '';
-  if (tool.bestFor && tool.bestFor.length > 0) {
-    const primaryUses = tool.bestFor.slice(0, 3).join(', ');
-    const whatItDoes = tool.whatItDoes ? tool.whatItDoes.split('.')[0] + '.' : '';
-    capabilitiesAnswer = `${tool.name} is designed for ${primaryUses}. ${whatItDoes}`;
-    if (tool.strengths && tool.strengths.length > 0) {
-      capabilitiesAnswer += ` Key strengths include ${tool.strengths.slice(0, 2).join(' and ')}.`;
-    }
+  // Moltbot/Clawdbot specific FAQs - check FIRST before generic FAQs
+  if (tool.id === 'clawdbot' || tool.name.toLowerCase().includes('moltbot') || tool.name.toLowerCase().includes('clawdbot')) {
+    faqItems.push({
+      "@type": "Question",
+      "name": "What is Moltbot and how does it work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Moltbot (also known as Clawdbot) is an open-source personal AI assistant that works through messaging apps like WhatsApp and Telegram. Unlike conversational AI assistants, Moltbot actually executes tasks autonomously—managing your email, scheduling meetings, checking in for flights, and coordinating across multiple services. You simply message it like any contact, and it performs the work without requiring you to open separate apps."
+      }
+    });
+    
+    faqItems.push({
+      "@type": "Question",
+      "name": "How is Moltbot different from ChatGPT or other AI assistants?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Moltbot executes tasks autonomously across services (email, calendar, travel), while ChatGPT provides conversation and content generation. Moltbot works through messaging apps you already use, has persistent memory that learns your preferences, and can coordinate multi-service workflows. ChatGPT excels at writing, coding, and research but cannot directly access or manage your email, calendar, or other services."
+      }
+    });
+    
+    faqItems.push({
+      "@type": "Question",
+      "name": "What makes Moltbot unique compared to other task automation tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Moltbot is unique because it operates entirely through messaging apps (WhatsApp, Telegram), requires no separate app installation, has persistent memory that learns your preferences over time, and can autonomously coordinate tasks across multiple services simultaneously. Unlike rule-based automation tools like Zapier, Moltbot uses AI to understand natural language commands and adapt to your specific needs."
+      }
+    });
+    
+    faqItems.push({
+      "@type": "Question",
+      "name": "Is Moltbot open source?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Moltbot is open source, allowing developers to contribute, customize, and self-host the platform. This provides transparency, security, and the ability to extend functionality according to your specific needs."
+      }
+    });
+    
+    faqItems.push({
+      "@type": "Question",
+      "name": "What services can Moltbot integrate with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Moltbot integrates with email services (Gmail, Outlook), calendar platforms (Google Calendar, iCal), travel services (airlines for check-ins), and can coordinate tasks across these services simultaneously. It works through messaging apps, making it accessible from any device."
+      }
+    });
+    
+    faqItems.push({
+      "@type": "Question",
+      "name": "How does Moltbot's persistent memory work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Moltbot remembers your preferences, communication style, task priorities, and past interactions across sessions. During persona onboarding, it learns your work patterns, preferred meeting times, and automation preferences. This allows it to provide personalized assistance without requiring you to repeat instructions."
+      }
+    });
   } else {
-    capabilitiesAnswer = tool.whatItDoes || `${tool.name} provides AI-powered capabilities.`;
+    // Generic FAQs for other tools
+    // Pricing FAQ - unique answer based on tool's specific pricing model
+    const pricingAnswer = tool.pricing === 'free' 
+      ? `Yes, ${tool.name} is completely free to use with no paid tiers or limitations.`
+      : tool.pricing === 'freemium'
+      ? `${tool.name} offers a free tier with limited features, plus paid plans for advanced capabilities and higher usage limits.`
+      : tool.pricing === 'paid'
+      ? `${tool.name} requires a paid subscription.`
+      : `Pricing information for ${tool.name} varies.`;
+    
+    faqItems.push({
+      "@type": "Question",
+      "name": `Is ${tool.name} free?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": pricingAnswer
+      }
+    });
+    
+    // Capabilities FAQ - unique answer using tool's specific bestFor and whatItDoes
+    let capabilitiesAnswer = '';
+    if (tool.bestFor && tool.bestFor.length > 0) {
+      const primaryUses = tool.bestFor.slice(0, 3).join(', ');
+      const whatItDoes = tool.whatItDoes ? tool.whatItDoes.split('.')[0] + '.' : '';
+      capabilitiesAnswer = `${tool.name} is designed for ${primaryUses}. ${whatItDoes}`;
+      if (tool.strengths && tool.strengths.length > 0) {
+        capabilitiesAnswer += ` Key strengths include ${tool.strengths.slice(0, 2).join(' and ')}.`;
+      }
+    } else {
+      capabilitiesAnswer = tool.whatItDoes || `${tool.name} provides AI-powered capabilities.`;
+    }
+    
+    faqItems.push({
+      "@type": "Question",
+      "name": `What can I do with ${tool.name}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": capabilitiesAnswer
+      }
+    });
+    
+    // API FAQ - unique answer based on tool's specific API availability and platform
+    let apiAnswer = '';
+    if (tool.hasApi === true || (tool.platform && tool.platform.includes('api'))) {
+      const apiLink = tool.links?.find(l => l.type === 'api' || l.label.toLowerCase().includes('api'));
+      apiAnswer = `Yes, ${tool.name} offers an API for developers.`;
+      if (apiLink) {
+        apiAnswer += ` API documentation and endpoints are available at ${apiLink.url}.`;
+      }
+      if (tool.platform && tool.platform.includes('api')) {
+        apiAnswer += ` The API is a core platform feature, enabling programmatic access to ${tool.name}'s capabilities.`;
+      }
+    } else if (tool.hasApi === false) {
+      apiAnswer = `${tool.name} does not currently offer a public API. It's primarily available through ${tool.platform?.includes('web') ? 'the web interface' : tool.platform?.includes('desktop') ? 'desktop application' : 'its user interface'}.`;
+    } else {
+      apiAnswer = `API availability for ${tool.name} is not publicly documented.`;
+    }
+    
+    faqItems.push({
+      "@type": "Question",
+      "name": `Does ${tool.name} have an API?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": apiAnswer
+      }
+    });
   }
-  
-  faqItems.push({
-    "@type": "Question",
-    "name": `What can I do with ${tool.name}?`,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": capabilitiesAnswer
-    }
-  });
-  
-  // API FAQ - unique answer based on tool's specific API availability and platform
-  let apiAnswer = '';
-  if (tool.hasApi === true || (tool.platform && tool.platform.includes('api'))) {
-    const apiLink = tool.links?.find(l => l.type === 'api' || l.label.toLowerCase().includes('api'));
-    apiAnswer = `Yes, ${tool.name} offers an API for developers.`;
-    if (apiLink) {
-      apiAnswer += ` API documentation and endpoints are available at ${apiLink.url}.`;
-    }
-    if (tool.platform && tool.platform.includes('api')) {
-      apiAnswer += ` The API is a core platform feature, enabling programmatic access to ${tool.name}'s capabilities.`;
-    }
-  } else if (tool.hasApi === false) {
-    apiAnswer = `${tool.name} does not currently offer a public API. It's primarily available through ${tool.platform?.includes('web') ? 'the web interface' : tool.platform?.includes('desktop') ? 'desktop application' : 'its user interface'}.`;
-  } else {
-    apiAnswer = `API availability for ${tool.name} is not publicly documented.`;
-  }
-  
-  faqItems.push({
-    "@type": "Question",
-    "name": `Does ${tool.name} have an API?`,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": apiAnswer
-    }
-  });
   
   // Category-specific FAQs based on modalities
   const modalities = tool.modalities || [];
