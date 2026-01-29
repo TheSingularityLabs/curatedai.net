@@ -242,11 +242,7 @@ function generateMetaTags(tool) {
   `;
 }
 
-function generateStructuredData(tool) {
-  const website = tool.links?.find(l => l.label === 'Website');
-  const modality = tool.modalities?.[0] || 'AI tool';
-  const modalityLabel = getModalityLabel(modality);
-  
+function generateToolFAQs(tool) {
   // FAQ Schema - Unique, verified questions and answers for each tool
   const faqItems = [];
   
@@ -562,6 +558,17 @@ function generateStructuredData(tool) {
     });
   }
   
+  return faqItems;
+}
+
+function generateStructuredData(tool) {
+  const website = tool.links?.find(l => l.label === 'Website');
+  const modality = tool.modalities?.[0] || 'AI tool';
+  const modalityLabel = getModalityLabel(modality);
+  
+  // Get FAQs from shared function
+  const faqItems = generateToolFAQs(tool);
+  
   // Breadcrumb Schema
   const breadcrumb = {
     "@context": "https://schema.org",
@@ -671,6 +678,10 @@ function getLinkIcon(linkType) {
 function generateToolPage(tool) {
   const modality = tool.modalities?.[0] || 'AI tool';
   const modalityLabel = getModalityLabel(modality);
+  
+  // Get FAQs for both schema and visible HTML
+  const faqItems = generateToolFAQs(tool);
+  
   const relatedTools = tools
     .filter(t => t.id !== tool.id && t.modalities?.some(m => tool.modalities?.includes(m)))
     .sort((a, b) => (a.curatedRank || 999) - (b.curatedRank || 999))
@@ -957,44 +968,20 @@ ${JSON.stringify(generateStructuredData(tool), null, 2)}
         <div class="content-section" style="padding: 20px 0; border-top: 1px solid var(--line); margin-top: 24px; max-width: 100%; box-sizing: border-box;">
           <p class="section-label mono" style="margin-bottom: 16px; font-size: 10px; opacity: 0.7;">FREQUENTLY ASKED QUESTIONS</p>
           <div style="display: flex; flex-direction: column; gap: 0; margin-top: 0; max-width: 100%; box-sizing: border-box; background: var(--card-bg); border-radius: 12px; border: 1px solid var(--line); overflow: hidden;">
-            <div style="padding: 18px 20px; border-bottom: 1px solid var(--line); max-width: 100%; box-sizing: border-box; background: var(--card-bg);">
+            ${faqItems.map((faq, index) => `
+            <div style="padding: 18px 20px; ${index < faqItems.length - 1 ? 'border-bottom: 1px solid var(--line);' : ''} max-width: 100%; box-sizing: border-box; background: var(--card-bg);">
               <div style="display: flex; align-items: start; gap: 12px;">
                 <span style="font-size: 14px; color: rgba(59, 130, 246, 0.8); flex-shrink: 0; font-family: var(--mono); font-weight: 600; margin-top: 2px;">Q:</span>
                 <div style="flex: 1; min-width: 0;">
-                  <p class="card-name mono" style="margin: 0; margin-bottom: 10px; font-size: 13px; font-weight: 600; color: var(--page-text); max-width: 100%; word-wrap: break-word; box-sizing: border-box;">Is ${escapeHtml(tool.name)} free?</p>
+                  <p class="card-name mono" style="margin: 0; margin-bottom: 10px; font-size: 13px; font-weight: 600; color: var(--page-text); max-width: 100%; word-wrap: break-word; box-sizing: border-box;">${escapeHtml(faq.name)}</p>
                   <div style="display: flex; align-items: start; gap: 12px;">
                     <span style="font-size: 14px; color: rgba(10, 185, 129, 0.8); flex-shrink: 0; font-family: var(--mono); font-weight: 600; margin-top: 2px;">A:</span>
-                    <p class="card-preview mono" style="margin: 0; font-size: 12px; line-height: 1.7; color: var(--page-muted); opacity: 0.9; max-width: 100%; word-wrap: break-word; box-sizing: border-box;">${tool.pricing === 'free' ? 'Yes, it\'s completely free to use with no subscription required.' : tool.pricing === 'freemium' ? 'It offers a free tier with limited features, plus paid plans for full access and higher usage limits.' : tool.pricing === 'paid' ? 'It requires a paid subscription.' : 'Pricing information varies.'}</p>
+                    <p class="card-preview mono" style="margin: 0; font-size: 12px; line-height: 1.7; color: var(--page-muted); opacity: 0.9; max-width: 100%; word-wrap: break-word; box-sizing: border-box;">${escapeHtml(faq.acceptedAnswer.text)}</p>
                   </div>
                 </div>
               </div>
             </div>
-            
-            <div style="padding: 18px 20px; border-bottom: 1px solid var(--line); max-width: 100%; box-sizing: border-box; background: var(--card-bg);">
-              <div style="display: flex; align-items: start; gap: 12px;">
-                <span style="font-size: 14px; color: rgba(59, 130, 246, 0.8); flex-shrink: 0; font-family: var(--mono); font-weight: 600; margin-top: 2px;">Q:</span>
-                <div style="flex: 1; min-width: 0;">
-                  <p class="card-name mono" style="margin: 0; margin-bottom: 10px; font-size: 13px; font-weight: 600; color: var(--page-text); max-width: 100%; word-wrap: break-word; box-sizing: border-box;">What can I do with ${escapeHtml(tool.name)}?</p>
-                  <div style="display: flex; align-items: start; gap: 12px;">
-                    <span style="font-size: 14px; color: rgba(10, 185, 129, 0.8); flex-shrink: 0; font-family: var(--mono); font-weight: 600; margin-top: 2px;">A:</span>
-                    <p class="card-preview mono" style="margin: 0; font-size: 12px; line-height: 1.7; color: var(--page-muted); opacity: 0.9; max-width: 100%; word-wrap: break-word; box-sizing: border-box;">${tool.bestFor?.length ? `You can use ${escapeHtml(tool.name)} for ${tool.bestFor.slice(0, 3).map(uf => escapeHtml(uf.toLowerCase())).join(', ')}. ${tool.whatItDoes ? escapeHtml(tool.whatItDoes.substring(0, 150)) + (tool.whatItDoes.length > 150 ? '...' : '') : ''}` : escapeHtml((tool.whatItDoes || '').substring(0, 150)) + ((tool.whatItDoes || '').length > 150 ? '...' : '')}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div style="padding: 18px 20px; max-width: 100%; box-sizing: border-box; background: var(--card-bg);">
-              <div style="display: flex; align-items: start; gap: 12px;">
-                <span style="font-size: 14px; color: rgba(59, 130, 246, 0.8); flex-shrink: 0; font-family: var(--mono); font-weight: 600; margin-top: 2px;">Q:</span>
-                <div style="flex: 1; min-width: 0;">
-                  <p class="card-name mono" style="margin: 0; margin-bottom: 10px; font-size: 13px; font-weight: 600; color: var(--page-text); max-width: 100%; word-wrap: break-word; box-sizing: border-box;">Does ${escapeHtml(tool.name)} have an API?</p>
-                  <div style="display: flex; align-items: start; gap: 12px;">
-                    <span style="font-size: 14px; color: rgba(10, 185, 129, 0.8); flex-shrink: 0; font-family: var(--mono); font-weight: 600; margin-top: 2px;">A:</span>
-                    <p class="card-preview mono" style="margin: 0; font-size: 12px; line-height: 1.7; color: var(--page-muted); opacity: 0.9; max-width: 100%; word-wrap: break-word; box-sizing: border-box;">${tool.hasApi === true || (tool.platform && tool.platform.includes('api')) ? (() => { const apiLink = tool.links?.find(l => l.type === 'api' || l.label.toLowerCase().includes('api')); return apiLink ? `Yes, it offers an API for developers. API documentation is available at ${apiLink.url}.` : 'Yes, it offers an API for developers to integrate into their applications and workflows.'; })() : tool.hasApi === false ? 'No, it does not currently offer an API. It\'s primarily available through the web interface.' : 'API availability is not publicly documented.'}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            `).join('')}
             
             ${tool.modalities?.some(m => m === 'text-to-video' || m === 'image-to-video') ? `
             <div style="padding: 18px 20px; border-bottom: 1px solid var(--line); max-width: 100%; box-sizing: border-box; background: var(--card-bg);">
