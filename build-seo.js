@@ -21786,7 +21786,34 @@ function generateFAQSchema(guide) {
   const faqs = [];
   
   // Generate FAQs based on guide type
-  if (guide.slug.includes('how-do-')) {
+  // Check for Moltbot/Clawdbot guides FIRST (before generic what-is- check)
+  if (guide.slug.includes('clawdbot') || guide.slug.includes('moltbot')) {
+    // Clawdbot/Moltbot specific FAQs
+    faqs.push({
+      question: 'What is Moltbot (Clawdbot) and how does it work?',
+      answer: 'Moltbot (also known as Clawdbot) is an open-source personal AI assistant that works through messaging apps like WhatsApp and Telegram. Unlike conversational AI assistants, Moltbot actually executes tasks autonomously—managing your email, scheduling meetings, checking in for flights, and coordinating across multiple services. You simply message it like any contact, and it performs the work without requiring you to open separate apps.'
+    });
+    faqs.push({
+      question: 'How is Moltbot different from ChatGPT or other AI assistants?',
+      answer: 'Moltbot executes tasks autonomously across services (email, calendar, travel), while ChatGPT provides conversation and content generation. Moltbot works through messaging apps you already use, has persistent memory that learns your preferences, and can coordinate multi-service workflows. ChatGPT excels at writing, coding, and research but cannot directly access or manage your email, calendar, or other services.'
+    });
+    faqs.push({
+      question: 'What makes Moltbot unique compared to other task automation tools?',
+      answer: 'Moltbot is unique because it operates entirely through messaging apps (WhatsApp, Telegram), requires no separate app installation, has persistent memory that learns your preferences over time, and can autonomously coordinate tasks across multiple services simultaneously. Unlike rule-based automation tools like Zapier, Moltbot uses AI to understand natural language commands and adapt to your specific needs.'
+    });
+    faqs.push({
+      question: 'Is Moltbot open source?',
+      answer: 'Yes, Moltbot is open source, allowing developers to contribute, customize, and self-host the platform. This provides transparency, security, and the ability to extend functionality according to your specific needs.'
+    });
+    faqs.push({
+      question: 'What services can Moltbot integrate with?',
+      answer: 'Moltbot integrates with email services (Gmail, Outlook), calendar platforms (Google Calendar, iCal), travel services (airlines for check-ins), and can coordinate tasks across these services simultaneously. It works through messaging apps, making it accessible from any device.'
+    });
+    faqs.push({
+      question: 'How does Moltbot\'s persistent memory work?',
+      answer: 'Moltbot remembers your preferences, communication style, task priorities, and past interactions across sessions. During persona onboarding, it learns your work patterns, preferred meeting times, and automation preferences. This allows it to provide personalized assistance without requiring you to repeat instructions.'
+    });
+  } else if (guide.slug.includes('how-do-')) {
     faqs.push({
       question: guide.question || `How does ${guide.title.toLowerCase().replace('how do ', '').replace('?', '').replace(' a complete guide', '')} work?`,
       answer: guide.description
@@ -21834,32 +21861,6 @@ function generateFAQSchema(guide) {
     faqs.push({
       question: 'Can I use AI tools for social media marketing?',
       answer: 'Yes, AI tools like Nano Banana Pro (4K photorealistic), Midjourney (aesthetic images), and Pika (quick video clips) are specifically designed for social media content creation.'
-    });
-  } else if (guide.slug.includes('clawdbot') || guide.slug.includes('moltbot')) {
-    // Clawdbot/Moltbot specific FAQs
-    faqs.push({
-      question: 'What is Moltbot (Clawdbot) and how does it work?',
-      answer: 'Moltbot (also known as Clawdbot) is an open-source personal AI assistant that works through messaging apps like WhatsApp and Telegram. Unlike conversational AI assistants, Moltbot actually executes tasks autonomously—managing your email, scheduling meetings, checking in for flights, and coordinating across multiple services. You simply message it like any contact, and it performs the work without requiring you to open separate apps.'
-    });
-    faqs.push({
-      question: 'How is Moltbot different from ChatGPT or other AI assistants?',
-      answer: 'Moltbot executes tasks autonomously across services (email, calendar, travel), while ChatGPT provides conversation and content generation. Moltbot works through messaging apps you already use, has persistent memory that learns your preferences, and can coordinate multi-service workflows. ChatGPT excels at writing, coding, and research but cannot directly access or manage your email, calendar, or other services.'
-    });
-    faqs.push({
-      question: 'What makes Moltbot unique compared to other task automation tools?',
-      answer: 'Moltbot is unique because it operates entirely through messaging apps (WhatsApp, Telegram), requires no separate app installation, has persistent memory that learns your preferences over time, and can autonomously coordinate tasks across multiple services simultaneously. Unlike rule-based automation tools like Zapier, Moltbot uses AI to understand natural language commands and adapt to your specific needs.'
-    });
-    faqs.push({
-      question: 'Is Moltbot open source?',
-      answer: 'Yes, Moltbot is open source, allowing developers to contribute, customize, and self-host the platform. This provides transparency, security, and the ability to extend functionality according to your specific needs.'
-    });
-    faqs.push({
-      question: 'What services can Moltbot integrate with?',
-      answer: 'Moltbot integrates with email services (Gmail, Outlook), calendar platforms (Google Calendar, iCal), travel services (airlines for check-ins), and can coordinate tasks across these services simultaneously. It works through messaging apps, making it accessible from any device.'
-    });
-    faqs.push({
-      question: 'How does Moltbot\'s persistent memory work?',
-      answer: 'Moltbot remembers your preferences, communication style, task priorities, and past interactions across sessions. During persona onboarding, it learns your work patterns, preferred meeting times, and automation preferences. This allows it to provide personalized assistance without requiring you to repeat instructions.'
     });
   } else {
     // Generic FAQs
